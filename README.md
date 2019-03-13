@@ -1,12 +1,19 @@
-# pm-quan-ly-dai-ly
+# 
 ARCHIVE:
-Phần mềm quản lý đại lý
-phần mềm dành cho doanh nghiệp  quuản lý các đại lý
-Thành viên:
+Store branches management software
+This software is used to manage multiple store branches in different areas
+Members:
 Hứa Văn Tuấn Anh
 Phạm Quang Thịnh
 Nguyễn Việt Mỹ
 
-AUDIT:
-REFERENCE:
+Features:
+Accept new branches 
+Create form for exporting goods from storage 
+Browse different branches for information 
+Create form for collecting money from branches
+Create monthly reports
+Allow rules modification 
+
+Programming languages used: C#, SQL Server
 WIP:
