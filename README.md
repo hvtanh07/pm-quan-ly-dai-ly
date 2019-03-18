@@ -13,6 +13,14 @@ Windows10-intel core i3-input(output) hardware
 ```
 Give examples
 ```
+### function
+
+* Adding Store branches 
+* Create delivery notes
+* Search
+* Create receipts
+* Create monthly report
+* Make changes in rules ò branch management (max number of braches, items, unit)
 
 ### Installing
 
