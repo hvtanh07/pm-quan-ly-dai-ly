@@ -18,6 +18,10 @@ Give examples
 
 A step by step to install 
 
+## Running the tests
+
+Explain how to run the automated tests for this system, result, image of result
+
 ## Deployment
 
 Add additional notes about how to deploy this on a live system
