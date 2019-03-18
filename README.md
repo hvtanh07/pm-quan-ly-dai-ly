@@ -48,6 +48,7 @@ Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c6
 ## License
 
 This project is licensed under the University of Information & Technology
+![alt text](https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwjl9fylv4rhAhXCTbwKHcTCBRgQjRx6BAgBEAU&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FHo_Chi_Minh_City_University_of_Information_Technology&psig=AOvVaw2aUUGrBit66QeQAZOQ9kqU&ust=1552957404691323)
 
 ## Acknowledgments
 
