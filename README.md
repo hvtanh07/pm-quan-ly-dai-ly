@@ -13,7 +13,7 @@ Windows10-intel core i3-input(output) hardware
 ```
 Give examples
 ```
-### function
+### Function
 
 * Adding Store branches 
 * Create delivery notes
