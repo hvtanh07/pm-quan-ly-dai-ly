@@ -22,6 +22,11 @@ Give examples
 * Create monthly report
 * Make changes in rules ò branch management (max number of braches, items, unit)
 
+### Status quo
+
+## organizational status
+
+
 ### Installing
 
 A step by step to install 
