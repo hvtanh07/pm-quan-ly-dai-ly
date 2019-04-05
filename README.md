@@ -25,7 +25,11 @@ Give examples
 ### Status quo
 
 ## organizational status
-![alt text](https://github.com/hvtanh07/pm-quan-ly-dai-ly/blob/master/bcds.png)
+![alt text](https://github.com/hvtanh07/pm-quan-ly-dai-ly/blob/master/httc.png)
+
+## Business status
+
+* see the (###Funtion) section
 
 ### Installing
 
