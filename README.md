@@ -25,7 +25,7 @@ Give examples
 ### Status quo
 
 ## organizational status
-
+![alt text](https://github.com/hvtanh07/pm-quan-ly-dai-ly/blob/master/bcds.png)
 
 ### Installing
 
