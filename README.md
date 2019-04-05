@@ -29,7 +29,9 @@ Give examples
 
 ## Business status
 
-* see the (###Funtion) section
+* see the [funtion](###Funtion) section
+
+## 
 
 ### Installing
 
