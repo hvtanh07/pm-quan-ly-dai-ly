@@ -6,7 +6,7 @@ This software is used to manage multiple store branches in different areas
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
-### Prerequisites
+## Prerequisites
 
 Windows10-intel core i3-input(output) hardware
 
@@ -22,7 +22,7 @@ Give examples
 * Create monthly report
 * Make changes in rules ò branch management (max number of braches, items, unit)
 
-### Status quo
+## Status quo
 
 ## organizational status
 ![alt text](https://github.com/hvtanh07/pm-quan-ly-dai-ly/blob/master/httc.png)
