@@ -29,7 +29,7 @@ Give examples
 
 ## Business status
 
-* see the [funtion](###Funtion) section
+* see the [funtion](#function) section
 
 ## 
 
