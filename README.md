@@ -20,7 +20,7 @@ Give examples
 * Search
 * Create receipts
 * Create monthly report
-* Make changes in rules ò branch management (max number of braches, items, unit)
+* Make changes in rules of branch management (max number of braches, items, unit)
 
 ## Status quo
 
