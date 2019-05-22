@@ -1,0 +1,6 @@
+D:\VisualSudio\HoSoDaiLyDTO\bin\Debug\HoSoDaiLyDTO.dll.config
+D:\VisualSudio\HoSoDaiLyDTO\bin\Debug\HoSoDaiLyDTO.dll
+D:\VisualSudio\HoSoDaiLyDTO\bin\Debug\HoSoDaiLyDTO.pdb
+D:\VisualSudio\HoSoDaiLyDTO\obj\Debug\QLDL_DTO.csproj.CoreCompileInputs.cache
+D:\VisualSudio\HoSoDaiLyDTO\obj\Debug\HoSoDaiLyDTO.dll
+D:\VisualSudio\HoSoDaiLyDTO\obj\Debug\HoSoDaiLyDTO.pdb

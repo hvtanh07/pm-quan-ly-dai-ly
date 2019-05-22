@@ -1,0 +1,14 @@
+D:\VisualSudio\HoSoDaiLyDAL01\bin\Debug\netstandard2.0\HoSoDaiLyDAL01.deps.json
+D:\VisualSudio\HoSoDaiLyDAL01\bin\Debug\netstandard2.0\HoSoDaiLyDAL01.dll
+D:\VisualSudio\HoSoDaiLyDAL01\bin\Debug\netstandard2.0\HoSoDaiLyDAL01.pdb
+D:\VisualSudio\HoSoDaiLyDAL01\bin\Debug\netstandard2.0\System.Configuration.dll
+D:\VisualSudio\HoSoDaiLyDAL01\bin\Debug\netstandard2.0\System.Security.dll
+D:\VisualSudio\HoSoDaiLyDAL01\bin\Debug\netstandard2.0\System.Configuration.xml
+D:\VisualSudio\HoSoDaiLyDAL01\bin\Debug\netstandard2.0\System.Security.xml
+D:\VisualSudio\HoSoDaiLyDAL01\obj\Debug\netstandard2.0\HoSoDaiLyDAL01.csproj.CoreCompileInputs.cache
+D:\VisualSudio\HoSoDaiLyDAL01\obj\Debug\netstandard2.0\HoSoDaiLyDAL01.AssemblyInfoInputs.cache
+D:\VisualSudio\HoSoDaiLyDAL01\obj\Debug\netstandard2.0\HoSoDaiLyDAL01.AssemblyInfo.cs
+D:\VisualSudio\HoSoDaiLyDAL01\obj\Debug\netstandard2.0\HoSoDaiLyDAL01.csproj.CopyComplete
+D:\VisualSudio\HoSoDaiLyDAL01\obj\Debug\netstandard2.0\HoSoDaiLyDAL01.dll
+D:\VisualSudio\HoSoDaiLyDAL01\obj\Debug\netstandard2.0\HoSoDaiLyDAL01.pdb
+D:\VisualSudio\HoSoDaiLyDAL01\obj\Debug\netstandard2.0\HoSoDaiLyDAL01.csprojAssemblyReference.cache

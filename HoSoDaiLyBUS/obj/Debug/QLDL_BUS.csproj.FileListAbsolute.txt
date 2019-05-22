@@ -1,0 +1,14 @@
+D:\VisualSudio\HoSoDaiLyBUS\obj\Debug\QLDL_BUS.csprojAssemblyReference.cache
+D:\VisualSudio\HoSoDaiLyBUS\obj\Debug\QLDL_BUS.csproj.CoreCompileInputs.cache
+D:\VisualSudio\HoSoDaiLyBUS\bin\Debug\HoSoDaiLyBUS.dll.config
+D:\VisualSudio\HoSoDaiLyBUS\bin\Debug\HoSoDaiLyBUS.dll
+D:\VisualSudio\HoSoDaiLyBUS\bin\Debug\HoSoDaiLyBUS.pdb
+D:\VisualSudio\HoSoDaiLyBUS\bin\Debug\HoSoDaiLyDTO.dll
+D:\VisualSudio\HoSoDaiLyBUS\bin\Debug\QLDL_DAL01.dll
+D:\VisualSudio\HoSoDaiLyBUS\bin\Debug\HoSoDaiLyDTO.pdb
+D:\VisualSudio\HoSoDaiLyBUS\bin\Debug\HoSoDaiLyDTO.dll.config
+D:\VisualSudio\HoSoDaiLyBUS\bin\Debug\QLDL_DAL01.pdb
+D:\VisualSudio\HoSoDaiLyBUS\bin\Debug\QLDL_DAL01.dll.config
+D:\VisualSudio\HoSoDaiLyBUS\obj\Debug\QLDL_BUS.csproj.CopyComplete
+D:\VisualSudio\HoSoDaiLyBUS\obj\Debug\HoSoDaiLyBUS.dll
+D:\VisualSudio\HoSoDaiLyBUS\obj\Debug\HoSoDaiLyBUS.pdb

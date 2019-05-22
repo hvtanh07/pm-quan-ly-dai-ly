@@ -1,0 +1,11 @@
+D:\VisualSudio\QLDL_DAL01\obj\Debug\QLDL_DAL.csprojAssemblyReference.cache
+D:\VisualSudio\QLDL_DAL01\obj\Debug\QLDL_DAL.csproj.CoreCompileInputs.cache
+D:\VisualSudio\QLDL_DAL01\bin\Debug\QLDL_DAL01.dll.config
+D:\VisualSudio\QLDL_DAL01\bin\Debug\QLDL_DAL01.dll
+D:\VisualSudio\QLDL_DAL01\bin\Debug\QLDL_DAL01.pdb
+D:\VisualSudio\QLDL_DAL01\bin\Debug\HoSoDaiLyDTO.dll
+D:\VisualSudio\QLDL_DAL01\bin\Debug\HoSoDaiLyDTO.pdb
+D:\VisualSudio\QLDL_DAL01\bin\Debug\HoSoDaiLyDTO.dll.config
+D:\VisualSudio\QLDL_DAL01\obj\Debug\QLDL_DAL.csproj.CopyComplete
+D:\VisualSudio\QLDL_DAL01\obj\Debug\QLDL_DAL01.dll
+D:\VisualSudio\QLDL_DAL01\obj\Debug\QLDL_DAL01.pdb

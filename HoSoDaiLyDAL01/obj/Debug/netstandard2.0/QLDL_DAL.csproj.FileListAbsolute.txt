@@ -1,0 +1,17 @@
+D:\VisualSudio\HoSoDaiLyDAL01\obj\Debug\netstandard2.0\QLDL_DAL.csprojAssemblyReference.cache
+D:\VisualSudio\HoSoDaiLyDAL01\obj\Debug\netstandard2.0\QLDL_DAL.csproj.CoreCompileInputs.cache
+D:\VisualSudio\HoSoDaiLyDAL01\obj\Debug\netstandard2.0\QLDL_DAL.AssemblyInfoInputs.cache
+D:\VisualSudio\HoSoDaiLyDAL01\obj\Debug\netstandard2.0\QLDL_DAL.AssemblyInfo.cs
+D:\VisualSudio\HoSoDaiLyDAL01\bin\Debug\netstandard2.0\QLDL_DAL.deps.json
+D:\VisualSudio\HoSoDaiLyDAL01\bin\Debug\netstandard2.0\QLDL_DAL.dll
+D:\VisualSudio\HoSoDaiLyDAL01\bin\Debug\netstandard2.0\QLDL_DAL.pdb
+D:\VisualSudio\HoSoDaiLyDAL01\bin\Debug\netstandard2.0\HoSoDaiLyDTO.dll
+D:\VisualSudio\HoSoDaiLyDAL01\bin\Debug\netstandard2.0\System.Configuration.dll
+D:\VisualSudio\HoSoDaiLyDAL01\bin\Debug\netstandard2.0\System.Security.dll
+D:\VisualSudio\HoSoDaiLyDAL01\bin\Debug\netstandard2.0\HoSoDaiLyDTO.pdb
+D:\VisualSudio\HoSoDaiLyDAL01\bin\Debug\netstandard2.0\HoSoDaiLyDTO.dll.config
+D:\VisualSudio\HoSoDaiLyDAL01\bin\Debug\netstandard2.0\System.Configuration.xml
+D:\VisualSudio\HoSoDaiLyDAL01\bin\Debug\netstandard2.0\System.Security.xml
+D:\VisualSudio\HoSoDaiLyDAL01\obj\Debug\netstandard2.0\QLDL_DAL.csproj.CopyComplete
+D:\VisualSudio\HoSoDaiLyDAL01\obj\Debug\netstandard2.0\QLDL_DAL.dll
+D:\VisualSudio\HoSoDaiLyDAL01\obj\Debug\netstandard2.0\QLDL_DAL.pdb
