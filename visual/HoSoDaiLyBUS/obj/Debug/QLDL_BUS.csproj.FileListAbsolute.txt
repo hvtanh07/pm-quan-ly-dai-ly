@@ -12,3 +12,17 @@ D:\VisualSudio\HoSoDaiLyBUS\bin\Debug\QLDL_DAL01.dll.config
 D:\VisualSudio\HoSoDaiLyBUS\obj\Debug\QLDL_BUS.csproj.CopyComplete
 D:\VisualSudio\HoSoDaiLyBUS\obj\Debug\HoSoDaiLyBUS.dll
 D:\VisualSudio\HoSoDaiLyBUS\obj\Debug\HoSoDaiLyBUS.pdb
+D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\HoSoDaiLyBUS\bin\Debug\HoSoDaiLyBUS.dll.config
+D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\HoSoDaiLyBUS\bin\Debug\HoSoDaiLyBUS.dll
+D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\HoSoDaiLyBUS\bin\Debug\HoSoDaiLyBUS.pdb
+D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\HoSoDaiLyBUS\bin\Debug\HoSoDaiLyDTO.dll
+D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\HoSoDaiLyBUS\bin\Debug\QLDL_DAL01.dll
+D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\HoSoDaiLyBUS\bin\Debug\HoSoDaiLyDTO.pdb
+D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\HoSoDaiLyBUS\bin\Debug\HoSoDaiLyDTO.dll.config
+D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\HoSoDaiLyBUS\bin\Debug\QLDL_DAL01.pdb
+D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\HoSoDaiLyBUS\bin\Debug\QLDL_DAL01.dll.config
+D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\HoSoDaiLyBUS\obj\Debug\QLDL_BUS.csprojAssemblyReference.cache
+D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\HoSoDaiLyBUS\obj\Debug\QLDL_BUS.csproj.CoreCompileInputs.cache
+D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\HoSoDaiLyBUS\obj\Debug\QLDL_BUS.csproj.CopyComplete
+D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\HoSoDaiLyBUS\obj\Debug\HoSoDaiLyBUS.dll
+D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\HoSoDaiLyBUS\obj\Debug\HoSoDaiLyBUS.pdb

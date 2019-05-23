@@ -9,3 +9,14 @@ D:\VisualSudio\QLDL_DAL01\bin\Debug\HoSoDaiLyDTO.dll.config
 D:\VisualSudio\QLDL_DAL01\obj\Debug\QLDL_DAL.csproj.CopyComplete
 D:\VisualSudio\QLDL_DAL01\obj\Debug\QLDL_DAL01.dll
 D:\VisualSudio\QLDL_DAL01\obj\Debug\QLDL_DAL01.pdb
+D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL_DAL01\bin\Debug\QLDL_DAL01.dll.config
+D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL_DAL01\bin\Debug\QLDL_DAL01.dll
+D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL_DAL01\bin\Debug\QLDL_DAL01.pdb
+D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL_DAL01\bin\Debug\HoSoDaiLyDTO.dll
+D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL_DAL01\bin\Debug\HoSoDaiLyDTO.pdb
+D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL_DAL01\bin\Debug\HoSoDaiLyDTO.dll.config
+D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL_DAL01\obj\Debug\QLDL_DAL.csprojAssemblyReference.cache
+D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL_DAL01\obj\Debug\QLDL_DAL.csproj.CoreCompileInputs.cache
+D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL_DAL01\obj\Debug\QLDL_DAL.csproj.CopyComplete
+D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL_DAL01\obj\Debug\QLDL_DAL01.dll
+D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL_DAL01\obj\Debug\QLDL_DAL01.pdb

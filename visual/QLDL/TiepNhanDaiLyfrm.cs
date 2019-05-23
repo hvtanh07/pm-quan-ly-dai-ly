@@ -26,7 +26,8 @@ namespace QLDL
             hs.diachi = dc.Text;
             hs.email = mail.Text;
             hs.dienthoai = dttxt.Text;
-            hs.ngaytiepnhan = DateTime.Today;
+            string today = DateTime.Today.ToShortDateString();
+            hs.ngaytiepnhan = Convert.ToDateTime(today);
             if (checkBox1.Checked == true)
             {
                 hs.loaidaily = 1;
@@ -45,9 +46,9 @@ namespace QLDL
             //3. Thêm vào DB
             bool kq = hsBUS.Them(hs);
             if (kq == false)
-                MessageBox.Show("Thêm Kiểu nấu thất bại. Vui lòng kiểm tra lại dũ liệu");
+                MessageBox.Show("Thêm hồ sơ thất bại. Vui lòng kiểm tra lại dũ liệu");
             else
-                MessageBox.Show("Thêm Kiểu nấu thành công");
+                MessageBox.Show("Thêm hồ sơ thành công");
         }
 
         private void CheckBox1_CheckedChanged(object sender, EventArgs e)
@@ -71,6 +72,9 @@ namespace QLDL
 
         }
 
-       
+        private void snv_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -23,8 +23,8 @@ namespace QLDL_DAL
             public bool Them(CHoSoDaiLyDTO HoSo)
             {
             string query = string.Empty;
-            query += "INSERT INTO [tblHoSoDaiLy] ([maDaiLy], [tenDaiLy], [diachi],[email], [loaiDaiLy], [quan], [dienthoai])";
-            query += "VALUES (@maDaiLy,@tenDaiLy,@diachi,@email,@loaiDaiLy,@quan,@dienthoai)";
+            query += "INSERT INTO [tblHoSoDaiLy] ([maDaiLy], [tenDaiLy], [diachi],[email], [loaiDaiLy], [ngayTiepNhan], [quan], [dienthoai])";
+            query += "VALUES (@maDaiLy, @tenDaiLy, @diachi, @email, @loaiDaiLy,@ngayTiepNhan , @quan, @dienthoai)";
             using (SqlConnection con = new SqlConnection(ConnectionString))
             {
 
@@ -38,21 +38,21 @@ namespace QLDL_DAL
                     cmd.Parameters.AddWithValue("@diachi", HoSo.diachi);
                     cmd.Parameters.AddWithValue("@email", HoSo.email);
                     cmd.Parameters.AddWithValue("@loaiDaiLy", HoSo.loaidaily);
-                    //cmd.Parameters.AddWithValue("@ngayTiepNhan", HoSo.ngaytiepnhan);
+                    cmd.Parameters.AddWithValue("@ngayTiepNhan", HoSo.ngaytiepnhan);
                     cmd.Parameters.AddWithValue("@quan", HoSo.quan);
                     cmd.Parameters.AddWithValue("@dienthoai", HoSo.dienthoai);
-                    //try
-                    //{
+                    try
+                    {
                         con.Open();
                         cmd.ExecuteNonQuery();
                         con.Close();
                         con.Dispose();
-                    //}
-                    //catch (Exception ex)
-                    //{
-                    //    con.Close();
-                    //    return false;
-                    //}
+                    }
+                    catch (Exception ex)
+                    {
+                        con.Close();
+                        return false;
+                    }
                 }
             }
             return true;
