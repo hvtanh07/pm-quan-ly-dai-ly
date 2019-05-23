@@ -13,6 +13,8 @@ namespace QLDL_DTO
         private string tenDaiLy;
         private int loaiDaiLy;
         private string Quan;
+        private int soNhanVien;
+        private int dienTich;
         private string dienThoai;
         private string diaChi;
         private string Email;
@@ -20,6 +22,8 @@ namespace QLDL_DTO
 
 
         public int madl { get => maDL; set => maDL = value; }
+        public int sonhanvien { get => soNhanVien; set => soNhanVien = value; }
+        public int dientich { get => dienTich; set => dienTich = value; }
         public string tendaily { get => tenDaiLy; set => tenDaiLy = value; }
         public string quan { get => Quan; set => Quan = value; }
         public string dienthoai { get => dienThoai; set => dienThoai = value; }

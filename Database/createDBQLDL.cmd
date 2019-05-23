@@ -1,0 +1,1 @@
+SQLCMD -S TUAN-ANH -E -i CreateQLDL.sql

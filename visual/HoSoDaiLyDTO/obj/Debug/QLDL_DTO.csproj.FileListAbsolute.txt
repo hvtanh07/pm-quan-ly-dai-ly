@@ -4,3 +4,17 @@ D:\VisualSudio\HoSoDaiLyDTO\bin\Debug\HoSoDaiLyDTO.pdb
 D:\VisualSudio\HoSoDaiLyDTO\obj\Debug\QLDL_DTO.csproj.CoreCompileInputs.cache
 D:\VisualSudio\HoSoDaiLyDTO\obj\Debug\HoSoDaiLyDTO.dll
 D:\VisualSudio\HoSoDaiLyDTO\obj\Debug\HoSoDaiLyDTO.pdb
+D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\HoSoDaiLyDTO\bin\Debug\HoSoDaiLyDTO.dll.config
+D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\HoSoDaiLyDTO\bin\Debug\HoSoDaiLyDTO.dll
+D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\HoSoDaiLyDTO\bin\Debug\HoSoDaiLyDTO.pdb
+D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\HoSoDaiLyDTO\obj\Debug\QLDL_DTO.csprojAssemblyReference.cache
+D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\HoSoDaiLyDTO\obj\Debug\QLDL_DTO.csproj.CoreCompileInputs.cache
+D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\HoSoDaiLyDTO\obj\Debug\HoSoDaiLyDTO.dll
+D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\HoSoDaiLyDTO\obj\Debug\HoSoDaiLyDTO.pdb
+D:\Githubclonepath\pm-quan-ly-dai-ly\visual\HoSoDaiLyDTO\bin\Debug\HoSoDaiLyDTO.dll.config
+D:\Githubclonepath\pm-quan-ly-dai-ly\visual\HoSoDaiLyDTO\bin\Debug\HoSoDaiLyDTO.dll
+D:\Githubclonepath\pm-quan-ly-dai-ly\visual\HoSoDaiLyDTO\bin\Debug\HoSoDaiLyDTO.pdb
+D:\Githubclonepath\pm-quan-ly-dai-ly\visual\HoSoDaiLyDTO\obj\Debug\QLDL_DTO.csprojAssemblyReference.cache
+D:\Githubclonepath\pm-quan-ly-dai-ly\visual\HoSoDaiLyDTO\obj\Debug\QLDL_DTO.csproj.CoreCompileInputs.cache
+D:\Githubclonepath\pm-quan-ly-dai-ly\visual\HoSoDaiLyDTO\obj\Debug\HoSoDaiLyDTO.dll
+D:\Githubclonepath\pm-quan-ly-dai-ly\visual\HoSoDaiLyDTO\obj\Debug\HoSoDaiLyDTO.pdb
