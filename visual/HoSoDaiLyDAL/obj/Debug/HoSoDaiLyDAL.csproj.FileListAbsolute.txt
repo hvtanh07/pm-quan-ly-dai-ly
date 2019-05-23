@@ -1,2 +1,0 @@
-D:\VisualSudio\HoSoDaiLyDAL\obj\Debug\HoSoDaiLyDAL.csprojAssemblyReference.cache
-D:\VisualSudio\HoSoDaiLyDAL\obj\Debug\HoSoDaiLyDAL.csproj.CoreCompileInputs.cache
