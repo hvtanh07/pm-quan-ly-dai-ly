@@ -69,14 +69,6 @@ namespace QLDL
             }
         }
 
-        private void Label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void snv_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }

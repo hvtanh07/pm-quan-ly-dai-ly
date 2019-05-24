@@ -59,20 +59,19 @@
             this.label1.Size = new System.Drawing.Size(285, 71);
             this.label1.TabIndex = 0;
             this.label1.Text = "Tiếp nhận đại lý";
-            this.label1.Click += new System.EventHandler(this.Label1_Click);
             // 
             // dc
             // 
-            this.dc.Location = new System.Drawing.Point(124, 127);
+            this.dc.Location = new System.Drawing.Point(124, 133);
             this.dc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dc.Name = "dc";
             this.dc.Size = new System.Drawing.Size(195, 22);
-            this.dc.TabIndex = 1;
+            this.dc.TabIndex = 2;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(40, 132);
+            this.label2.Location = new System.Drawing.Point(19, 138);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(51, 17);
             this.label2.TabIndex = 2;
@@ -81,7 +80,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(40, 198);
+            this.label3.Location = new System.Drawing.Point(19, 198);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(63, 17);
             this.label3.TabIndex = 3;
@@ -90,7 +89,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(336, 132);
+            this.label5.Location = new System.Drawing.Point(336, 138);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(42, 17);
             this.label5.TabIndex = 5;
@@ -116,44 +115,44 @@
             // 
             // dt
             // 
-            this.dt.Location = new System.Drawing.Point(124, 193);
+            this.dt.Location = new System.Drawing.Point(124, 195);
             this.dt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dt.Name = "dt";
             this.dt.Size = new System.Drawing.Size(195, 22);
-            this.dt.TabIndex = 8;
+            this.dt.TabIndex = 3;
             // 
             // mail
             // 
-            this.mail.Location = new System.Drawing.Point(413, 127);
+            this.mail.Location = new System.Drawing.Point(413, 133);
             this.mail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.mail.Name = "mail";
             this.mail.Size = new System.Drawing.Size(195, 22);
-            this.mail.TabIndex = 10;
+            this.mail.TabIndex = 6;
             // 
             // quantxt
             // 
-            this.quantxt.Location = new System.Drawing.Point(413, 193);
+            this.quantxt.Location = new System.Drawing.Point(413, 195);
             this.quantxt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.quantxt.Name = "quantxt";
             this.quantxt.Size = new System.Drawing.Size(195, 22);
-            this.quantxt.TabIndex = 11;
+            this.quantxt.TabIndex = 7;
             // 
             // dttxt
             // 
             this.dttxt.Location = new System.Drawing.Point(413, 257);
             this.dttxt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dttxt.Name = "dttxt";
-            this.dttxt.Size = new System.Drawing.Size(165, 22);
-            this.dttxt.TabIndex = 12;
+            this.dttxt.Size = new System.Drawing.Size(195, 22);
+            this.dttxt.TabIndex = 8;
             // 
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(203, 317);
+            this.checkBox1.Location = new System.Drawing.Point(250, 318);
             this.checkBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(69, 21);
-            this.checkBox1.TabIndex = 14;
+            this.checkBox1.TabIndex = 9;
             this.checkBox1.Text = "Loại 1";
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.CheckBox1_CheckedChanged);
@@ -161,11 +160,11 @@
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(339, 317);
+            this.checkBox2.Location = new System.Drawing.Point(362, 318);
             this.checkBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(69, 21);
-            this.checkBox2.TabIndex = 15;
+            this.checkBox2.TabIndex = 10;
             this.checkBox2.Text = "Loại 2";
             this.checkBox2.UseVisualStyleBackColor = true;
             this.checkBox2.CheckedChanged += new System.EventHandler(this.CheckBox2_CheckedChanged);
@@ -176,7 +175,7 @@
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(119, 36);
-            this.button1.TabIndex = 16;
+            this.button1.TabIndex = 11;
             this.button1.Text = "Thêm đại lý";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.Button1_Click);
@@ -192,16 +191,16 @@
             // 
             // matxt
             // 
-            this.matxt.Location = new System.Drawing.Point(413, 79);
+            this.matxt.Location = new System.Drawing.Point(413, 74);
             this.matxt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.matxt.Name = "matxt";
-            this.matxt.Size = new System.Drawing.Size(169, 22);
-            this.matxt.TabIndex = 18;
+            this.matxt.Size = new System.Drawing.Size(106, 22);
+            this.matxt.TabIndex = 5;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(40, 81);
+            this.label9.Location = new System.Drawing.Point(19, 79);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(70, 17);
             this.label9.TabIndex = 19;
@@ -209,16 +208,16 @@
             // 
             // tentxt
             // 
-            this.tentxt.Location = new System.Drawing.Point(124, 79);
+            this.tentxt.Location = new System.Drawing.Point(124, 76);
             this.tentxt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tentxt.Name = "tentxt";
             this.tentxt.Size = new System.Drawing.Size(195, 22);
-            this.tentxt.TabIndex = 20;
+            this.tentxt.TabIndex = 1;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(96, 321);
+            this.label10.Location = new System.Drawing.Point(132, 322);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(72, 17);
@@ -228,7 +227,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(40, 267);
+            this.label4.Location = new System.Drawing.Point(19, 262);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(91, 17);
             this.label4.TabIndex = 22;
@@ -236,11 +235,11 @@
             // 
             // snv
             // 
-            this.snv.Location = new System.Drawing.Point(137, 262);
+            this.snv.Location = new System.Drawing.Point(124, 259);
             this.snv.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.snv.Name = "snv";
-            this.snv.Size = new System.Drawing.Size(182, 22);
-            this.snv.TabIndex = 23;
+            this.snv.Size = new System.Drawing.Size(195, 22);
+            this.snv.TabIndex = 4;
             // 
             // TiepNhanDaiLyfrm
             // 

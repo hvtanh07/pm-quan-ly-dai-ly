@@ -23,5 +23,12 @@ namespace QLDL
             frm.MdiParent = this;
             frm.Show();
         }
+
+        private void SửaThôngTinĐạiLýToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CapNhatSuaDaiLy frm = new CapNhatSuaDaiLy();
+            frm.MdiParent = this;
+            frm.Show();
+        }
     }
 }
