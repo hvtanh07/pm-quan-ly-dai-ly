@@ -128,6 +128,7 @@
             this.thêmXóaMặtHàngToolStripMenuItem.Name = "thêmXóaMặtHàngToolStripMenuItem";
             this.thêmXóaMặtHàngToolStripMenuItem.Size = new System.Drawing.Size(219, 26);
             this.thêmXóaMặtHàngToolStripMenuItem.Text = "Thêm, xóa mặt hàng";
+            this.thêmXóaMặtHàngToolStripMenuItem.Click += new System.EventHandler(this.ThêmXóaMặtHàngToolStripMenuItem_Click);
             // 
             // lậpBáoCáoThángToolStripMenuItem
             // 

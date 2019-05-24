@@ -36,4 +36,32 @@ namespace QLDL_BUS
             return null;
         }
     }
+    public class CMatHangBUS
+    {
+        private CMatHangDAL mhDAL;
+        public CMatHangBUS()
+        {
+            mhDAL = new CMatHangDAL();
+        }
+        public bool Them(DanhsachmathangDTO MH)
+        {
+            bool re = mhDAL.Them(MH);
+            return re;
+        }
+        public bool Sua(DanhsachmathangDTO MH)
+        {
+            bool re = mhDAL.Sua(MH);
+            return re;
+        }
+
+        public bool Xoa(DanhsachmathangDTO MH)
+        {
+            bool re = mhDAL.Xoa(MH);
+            return re;
+        }
+        public List<CHoSoDaiLyDTO> select()
+        {
+            return null;
+        }
+    }
 }

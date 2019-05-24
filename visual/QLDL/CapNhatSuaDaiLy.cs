@@ -71,24 +71,35 @@ namespace QLDL
 
         private void Button2_Click(object sender, EventArgs e)
         {
-            CHoSoDaiLyDTO hs = new CHoSoDaiLyDTO();
-            hs.madl = int.Parse(matxt.Text);
-            bool kq = hsBUS.Xoa(hs);
-            if (kq == false)
-                MessageBox.Show("Xóa hồ sơ thất bại. Vui lòng kiểm tra lại dũ liệu");
-            else
+            DialogResult dlr = MessageBox.Show("Bạn có chắc muốn xóa đại lý này không ?", "Xóa thông tin", MessageBoxButtons.YesNo);
+            if (dlr == DialogResult.Yes)
             {
-                MessageBox.Show("Xóa hồ sơ thành công");
-                matxt.Text = "";
-                quantxt.Text = "";
-                dt.Text = "";
-                snv.Text = "";
-                tentxt.Text = "";
-                dc.Text = "";
-                mail.Text = "";
-                dttxt.Text = "";
-                checkBox1.Checked = false;
-                checkBox2.Checked = false;
+                CHoSoDaiLyDTO hs = new CHoSoDaiLyDTO();
+                hs.madl = int.Parse(matxt.Text);
+                bool kq = hsBUS.Xoa(hs);
+                if (kq == false)
+                    MessageBox.Show("Xóa hồ sơ thất bại. Vui lòng kiểm tra lại dũ liệu");
+                else
+                {
+                    MessageBox.Show("Xóa hồ sơ thành công");
+                    matxt.Text = "";
+                    quantxt.Text = "";
+                    dt.Text = "";
+                    snv.Text = "";
+                    tentxt.Text = "";
+                    dc.Text = "";
+                    mail.Text = "";
+                    dttxt.Text = "";
+                    checkBox1.Checked = false;
+                    checkBox2.Checked = false;
+                }
+            }
+        }
+        private void autosize()
+        {
+            for (int i = 0; i < dataGridView1.Columns.Count; i++)
+            {
+                dataGridView1.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             }
         }
 

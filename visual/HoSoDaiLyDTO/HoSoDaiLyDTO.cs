@@ -32,4 +32,22 @@ namespace QLDL_DTO
         public int loaidaily { get => loaiDaiLy; set => loaiDaiLy = value; }
         public DateTime ngaytiepnhan { get => ngayTiepNhan; set => ngayTiepNhan = value; }
     }
+    public class DanhsachmathangDTO
+    {
+        private int MaMH;
+        private string tenMH;
+        private int Soluong;
+        private int KhoiLuong;
+        private DateTime HanSuDung;
+        private int Gia;
+        private string DonViTinh;
+
+        public int Mamh { get => MaMH; set => MaMH = value; }
+        public string tenmh { get => tenMH; set => tenMH = value; }
+        public int soluong { get => Soluong; set => Soluong = value; }
+        public int khoiluong { get => KhoiLuong; set => KhoiLuong = value; }
+        public DateTime hansudung { get => HanSuDung; set => HanSuDung = value; }
+        public int gia { get => Gia; set => Gia = value; }
+        public string donvitinh { get => DonViTinh; set => DonViTinh = value; }
+    }
 }

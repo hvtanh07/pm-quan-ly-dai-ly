@@ -30,5 +30,12 @@ namespace QLDL
             frm.MdiParent = this;
             frm.Show();
         }
+
+        private void ThêmXóaMặtHàngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ThemXoaSuaMatHangfrm frm = new ThemXoaSuaMatHangfrm();
+            frm.MdiParent = this;
+            frm.Show();
+        }
     }
 }

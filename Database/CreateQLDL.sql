@@ -26,11 +26,13 @@ CREATE TABLE [dbo].[tblMatHang]
 (
 	[maMatHang] int NOT NULL PRIMARY KEY,
 	[soluong]	int NOT NULL,
+	[tenmathang] nvarchar(50) NOT NULL,
 	[khoiluong] int NOT NULL,
 	[hanSuDung] datetime NOT NULL,
 	[gia]		int NOT NULL,
 	[donViTinh] nvarchar(50)
 )
+
 CREATE TABLE [dbo].[tblHoSoDaiLy]
 (
 	[maDaiLy]	int NOT NULL PRIMARY KEY,
@@ -42,6 +44,7 @@ CREATE TABLE [dbo].[tblHoSoDaiLy]
 	[quan]		nvarchar(20) NOT NULL,
 	[dienthoai]	int NOT NULL
 )
+
 CREATE TABLE [dbo].[tblDanhSachDaiLy]
 (
 	[STT]	int NOT NULL,
@@ -112,3 +115,5 @@ GO
 INSERT INTO [dbo].[tblHoSoDaiLy] VALUES ('2','Dai Ly B','Dia Chi Dai Ly B','DLB@email.com','2','30/04/1975','9','0909222333')
 GO
 INSERT INTO [dbo].[tblHoSoDaiLy] VALUES ('3','Dai Ly C','Dia Chi Dai Ly C','DLC@email.com','3','19/05/1890','9','0930041975')
+UPDATE tblHoSoDaiLy SET [tenDaiLy] = 'test', [diachi] = 'test', [email] = 'test', [loaiDaiLy] = '1', [quan] = '2', [dienthoai] = '123', [dientich] = '30', [sonhanvien] = '7' WHERE [maDaiLy] = '9'
+DELETE FROM tblHoSoDaiLy WHERE [maDaiLy] = '1'

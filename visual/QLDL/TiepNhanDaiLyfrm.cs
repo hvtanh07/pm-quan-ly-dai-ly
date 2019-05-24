@@ -28,8 +28,7 @@ namespace QLDL
             hs.diachi = dc.Text;
             hs.email = mail.Text;
             hs.dienthoai = dttxt.Text;
-            string today = DateTime.Today.ToShortDateString();
-            hs.ngaytiepnhan = Convert.ToDateTime(today);
+            hs.ngaytiepnhan = Convert.ToDateTime(DateTime.Today.ToShortDateString());
             if (checkBox1.Checked == true)
             {
                 hs.loaidaily = 1;
