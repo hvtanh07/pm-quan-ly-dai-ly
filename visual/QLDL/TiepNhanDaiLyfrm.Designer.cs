@@ -120,6 +120,7 @@
             this.dt.Name = "dt";
             this.dt.Size = new System.Drawing.Size(195, 22);
             this.dt.TabIndex = 3;
+            this.dt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numOnly);
             // 
             // mail
             // 
@@ -141,9 +142,11 @@
             // 
             this.dttxt.Location = new System.Drawing.Point(413, 257);
             this.dttxt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dttxt.MaxLength = 11;
             this.dttxt.Name = "dttxt";
             this.dttxt.Size = new System.Drawing.Size(195, 22);
             this.dttxt.TabIndex = 8;
+            this.dttxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numOnly);
             // 
             // checkBox1
             // 
@@ -196,6 +199,7 @@
             this.matxt.Name = "matxt";
             this.matxt.Size = new System.Drawing.Size(106, 22);
             this.matxt.TabIndex = 5;
+            this.matxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numOnly);
             // 
             // label9
             // 
@@ -240,6 +244,7 @@
             this.snv.Name = "snv";
             this.snv.Size = new System.Drawing.Size(195, 22);
             this.snv.TabIndex = 4;
+            this.snv.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numOnly);
             // 
             // TiepNhanDaiLyfrm
             // 

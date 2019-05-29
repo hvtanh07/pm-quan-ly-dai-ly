@@ -33,7 +33,7 @@ namespace QLDL_BUS
         }
         public List<CHoSoDaiLyDTO> select()
         {
-            return null;
+            return hsDAL.select();
         }
     }
     public class CMatHangBUS

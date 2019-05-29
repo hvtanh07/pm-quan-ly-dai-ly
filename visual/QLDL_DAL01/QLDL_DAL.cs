@@ -129,9 +129,54 @@ namespace QLDL_DAL
             }
             return true;
         }
+
         public List<CHoSoDaiLyDTO> select()
         {
-            return null;
+            string query = string.Empty;
+            query += "SELECT [maDaiLy],[tenDaiLy],[diachi],[email],[loaiDaiLy],[dientich],[sonhanvien],[ngayTiepNhan],[quan],[dienthoai]";
+            query += "FROM [tblHoSoDaiLy]";
+
+            List<CHoSoDaiLyDTO> lsHoSoDaiLy = new List<CHoSoDaiLyDTO>();
+
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cmd.Connection = con;
+                    cmd.CommandType = System.Data.CommandType.Text;
+                    cmd.CommandText = query;
+
+                    try
+                    {
+                        con.Open();
+                        SqlDataReader reader = null;
+                        reader = cmd.ExecuteReader();
+                        if (reader.HasRows == true)
+                        {
+                            while (reader.Read())
+                            {
+                                CHoSoDaiLyDTO hs = new CHoSoDaiLyDTO();
+                                hs.madl = int.Parse(reader["maDaiLy"].ToString());
+                                hs.tendaily = reader["tenDaiLy"].ToString();
+                                hs.diachi = reader["diachi"].ToString();
+                                hs.dienthoai = reader["dienthoai"].ToString();
+                                hs.dientich = int.Parse(reader["dientich"].ToString());
+                                lsHoSoDaiLy.Add(hs);
+                            }
+                        }
+
+                        con.Close();
+                        con.Dispose();
+                    }
+                    catch (Exception ex)
+                    {
+                        con.Close();
+                        return null;
+                    }
+                }
+            }
+            return lsHoSoDaiLy;
         }
     }
     public class CMatHangDAL
@@ -254,4 +299,5 @@ namespace QLDL_DAL
         }
 
     }
+   
 }

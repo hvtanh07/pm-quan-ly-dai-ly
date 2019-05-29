@@ -28,7 +28,7 @@ CREATE TABLE [dbo].[tblMatHang]
 	[soluong]	int NOT NULL,
 	[tenmathang] nvarchar(50) NOT NULL,
 	[khoiluong] int NOT NULL,
-	[hanSuDung] datetime NOT NULL,
+	[hanSuDung] datetime2(7) NOT NULL,
 	[gia]		int NOT NULL,
 	[donViTinh] nvarchar(50)
 )
@@ -40,7 +40,9 @@ CREATE TABLE [dbo].[tblHoSoDaiLy]
 	[diachi]	nvarchar(50) NOT NULL,
 	[email]		nvarchar(30),
 	[loaiDaiLy]	int	NOT NULL,
-	[ngayTiepNhan]	datetime NOT NULL,
+	[dientich] int NOT NULL,
+	[sonhanvien] int NOT NULL,
+	[ngayTiepNhan]	datetime2(7) NOT NULL,
 	[quan]		nvarchar(20) NOT NULL,
 	[dienthoai]	int NOT NULL
 )
@@ -61,14 +63,14 @@ CREATE TABLE [dbo].[tblPhieuThuTien]
 	[diachi]	nvarchar(50) NOT NULL,
 	[email]		nvarchar(30),
 	[dienthoai]	int NOT NULL,
-	[ngayThuTien] datetime NOT NULL,
+	[ngayThuTien] datetime2(7) NOT NULL,
 	[soTienThu] int NOT NULL,
 )
 CREATE TABLE [dbo].[tblPhieuXuatHang]
 (
 	[maXuatHang]	int NOT NULL PRIMARY KEY,
 	[maDaiLy]		int NOT NULL,
-	[ngayLapPhieu]	datetime NOT NULL,
+	[ngayLapPhieu]	datetime2(7) NOT NULL,
 	[thanhtien]		int NOT NULL
 )
 CREATE TABLE [dbo].[tblChiTietPhieuXH]
