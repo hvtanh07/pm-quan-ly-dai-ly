@@ -162,6 +162,9 @@ namespace QLDL_DAL
                                 hs.diachi = reader["diachi"].ToString();
                                 hs.dienthoai = reader["dienthoai"].ToString();
                                 hs.dientich = int.Parse(reader["dientich"].ToString());
+                                hs.email = reader["dientich"].ToString();
+                                hs.loaidaily= int.Parse(reader["dientich"].ToString());
+                                hs.dientich = int.Parse(reader["dientich"].ToString());
                                 lsHoSoDaiLy.Add(hs);
                             }
                         }

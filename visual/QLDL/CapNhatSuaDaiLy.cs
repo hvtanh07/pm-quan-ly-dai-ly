@@ -42,25 +42,50 @@ namespace QLDL
             dgvBangDanhSach.DataSource = listHoSoDaiLy;
 
             DataGridViewTextBoxColumn clMa = new DataGridViewTextBoxColumn();
-            clMa.Name = "Ma";
+            clMa.Name = "maDL";
             clMa.HeaderText = "Mã đại lý";
-            clMa.DataPropertyName = "Ma";
+            clMa.DataPropertyName = "maDL";
             dgvBangDanhSach.Columns.Add(clMa);
 
             DataGridViewTextBoxColumn clTen = new DataGridViewTextBoxColumn();
-            clTen.Name = "Ten";
+            clTen.Name = "tenDaiLy";
             clTen.HeaderText = "Tên đại lý";
-            clTen.DataPropertyName = "Ten";
+            clTen.DataPropertyName = "tenDaiLy";
             dgvBangDanhSach.Columns.Add(clTen);
 
-            //DataGridViewTextBoxColumn clMoTa = new DataGridViewTextBoxColumn();
-            //clMoTa.Name = "Mota";
-            //clMoTa.HeaderText = "Mô tả";
-            //clMoTa.DataPropertyName = "Mota";
-            //dgvBangDanhSach.Columns.Add(clMoTa);
+            DataGridViewTextBoxColumn cldc = new DataGridViewTextBoxColumn();
+            cldc.Name = "diachi";
+            cldc.HeaderText = "Địa chỉ";
+            cldc.DataPropertyName = "diachi";
+            dgvBangDanhSach.Columns.Add(cldc);
+
+            DataGridViewTextBoxColumn cldc = new DataGridViewTextBoxColumn();
+            cldc.Name = "diachi";
+            cldc.HeaderText = "Địa chỉ";
+            cldc.DataPropertyName = "diachi";
+            dgvBangDanhSach.Columns.Add(cldc);
+
+            DataGridViewTextBoxColumn cldc = new DataGridViewTextBoxColumn();
+            cldc.Name = "diachi";
+            cldc.HeaderText = "Địa chỉ";
+            cldc.DataPropertyName = "diachi";
+            dgvBangDanhSach.Columns.Add(cldc);
+
+            DataGridViewTextBoxColumn cldc = new DataGridViewTextBoxColumn();
+            cldc.Name = "diachi";
+            cldc.HeaderText = "Địa chỉ";
+            cldc.DataPropertyName = "diachi";
+            dgvBangDanhSach.Columns.Add(cldc);
+
+            DataGridViewTextBoxColumn cldc = new DataGridViewTextBoxColumn();
+            cldc.Name = "diachi";
+            cldc.HeaderText = "Địa chỉ";
+            cldc.DataPropertyName = "diachi";
+            dgvBangDanhSach.Columns.Add(cldc);
 
             CurrencyManager myCurrencyManager = (CurrencyManager)this.BindingContext[dgvBangDanhSach.DataSource];
             myCurrencyManager.Refresh();
+            autosize();
         }
         private void Button1_Click(object sender, EventArgs e)
         {
