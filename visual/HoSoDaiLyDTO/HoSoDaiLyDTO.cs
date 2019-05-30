@@ -18,6 +18,7 @@ namespace QLDL_DTO
         private string dienThoai;
         private string diaChi;
         private string Email;
+        private int Nohientai;
         private DateTime ngayTiepNhan;
 
 
@@ -30,6 +31,7 @@ namespace QLDL_DTO
         public string diachi { get => diaChi; set => diaChi = value; }
         public string email { get => Email; set => Email = value; }
         public int loaidaily { get => loaiDaiLy; set => loaiDaiLy = value; }
+        public int nohientai { get => Nohientai; set => Nohientai = value; }
         public DateTime ngaytiepnhan { get => ngayTiepNhan; set => ngayTiepNhan = value; }
     }
     public class DanhsachmathangDTO

@@ -1,6 +1,6 @@
 ﻿namespace QLDL
 {
-    partial class ThemXoaSuaMatHangfrm
+    partial class QuanlyMatHangfrm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -43,13 +44,19 @@
             this.label8 = new System.Windows.Forms.Label();
             this.dvt = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.hsd = new System.Windows.Forms.DateTimePicker();
+            this.dsmathang = new System.Windows.Forms.DataGridView();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtKeyword = new System.Windows.Forms.TextBox();
+            this.button4 = new System.Windows.Forms.Button();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.xóaMặtHàngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sửaMặtHàngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.hsd = new System.Windows.Forms.DateTimePicker();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsmathang)).BeginInit();
             this.groupBox1.SuspendLayout();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -177,6 +184,79 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
+            // hsd
+            // 
+            this.hsd.CustomFormat = "dd/MM/yyyy";
+            this.hsd.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.hsd.Location = new System.Drawing.Point(114, 265);
+            this.hsd.Name = "hsd";
+            this.hsd.Size = new System.Drawing.Size(133, 22);
+            this.hsd.TabIndex = 11;
+            // 
+            // dsmathang
+            // 
+            this.dsmathang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dsmathang.ContextMenuStrip = this.contextMenuStrip1;
+            this.dsmathang.Location = new System.Drawing.Point(12, 88);
+            this.dsmathang.Name = "dsmathang";
+            this.dsmathang.RowHeadersWidth = 51;
+            this.dsmathang.RowTemplate.Height = 24;
+            this.dsmathang.Size = new System.Drawing.Size(632, 485);
+            this.dsmathang.TabIndex = 19;
+            this.dsmathang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dsmathang_CellClick);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.button4);
+            this.groupBox1.Controls.Add(this.txtKeyword);
+            this.groupBox1.Controls.Add(this.dsmathang);
+            this.groupBox1.Location = new System.Drawing.Point(412, 13);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(650, 579);
+            this.groupBox1.TabIndex = 20;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Danh sách mặt hàng";
+            // 
+            // txtKeyword
+            // 
+            this.txtKeyword.Location = new System.Drawing.Point(155, 39);
+            this.txtKeyword.Name = "txtKeyword";
+            this.txtKeyword.Size = new System.Drawing.Size(324, 22);
+            this.txtKeyword.TabIndex = 21;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(485, 39);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(87, 22);
+            this.button4.TabIndex = 21;
+            this.button4.Text = "Thêm";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.Button4_Click);
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.xóaMặtHàngToolStripMenuItem,
+            this.sửaMặtHàngToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(172, 52);
+            // 
+            // xóaMặtHàngToolStripMenuItem
+            // 
+            this.xóaMặtHàngToolStripMenuItem.Name = "xóaMặtHàngToolStripMenuItem";
+            this.xóaMặtHàngToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.xóaMặtHàngToolStripMenuItem.Text = "Xóa mặt hàng";
+            this.xóaMặtHàngToolStripMenuItem.Click += new System.EventHandler(this.XóaMặtHàngToolStripMenuItem_Click);
+            // 
+            // sửaMặtHàngToolStripMenuItem
+            // 
+            this.sửaMặtHàngToolStripMenuItem.Name = "sửaMặtHàngToolStripMenuItem";
+            this.sửaMặtHàngToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.sửaMặtHàngToolStripMenuItem.Text = "Sửa mặt hàng";
+            this.sửaMặtHàngToolStripMenuItem.Click += new System.EventHandler(this.SửaMặtHàngToolStripMenuItem_Click);
+            // 
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(281, 445);
@@ -197,40 +277,11 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.Button3_Click);
             // 
-            // hsd
-            // 
-            this.hsd.CustomFormat = "dd/MM/yyyy";
-            this.hsd.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.hsd.Location = new System.Drawing.Point(114, 265);
-            this.hsd.Name = "hsd";
-            this.hsd.Size = new System.Drawing.Size(133, 22);
-            this.hsd.TabIndex = 11;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(6, 19);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(498, 439);
-            this.dataGridView1.TabIndex = 19;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.dataGridView1);
-            this.groupBox1.Location = new System.Drawing.Point(412, 13);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(510, 464);
-            this.groupBox1.TabIndex = 20;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Danh sách mặt hàng";
-            // 
-            // ThemXoaSuaMatHangfrm
+            // QuanlyMatHangfrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(929, 509);
+            this.ClientSize = new System.Drawing.Size(1074, 604);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.hsd);
             this.Controls.Add(this.button3);
@@ -250,11 +301,13 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "ThemXoaSuaMatHangfrm";
+            this.Name = "QuanlyMatHangfrm";
             this.Text = "ThemXoaSuaMatHangfrm";
             this.Load += new System.EventHandler(this.ThemXoaSuaMatHangfrm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsmathang)).EndInit();
             this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -277,10 +330,15 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox dvt;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DateTimePicker hsd;
+        private System.Windows.Forms.DataGridView dsmathang;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.TextBox txtKeyword;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem xóaMặtHàngToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sửaMặtHàngToolStripMenuItem;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.DateTimePicker hsd;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

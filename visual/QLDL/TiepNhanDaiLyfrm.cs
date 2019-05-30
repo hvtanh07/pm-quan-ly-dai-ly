@@ -34,6 +34,7 @@ namespace QLDL
             hs.email = mail.Text;
             hs.dienthoai = dttxt.Text;
             hs.ngaytiepnhan = DateTime.Today;
+            hs.nohientai = 0;
             if (checkBox1.Checked == true)
             {
                 hs.loaidaily = 1;

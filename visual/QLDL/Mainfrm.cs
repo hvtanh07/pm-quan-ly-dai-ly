@@ -33,7 +33,14 @@ namespace QLDL
 
         private void ThêmXóaMặtHàngToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ThemXoaSuaMatHangfrm frm = new ThemXoaSuaMatHangfrm();
+            QuanlyMatHangfrm frm = new QuanlyMatHangfrm();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void QuảnLýĐạiLýToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            QuanlyDaily frm = new QuanlyDaily();
             frm.MdiParent = this;
             frm.Show();
         }

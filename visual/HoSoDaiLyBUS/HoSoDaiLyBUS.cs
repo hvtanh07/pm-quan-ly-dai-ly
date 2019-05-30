@@ -35,6 +35,10 @@ namespace QLDL_BUS
         {
             return hsDAL.select();
         }
+        public List<CHoSoDaiLyDTO> selectByKeyWord(string sKeyword)
+        {
+            return hsDAL.selectByKeyWord(sKeyword);
+        }
     }
     public class CMatHangBUS
     {
@@ -59,9 +63,13 @@ namespace QLDL_BUS
             bool re = mhDAL.Xoa(MH);
             return re;
         }
-        public List<CHoSoDaiLyDTO> select()
+        public List<DanhsachmathangDTO> select()
         {
-            return null;
+            return mhDAL.select();
+        }
+        public List<DanhsachmathangDTO> selectByKeyWord(string sKeyword)
+        {
+            return mhDAL.selectByKeyWord(sKeyword);
         }
     }
 }

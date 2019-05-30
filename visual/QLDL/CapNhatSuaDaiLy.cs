@@ -15,77 +15,41 @@ namespace QLDL
     public partial class CapNhatSuaDaiLy : Form
     {
         private CHoSoDaiLyBUS hsBUS;
+        private CHoSoDaiLyDTO dlDTO = null;
         public CapNhatSuaDaiLy()
         {
             InitializeComponent();
         }
         private void CapNhatSuaDaiLy_Load(object sender, EventArgs e)
         {
-            hsBUS = new CHoSoDaiLyBUS();
-            this.loadData_Vao_GridView();
-        }
-        private void loadData_Vao_GridView()
-        {
-            List<CHoSoDaiLyDTO> listHoSoDaiLy= hsBUS.select();
-
-            if (listHoSoDaiLy == null)
+            if (this.dlDTO != null)
             {
-                MessageBox.Show("Có lỗi khi lấy hồ sơ từ DB");
-                return;
+                matxt.Text = dlDTO.madl.ToString();
+                quantxt.Text = dlDTO.quan.ToString();
+                dt.Text = dlDTO.dientich.ToString();
+                snv.Text = dlDTO.sonhanvien.ToString();
+                tentxt.Text = dlDTO.tendaily.ToString();
+                dc.Text = dlDTO.diachi.ToString();
+                mail.Text = dlDTO.email.ToString();
+                dttxt.Text = dlDTO.dienthoai.ToString();
+                notxt.Text = dlDTO.nohientai.ToString();
+                if(dlDTO.loaidaily == 1)
+                {
+                    checkBox1.Checked = true;
+                    checkBox2.Checked = false;
+                }
+                else
+                {
+                    checkBox1.Checked = false;
+                    checkBox2.Checked = true;
+                }
             }
-
-            dgvBangDanhSach.Columns.Clear();
-            dgvBangDanhSach.DataSource = null;
-
-            dgvBangDanhSach.AutoGenerateColumns = false;
-            dgvBangDanhSach.AllowUserToAddRows = false;
-            dgvBangDanhSach.DataSource = listHoSoDaiLy;
-
-            DataGridViewTextBoxColumn clMa = new DataGridViewTextBoxColumn();
-            clMa.Name = "maDL";
-            clMa.HeaderText = "Mã đại lý";
-            clMa.DataPropertyName = "maDL";
-            dgvBangDanhSach.Columns.Add(clMa);
-
-            DataGridViewTextBoxColumn clTen = new DataGridViewTextBoxColumn();
-            clTen.Name = "tenDaiLy";
-            clTen.HeaderText = "Tên đại lý";
-            clTen.DataPropertyName = "tenDaiLy";
-            dgvBangDanhSach.Columns.Add(clTen);
-
-            DataGridViewTextBoxColumn cldc = new DataGridViewTextBoxColumn();
-            cldc.Name = "diachi";
-            cldc.HeaderText = "Địa chỉ";
-            cldc.DataPropertyName = "diachi";
-            dgvBangDanhSach.Columns.Add(cldc);
-
-            DataGridViewTextBoxColumn cldc = new DataGridViewTextBoxColumn();
-            cldc.Name = "diachi";
-            cldc.HeaderText = "Địa chỉ";
-            cldc.DataPropertyName = "diachi";
-            dgvBangDanhSach.Columns.Add(cldc);
-
-            DataGridViewTextBoxColumn cldc = new DataGridViewTextBoxColumn();
-            cldc.Name = "diachi";
-            cldc.HeaderText = "Địa chỉ";
-            cldc.DataPropertyName = "diachi";
-            dgvBangDanhSach.Columns.Add(cldc);
-
-            DataGridViewTextBoxColumn cldc = new DataGridViewTextBoxColumn();
-            cldc.Name = "diachi";
-            cldc.HeaderText = "Địa chỉ";
-            cldc.DataPropertyName = "diachi";
-            dgvBangDanhSach.Columns.Add(cldc);
-
-            DataGridViewTextBoxColumn cldc = new DataGridViewTextBoxColumn();
-            cldc.Name = "diachi";
-            cldc.HeaderText = "Địa chỉ";
-            cldc.DataPropertyName = "diachi";
-            dgvBangDanhSach.Columns.Add(cldc);
-
-            CurrencyManager myCurrencyManager = (CurrencyManager)this.BindingContext[dgvBangDanhSach.DataSource];
-            myCurrencyManager.Refresh();
-            autosize();
+        }
+        public CapNhatSuaDaiLy(CHoSoDaiLyDTO dl)
+        {
+            hsBUS = new CHoSoDaiLyBUS();
+            this.dlDTO = dl;
+            InitializeComponent();
         }
         private void Button1_Click(object sender, EventArgs e)
         {
@@ -102,6 +66,8 @@ namespace QLDL
             hs.diachi = dc.Text;
             hs.email = mail.Text;
             hs.dienthoai = dttxt.Text;
+            hs.nohientai = int.Parse(notxt.Text);
+            
             if (checkBox1.Checked == true)
             {
                 hs.loaidaily = 1;
@@ -127,37 +93,8 @@ namespace QLDL
                 MessageBox.Show("Cập nhật hồ sơ thành công");
                 clear();
             }
-        }
-
-        private void Button2_Click(object sender, EventArgs e)
-        {
-            if (string.IsNullOrWhiteSpace(matxt.Text))
-            {
-                MessageBox.Show("Xóa hồ sơ thất bại.Chưa nhập mã đại lý cần xóa");
-                return;
-            }
-            DialogResult dlr = MessageBox.Show("Bạn có chắc muốn xóa đại lý này không ?", "Xóa thông tin", MessageBoxButtons.YesNo);
-            if (dlr == DialogResult.Yes)
-            {               
-                CHoSoDaiLyDTO hs = new CHoSoDaiLyDTO();
-                hs.madl = int.Parse(matxt.Text);
-                bool kq = hsBUS.Xoa(hs);
-                if (kq == false)
-                    MessageBox.Show("Xóa hồ sơ thất bại. Vui lòng kiểm tra lại dũ liệu");
-                else
-                {
-                    MessageBox.Show("Xóa hồ sơ thành công");
-                    clear();
-                }
-            }
-        }
-        private void autosize()
-        {
-            for (int i = 0; i < dgvBangDanhSach.Columns.Count; i++)
-            {
-                dgvBangDanhSach.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            }
-        }
+        }        
+        
         private void clear()
         {
             matxt.Text = "";
@@ -168,6 +105,7 @@ namespace QLDL
             dc.Text = "";
             mail.Text = "";
             dttxt.Text = "";
+            notxt.Text = "";
             checkBox1.Checked = false;
             checkBox2.Checked = false;
         }
@@ -260,6 +198,5 @@ namespace QLDL
 
             return true;//all true then gud to go
         }
-
     }
 }
