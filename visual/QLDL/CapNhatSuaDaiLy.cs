@@ -24,25 +24,13 @@ namespace QLDL
         {
             if (this.dlDTO != null)
             {
-                matxt.Text = dlDTO.madl.ToString();
                 quantxt.Text = dlDTO.quan.ToString();
-                dt.Text = dlDTO.dientich.ToString();
-                snv.Text = dlDTO.sonhanvien.ToString();
                 tentxt.Text = dlDTO.tendaily.ToString();
                 dc.Text = dlDTO.diachi.ToString();
                 mail.Text = dlDTO.email.ToString();
                 dttxt.Text = dlDTO.dienthoai.ToString();
                 notxt.Text = dlDTO.nohientai.ToString();
-                if(dlDTO.loaidaily == 1)
-                {
-                    checkBox1.Checked = true;
-                    checkBox2.Checked = false;
-                }
-                else
-                {
-                    checkBox1.Checked = false;
-                    checkBox2.Checked = true;
-                }
+                ldl.Text = dlDTO.loaidaily.ToString();
             }
         }
         public CapNhatSuaDaiLy(CHoSoDaiLyDTO dl)
@@ -58,28 +46,13 @@ namespace QLDL
                 return;
             }
             CHoSoDaiLyDTO hs = new CHoSoDaiLyDTO();
-            hs.madl = int.Parse(matxt.Text);
             hs.quan = quantxt.Text;
-            hs.dientich = int.Parse(dt.Text);
-            hs.sonhanvien = int.Parse(snv.Text);
             hs.tendaily = tentxt.Text;
             hs.diachi = dc.Text;
             hs.email = mail.Text;
             hs.dienthoai = dttxt.Text;
             hs.nohientai = int.Parse(notxt.Text);
-            
-            if (checkBox1.Checked == true)
-            {
-                hs.loaidaily = 1;
-            }
-            else if (checkBox2.Checked == true)
-            {
-                hs.loaidaily = 2;
-            }
-            else
-            {
-                hs.loaidaily = 1;
-            }
+            hs.loaidaily = int.Parse(ldl.Text);
 
             //2. Kiểm tra data hợp lệ or not
             //kiểm tra trong quận đã đạt tối đa số đại lý chưa
@@ -97,17 +70,13 @@ namespace QLDL
         
         private void clear()
         {
-            matxt.Text = "";
             quantxt.Text = "";
-            dt.Text = "";
-            snv.Text = "";
             tentxt.Text = "";
             dc.Text = "";
             mail.Text = "";
             dttxt.Text = "";
             notxt.Text = "";
-            checkBox1.Checked = false;
-            checkBox2.Checked = false;
+            ldl.Text = "";
         }
 
         //RÀNG BUỘC CỦA DỮ LIỆU NHẬP VÀO
@@ -140,18 +109,6 @@ namespace QLDL
                 dc.Focus();
                 return false;
             }//dia chi
-            if (string.IsNullOrWhiteSpace(dt.Text))
-            {
-                MessageBox.Show(dt, "Bạn chưa nhập diện tích.");
-                dt.Focus();
-                return false;
-            }//dien tich
-            if (string.IsNullOrWhiteSpace(snv.Text))
-            {
-                MessageBox.Show(snv, "Bạn chưa nhập số nhân viên.");
-                snv.Focus();
-                return false;
-            }//so nhan vien
             if (string.IsNullOrWhiteSpace(quantxt.Text))//quan
             {
                 MessageBox.Show(quantxt, "Bạn chưa nhập địa chỉ quận.");

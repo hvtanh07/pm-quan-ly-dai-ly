@@ -24,7 +24,7 @@ namespace QLDL
             mhbus = new CMatHangBUS();
             this.loadData_Vao_GridView();
         }
-        //THEM
+        //THEM ---- Kiểm tra qui định thì thêm ở đây này
         private void Button1_Click(object sender, EventArgs e)
         {
             if (!testtext())
@@ -32,15 +32,12 @@ namespace QLDL
                 return;
             }
             DanhsachmathangDTO mh = new DanhsachmathangDTO();
-            mh.Mamh = int.Parse(ma.Text);
             mh.tenmh = tmh.Text;
-            mh.khoiluong = int.Parse(kl.Text);
-            mh.soluong = int.Parse(sl.Text);
             mh.hansudung = hsd.Value;
             mh.gia = int.Parse(gia.Text);
             mh.donvitinh = dvt.Text;
             //2. Kiểm tra data hợp lệ or not
-            
+            // số lượng mặt hàng quá 5 chưa, số lương dơn vị tính có quá 3 chưa
             //3. Thêm vào DB
             bool kq = mhbus.Them(mh);
             if (kq == false)
@@ -55,17 +52,17 @@ namespace QLDL
         //XOA
         private void Button2_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(ma.Text))
+            if (string.IsNullOrWhiteSpace(tmh.Text))
             {
                 MessageBox.Show("Xóa mặt hàng thất bại. Chưa nhập mã mặt hàng cần xóa.");
-                ma.Focus();
+                tmh.Focus();
                 return;
             }
             DialogResult dlr = MessageBox.Show("Bạn có chắc muốn xóa mặt hàng này không ?", "Xóa thông tin", MessageBoxButtons.YesNo);
             if (dlr == DialogResult.Yes)
             {
                 DanhsachmathangDTO mh = new DanhsachmathangDTO();
-                mh.Mamh = int.Parse(ma.Text);
+                mh.tenmh = tmh.Text;
                 //2. Kiểm tra data hợp lệ or not
 
                 //3. Thêm vào DB
@@ -80,14 +77,43 @@ namespace QLDL
             }
             loadData_Vao_GridView();
         }
+        private void XóaMặtHàngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DialogResult dlr = MessageBox.Show("Bạn có chắc muốn xóa mặt hàng này không ?", "Xóa thông tin", MessageBoxButtons.YesNo);
+            if (dlr == DialogResult.Yes)
+            {
+                {
+                    // ' Get the current cell location.
+                    int currentRowIndex = dsmathang.CurrentCellAddress.Y;// 'current row selected
+
+
+                    //'Verify that indexing OK
+                    if (-1 < currentRowIndex && currentRowIndex < dsmathang.RowCount)
+                    {
+                        DanhsachmathangDTO dl = (DanhsachmathangDTO)dsmathang.Rows[currentRowIndex].DataBoundItem;
+                        if (dl != null)
+                        {
+                            bool kq = mhbus.Xoa(dl);
+                            if (kq == false)
+                                MessageBox.Show("Xóa mặt hàng thất bại. Vui lòng kiểm tra lại dũ liệu");
+                            else
+                            {
+                                MessageBox.Show("Xóa mặt hàng thành công");
+                                this.loadData_Vao_GridView();
+                            }
+
+                        }
+                    }
+                    this.loadData_Vao_GridView();
+                }
+            }
+            loadData_Vao_GridView();
+        }
         //SUA
         private void Button3_Click(object sender, EventArgs e)
         {
             DanhsachmathangDTO mh = new DanhsachmathangDTO();
-            mh.Mamh = int.Parse(ma.Text);
             mh.tenmh = tmh.Text;
-            mh.khoiluong = int.Parse(kl.Text);
-            mh.soluong = int.Parse(sl.Text);
             mh.hansudung = hsd.Value;
             mh.gia = int.Parse(gia.Text);
             mh.donvitinh = dvt.Text;
@@ -100,6 +126,28 @@ namespace QLDL
             else
                 MessageBox.Show("Sửa mặt hàng thành công");
             loadData_Vao_GridView();
+        }
+        private void SửaMặtHàngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // ' Get the current cell location.
+            int currentRowIndex = dsmathang.CurrentCellAddress.Y;// 'current row selected
+
+
+            //'Verify that indexing OK
+            if (-1 < currentRowIndex && currentRowIndex < dsmathang.RowCount)
+            {
+                DanhsachmathangDTO mh = new DanhsachmathangDTO();
+                mh.tenmh = tmh.Text;
+                mh.hansudung = hsd.Value;
+                mh.gia = int.Parse(gia.Text);
+                mh.donvitinh = dvt.Text;
+                bool kq = mhbus.Sua(mh);
+                if (kq == false)
+                    MessageBox.Show("Sửa mặt hàng thất bại. Vui lòng kiểm tra lại dữ liệu");
+                else
+                    MessageBox.Show("Sửa mặt hàng thành công");
+            }
+            this.loadData_Vao_GridView();
         }
         //TIM KIEM
         private void Button4_Click(object sender, EventArgs e)
@@ -115,8 +163,15 @@ namespace QLDL
                 List<DanhsachmathangDTO> listMatHang = mhbus.selectByKeyWord(sKeyword);
                 this.loadData_Vao_GridView(listMatHang);
             }
+        }             
+        //Lấy dữ liệu nhập vào khung 
+        private void Dsmathang_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            tmh.Text = dsmathang.CurrentRow.Cells[0].Value.ToString();
+            hsd.Value = Convert.ToDateTime(dsmathang.CurrentRow.Cells[1].Value.ToString());
+            gia.Text = dsmathang.CurrentRow.Cells[2].Value.ToString();
+            dvt.Text = dsmathang.CurrentRow.Cells[3].Value.ToString();
         }
-
         private void loadData_Vao_GridView()
         {
             List<DanhsachmathangDTO> listMatHang = mhbus.select();
@@ -134,29 +189,11 @@ namespace QLDL
             dsmathang.AllowUserToAddRows = false;
             dsmathang.DataSource = listMatHang;
 
-            DataGridViewTextBoxColumn clMa = new DataGridViewTextBoxColumn();
-            clMa.Name = "Mamh";
-            clMa.HeaderText = "Mã mặt hàng";
-            clMa.DataPropertyName = "Mamh";
-            dsmathang.Columns.Add(clMa);
-
             DataGridViewTextBoxColumn clTen = new DataGridViewTextBoxColumn();
             clTen.Name = "tenmh";
             clTen.HeaderText = "Tên mặt hàng";
             clTen.DataPropertyName = "tenmh";
             dsmathang.Columns.Add(clTen);
-
-            DataGridViewTextBoxColumn clsl = new DataGridViewTextBoxColumn();
-            clsl.Name = "soluong";
-            clsl.HeaderText = "Số lượng";
-            clsl.DataPropertyName = "soluong";
-            dsmathang.Columns.Add(clsl);
-
-            DataGridViewTextBoxColumn clkl = new DataGridViewTextBoxColumn();
-            clkl.Name = "khoiluong";
-            clkl.HeaderText = "Khối lượng";
-            clkl.DataPropertyName = "khoiluong";
-            dsmathang.Columns.Add(clkl);
 
             DataGridViewTextBoxColumn clhsd = new DataGridViewTextBoxColumn();
             clhsd.Name = "hanSuDung";
@@ -196,29 +233,11 @@ namespace QLDL
             dsmathang.AllowUserToAddRows = false;
             dsmathang.DataSource = listMatHang;
 
-            DataGridViewTextBoxColumn clMa = new DataGridViewTextBoxColumn();
-            clMa.Name = "Mamh";
-            clMa.HeaderText = "Mã mặt hàng";
-            clMa.DataPropertyName = "Mamh";
-            dsmathang.Columns.Add(clMa);
-
             DataGridViewTextBoxColumn clTen = new DataGridViewTextBoxColumn();
             clTen.Name = "tenmh";
             clTen.HeaderText = "Tên mặt hàng";
             clTen.DataPropertyName = "tenmh";
             dsmathang.Columns.Add(clTen);
-
-            DataGridViewTextBoxColumn clsl = new DataGridViewTextBoxColumn();
-            clsl.Name = "soluong";
-            clsl.HeaderText = "Số lượng";
-            clsl.DataPropertyName = "soluong";
-            dsmathang.Columns.Add(clsl);
-
-            DataGridViewTextBoxColumn clkl = new DataGridViewTextBoxColumn();
-            clkl.Name = "khoiluong";
-            clkl.HeaderText = "Khối lượng";
-            clkl.DataPropertyName = "khoiluong";
-            dsmathang.Columns.Add(clkl);
 
             DataGridViewTextBoxColumn clhsd = new DataGridViewTextBoxColumn();
             clhsd.Name = "hanSuDung";
@@ -247,10 +266,7 @@ namespace QLDL
         //XÓA CÁC Ô ĐIỀN DỮ LIỆU
         private void clear()
         {   
-            ma.Text="";
             tmh.Text="";
-            kl.Text="";
-            sl.Text = "";
             hsd.Value = DateTime.Today;
             gia.Text = "";
             dvt.Text = "";
@@ -259,30 +275,12 @@ namespace QLDL
         bool testtext()//kiểm tra ô dữ liệu trống
         {
 
-            if (string.IsNullOrWhiteSpace(ma.Text))
-            {
-                MessageBox.Show(ma, "Bạn chưa nhập mã mặt hàng.");
-                ma.Focus();
-                return false;
-            }//ma
             if (string.IsNullOrWhiteSpace(tmh.Text))
             {
                 MessageBox.Show(tmh, "Bạn chưa nhập tên mặt hàng.");
                 tmh.Focus();
                 return false;
             }//tên
-            if (string.IsNullOrWhiteSpace(sl.Text))
-            {
-                MessageBox.Show(sl, "Bạn chưa nhập số lượng.");
-                sl.Focus();
-                return false;
-            }//số lượng
-            if (string.IsNullOrWhiteSpace(kl.Text))
-            {
-                MessageBox.Show(kl, "Bạn chưa nhập khối lượng.");
-                kl.Focus();
-                return false;
-            }//khối lượng
             if (DateTime.Compare(hsd.Value, DateTime.Today) < 0)
             {
                 MessageBox.Show("Mặt hàng đã hết hạn sử dụng hoặc hạn sử dụng không đúng, vui lòng thử lại");
@@ -304,66 +302,19 @@ namespace QLDL
             return true;//all true then gud to go
         }
 
-        private void XóaMặtHàngToolStripMenuItem_Click(object sender, EventArgs e)
+        private void numOnly(object sender, KeyPressEventArgs e)// I have no idea how this shit work, so dont touch it
         {
-            DialogResult dlr = MessageBox.Show("Bạn có chắc muốn xóa mặt hàng này không ?", "Xóa thông tin", MessageBoxButtons.YesNo);
-            if (dlr == DialogResult.Yes)
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+                (e.KeyChar != '.'))
             {
-                {
-                    // ' Get the current cell location.
-                    int currentRowIndex = dsmathang.CurrentCellAddress.Y;// 'current row selected
-
-
-                    //'Verify that indexing OK
-                    if (-1 < currentRowIndex && currentRowIndex < dsmathang.RowCount)
-                    {
-                        DanhsachmathangDTO dl = (DanhsachmathangDTO)dsmathang.Rows[currentRowIndex].DataBoundItem;
-                        if (dl != null)
-                        {
-                            bool kq = mhbus.Xoa(dl);
-                            if (kq == false)
-                                MessageBox.Show("Xóa mặt hàng thất bại. Vui lòng kiểm tra lại dũ liệu");
-                            else
-                            {
-                                MessageBox.Show("Xóa mặt hàng thành công");
-                                this.loadData_Vao_GridView();
-                            }
-
-                        }
-                    }
-                    this.loadData_Vao_GridView();
-                }
+                e.Handled = true;
             }
-            loadData_Vao_GridView();
-        }
-        private void SửaMặtHàngToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            // ' Get the current cell location.
-            int currentRowIndex = dsmathang.CurrentCellAddress.Y;// 'current row selected
 
-
-            //'Verify that indexing OK
-            if (-1 < currentRowIndex && currentRowIndex < dsmathang.RowCount)
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
             {
-                DanhsachmathangDTO mh = (DanhsachmathangDTO)dsmathang.Rows[currentRowIndex].DataBoundItem;
-                bool kq = mhbus.Sua(mh);
-                if (kq == false)
-                    MessageBox.Show("Sửa mặt hàng thất bại. Vui lòng kiểm tra lại dữ liệu");
-                else
-                    MessageBox.Show("Sửa mặt hàng thành công");
+                e.Handled = true;
             }
-            this.loadData_Vao_GridView();
-        }
-
-        private void Dsmathang_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            ma.Text = dsmathang.CurrentRow.Cells[0].Value.ToString();
-            tmh.Text = dsmathang.CurrentRow.Cells[1].Value.ToString();
-            sl.Text = dsmathang.CurrentRow.Cells[2].Value.ToString();
-            kl.Text = dsmathang.CurrentRow.Cells[3].Value.ToString();
-            hsd.Value = Convert.ToDateTime(dsmathang.CurrentRow.Cells[4].Value.ToString());
-            gia.Text = dsmathang.CurrentRow.Cells[5].Value.ToString();
-            dvt.Text = dsmathang.CurrentRow.Cells[6].Value.ToString();
         }
     }
 }

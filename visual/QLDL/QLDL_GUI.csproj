@@ -74,11 +74,23 @@
     <Compile Include="QuanlyDaily.Designer.cs">
       <DependentUpon>QuanlyDaily.cs</DependentUpon>
     </Compile>
+    <Compile Include="QuanLyLoaiDaily.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyLoaiDaily.Designer.cs">
+      <DependentUpon>QuanLyLoaiDaily.cs</DependentUpon>
+    </Compile>
     <Compile Include="QuanlyMatHangfrm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="QuanlyMatHangfrm.Designer.cs">
       <DependentUpon>QuanlyMatHangfrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuiDinhfrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuiDinhfrm.Designer.cs">
+      <DependentUpon>QuiDinhfrm.cs</DependentUpon>
     </Compile>
     <Compile Include="TiepNhanDaiLyfrm.cs">
       <SubType>Form</SubType>
@@ -106,8 +118,14 @@
     <EmbeddedResource Include="QuanlyDaily.resx">
       <DependentUpon>QuanlyDaily.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyLoaiDaily.resx">
+      <DependentUpon>QuanLyLoaiDaily.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="QuanlyMatHangfrm.resx">
       <DependentUpon>QuanlyMatHangfrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuiDinhfrm.resx">
+      <DependentUpon>QuiDinhfrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TiepNhanDaiLyfrm.resx">
       <DependentUpon>TiepNhanDaiLyfrm.cs</DependentUpon>

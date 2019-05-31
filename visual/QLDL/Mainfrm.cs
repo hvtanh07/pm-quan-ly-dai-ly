@@ -44,5 +44,19 @@ namespace QLDL
             frm.MdiParent = this;
             frm.Show();
         }
+
+        private void ThayĐổiSốLượngCácĐạiLýToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            QuanLyLoaiDaily frm = new QuanLyLoaiDaily();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void ThayĐổiSốĐạiLýTốiĐaTrongQuậnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            QuiDinhfrm frm = new QuiDinhfrm();
+            frm.MdiParent = this;
+            frm.Show();
+        }
     }
 }

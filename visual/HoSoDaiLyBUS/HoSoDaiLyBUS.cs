@@ -72,4 +72,79 @@ namespace QLDL_BUS
             return mhDAL.selectByKeyWord(sKeyword);
         }
     }
+    public class CQuyDinhBUS
+    {
+        private CQuiDinhDAL qdDAL;
+        public CQuyDinhBUS()
+        {
+            qdDAL = new CQuiDinhDAL();
+        }
+        public bool Sua(QuiDinhDTO QD)
+        {
+            bool re = qdDAL.Sua(QD);
+            return re;
+        }
+        public QuiDinhDTO Laydulieu()
+        {
+            return qdDAL.Laydulieu();
+        }
+    }
+    public class CLoaiDaiLyBUS
+    {
+        private CLoaiDaiLyDAL ldlDAL;
+        public CLoaiDaiLyBUS()
+        {
+            ldlDAL = new CLoaiDaiLyDAL();
+        }
+        public bool Them(LoaiDaiLyDTO MH)
+        {
+            bool re = ldlDAL.Them(MH);
+            return re;
+        }
+        public bool Sua(LoaiDaiLyDTO MH)
+        {
+            bool re = ldlDAL.Sua(MH);
+            return re;
+        }
+
+        public bool Xoa(LoaiDaiLyDTO MH)
+        {
+            bool re = ldlDAL.Xoa(MH);
+            return re;
+        }
+        public List<LoaiDaiLyDTO> select()
+        {
+            return ldlDAL.select();
+        }
+        public List<LoaiDaiLyDTO> selectByKeyWord(string sKeyword)
+        {
+            return ldlDAL.selectByKeyWord(sKeyword);
+        }
+    }
+    public class DanhsachDonviBUS
+    {
+        private DanhsachDonviDAL dvDAL;
+        public DanhsachDonviBUS()
+        {
+            dvDAL = new DanhsachDonviDAL();
+        }
+        public bool Them(DanhsachDonviDTO dv)
+        {
+            bool re = dvDAL.Them(dv);
+            return re;
+        }       
+        public bool Xoa(DanhsachDonviDTO dv)
+        {
+            bool re = dvDAL.Xoa(dv);
+            return re;
+        }
+        public List<DanhsachDonviDTO> select()
+        {
+            return dvDAL.select();
+        }
+        public List<DanhsachDonviDTO> selectByKeyWord(string sKeyword)
+        {
+            return dvDAL.selectByKeyWord(sKeyword);
+        }
+    }
 }
