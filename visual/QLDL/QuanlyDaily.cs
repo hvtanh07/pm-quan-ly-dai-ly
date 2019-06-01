@@ -111,7 +111,13 @@ namespace QLDL
 
             dgvBangDanhSach.AutoGenerateColumns = false;
             dgvBangDanhSach.AllowUserToAddRows = false;
-            dgvBangDanhSach.DataSource = listHoSoDaiLy;         
+            dgvBangDanhSach.DataSource = listHoSoDaiLy;
+
+            DataGridViewTextBoxColumn clMa = new DataGridViewTextBoxColumn();
+            clMa.Name = "maDaiLy";
+            clMa.HeaderText = "Mã đại lý";
+            clMa.DataPropertyName = "maDaiLy";
+            dgvBangDanhSach.Columns.Add(clMa);
 
             DataGridViewTextBoxColumn clTen = new DataGridViewTextBoxColumn();
             clTen.Name = "tenDaiLy";
@@ -180,6 +186,12 @@ namespace QLDL
             dgvBangDanhSach.AutoGenerateColumns = false;
             dgvBangDanhSach.AllowUserToAddRows = false;
             dgvBangDanhSach.DataSource = listHoSoDaiLy;
+
+            DataGridViewTextBoxColumn clMa = new DataGridViewTextBoxColumn();
+            clMa.Name = "maDaiLy";
+            clMa.HeaderText = "Mã đại lý";
+            clMa.DataPropertyName = "maDaiLy";
+            dgvBangDanhSach.Columns.Add(clMa);
 
             DataGridViewTextBoxColumn clTen = new DataGridViewTextBoxColumn();
             clTen.Name = "tenDaiLy";

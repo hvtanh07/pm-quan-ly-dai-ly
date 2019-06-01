@@ -26,11 +26,19 @@ namespace QLDL
         }
         private void LayduLieu()
         {
-            QuiDinhDTO qd = qdbus.Laydulieu();
-            maxloaidl.Text = qd.Maxloaidl.ToString();
-            soluongmh.Text = qd.soluongMH.ToString();
-            soluongdvt.Text = qd.soluongDVT.ToString();
-            maxsodl.Text = qd.Maxsodl.ToString();
+            try
+            {
+                QuiDinhDTO qd = qdbus.Laydulieu();
+                maxloaidl.Text = qd.Maxloaidl.ToString();
+                soluongmh.Text = qd.soluongMH.ToString();
+                soluongdvt.Text = qd.soluongDVT.ToString();
+                maxsodl.Text = qd.Maxsodl.ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lấy dữ liệu qui định thất bại");
+                return;
+            }
         }
 
         private void Button1_Click(object sender, EventArgs e)

@@ -41,6 +41,12 @@ namespace QLDL
             danhsachldl.AllowUserToAddRows = false;
             danhsachldl.DataSource = listldl;
 
+            DataGridViewTextBoxColumn clMa = new DataGridViewTextBoxColumn();
+            clMa.Name = "maLoaiDaiLy";
+            clMa.HeaderText = "Loại đại lý";
+            clMa.DataPropertyName = "maLoaiDaiLy";
+            danhsachldl.Columns.Add(clMa);
+
             DataGridViewTextBoxColumn clTen = new DataGridViewTextBoxColumn();
             clTen.Name = "loaiDaiLy";
             clTen.HeaderText = "Loại đại lý";
@@ -72,6 +78,12 @@ namespace QLDL
             danhsachldl.AllowUserToAddRows = false;
             danhsachldl.DataSource = listldl;
 
+            DataGridViewTextBoxColumn clMa = new DataGridViewTextBoxColumn();
+            clMa.Name = "maLoaiDaiLy";
+            clMa.HeaderText = "Loại đại lý";
+            clMa.DataPropertyName = "maLoaiDaiLy";
+            danhsachldl.Columns.Add(clMa);
+
             DataGridViewTextBoxColumn clTen = new DataGridViewTextBoxColumn();
             clTen.Name = "loaiDaiLy";
             clTen.HeaderText = "Loại đại lý";
@@ -96,6 +108,7 @@ namespace QLDL
                 return;
             }
             LoaiDaiLyDTO ldl = new LoaiDaiLyDTO();
+            ldl.maLDL = int.Parse(maldl.Text);
             ldl.loaidaily = int.Parse(ldltxt.Text);
             ldl.MaxNo = int.Parse(stntxt.Text);           
             //2. Kiểm tra data hợp lệ or not
@@ -115,6 +128,7 @@ namespace QLDL
         private void Button3_Click(object sender, EventArgs e)
         {
             LoaiDaiLyDTO ldl = new LoaiDaiLyDTO();
+            ldl.maLDL = int.Parse(maldl.Text);
             ldl.loaidaily = int.Parse(ldltxt.Text);
             ldl.MaxNo = int.Parse(stntxt.Text);
             //2. Kiểm tra data hợp lệ or not
@@ -177,7 +191,12 @@ namespace QLDL
         }
         bool testtext()//kiểm tra ô dữ liệu trống
         {
-
+            if (string.IsNullOrWhiteSpace(maldl.Text))
+            {
+                MessageBox.Show(maldl, "Bạn chưa nhập loại đại lý.");
+                maldl.Focus();
+                return false;
+            }
             if (string.IsNullOrWhiteSpace(ldltxt.Text))
             {
                 MessageBox.Show(ldltxt, "Bạn chưa nhập loại đại lý.");
@@ -194,6 +213,7 @@ namespace QLDL
         }
         private void clear()
         {
+            maldl.Text = "";
             ldltxt.Text = "";
             stntxt.Text = "";
         }
@@ -214,6 +234,7 @@ namespace QLDL
 
         private void Danhsachldl_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            maldl.Text = danhsachldl.CurrentRow.Cells[0].Value.ToString();
             ldltxt.Text = danhsachldl.CurrentRow.Cells[0].Value.ToString();
             stntxt.Text = danhsachldl.CurrentRow.Cells[1].Value.ToString();
         }

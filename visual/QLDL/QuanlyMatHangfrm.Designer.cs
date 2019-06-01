@@ -48,6 +48,8 @@
             this.txtKeyword = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.mamh = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dsmathang)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -57,7 +59,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(334, 9);
+            this.label1.Location = new System.Drawing.Point(240, 19);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(238, 32);
             this.label1.TabIndex = 0;
@@ -66,7 +68,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(102, 81);
+            this.label3.Location = new System.Drawing.Point(344, 90);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(96, 17);
             this.label3.TabIndex = 2;
@@ -75,7 +77,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(468, 81);
+            this.label6.Location = new System.Drawing.Point(40, 155);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(89, 17);
             this.label6.TabIndex = 5;
@@ -84,7 +86,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(102, 132);
+            this.label7.Location = new System.Drawing.Point(271, 155);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(30, 17);
             this.label7.TabIndex = 6;
@@ -92,23 +94,23 @@
             // 
             // tmh
             // 
-            this.tmh.Location = new System.Drawing.Point(214, 78);
+            this.tmh.Location = new System.Drawing.Point(446, 87);
             this.tmh.Name = "tmh";
-            this.tmh.Size = new System.Drawing.Size(210, 22);
-            this.tmh.TabIndex = 8;
+            this.tmh.Size = new System.Drawing.Size(158, 22);
+            this.tmh.TabIndex = 2;
             // 
             // gia
             // 
-            this.gia.Location = new System.Drawing.Point(214, 129);
+            this.gia.Location = new System.Drawing.Point(307, 152);
             this.gia.Name = "gia";
-            this.gia.Size = new System.Drawing.Size(210, 22);
-            this.gia.TabIndex = 12;
+            this.gia.Size = new System.Drawing.Size(157, 22);
+            this.gia.TabIndex = 4;
             this.gia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numOnly);
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(468, 132);
+            this.label8.Location = new System.Drawing.Point(472, 155);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(75, 17);
             this.label8.TabIndex = 13;
@@ -116,14 +118,14 @@
             // 
             // dvt
             // 
-            this.dvt.Location = new System.Drawing.Point(579, 129);
+            this.dvt.Location = new System.Drawing.Point(553, 152);
             this.dvt.Name = "dvt";
-            this.dvt.Size = new System.Drawing.Size(210, 22);
-            this.dvt.TabIndex = 13;
+            this.dvt.Size = new System.Drawing.Size(101, 22);
+            this.dvt.TabIndex = 5;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(244, 183);
+            this.button1.Location = new System.Drawing.Point(196, 206);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(94, 32);
             this.button1.TabIndex = 15;
@@ -135,10 +137,10 @@
             // 
             this.hsd.CustomFormat = "dd/MM/yyyy";
             this.hsd.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.hsd.Location = new System.Drawing.Point(579, 76);
+            this.hsd.Location = new System.Drawing.Point(135, 150);
             this.hsd.Name = "hsd";
             this.hsd.Size = new System.Drawing.Size(133, 22);
-            this.hsd.TabIndex = 11;
+            this.hsd.TabIndex = 3;
             // 
             // dsmathang
             // 
@@ -148,7 +150,7 @@
             this.dsmathang.Name = "dsmathang";
             this.dsmathang.RowHeadersWidth = 51;
             this.dsmathang.RowTemplate.Height = 24;
-            this.dsmathang.Size = new System.Drawing.Size(854, 275);
+            this.dsmathang.Size = new System.Drawing.Size(664, 275);
             this.dsmathang.TabIndex = 19;
             this.dsmathang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dsmathang_CellClick);
             // 
@@ -182,14 +184,14 @@
             this.groupBox1.Controls.Add(this.dsmathang);
             this.groupBox1.Location = new System.Drawing.Point(12, 244);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(866, 348);
+            this.groupBox1.Size = new System.Drawing.Size(676, 348);
             this.groupBox1.TabIndex = 20;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh sách mặt hàng";
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(539, 23);
+            this.button4.Location = new System.Drawing.Point(391, 23);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(87, 30);
             this.button4.TabIndex = 21;
@@ -199,14 +201,14 @@
             // 
             // txtKeyword
             // 
-            this.txtKeyword.Location = new System.Drawing.Point(186, 27);
+            this.txtKeyword.Location = new System.Drawing.Point(50, 27);
             this.txtKeyword.Name = "txtKeyword";
             this.txtKeyword.Size = new System.Drawing.Size(324, 22);
-            this.txtKeyword.TabIndex = 21;
+            this.txtKeyword.TabIndex = 6;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(533, 183);
+            this.button2.Location = new System.Drawing.Point(396, 206);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(94, 32);
             this.button2.TabIndex = 16;
@@ -216,7 +218,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(393, 183);
+            this.button3.Location = new System.Drawing.Point(296, 206);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(94, 32);
             this.button3.TabIndex = 17;
@@ -224,11 +226,30 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.Button3_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(84, 90);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(90, 17);
+            this.label2.TabIndex = 21;
+            this.label2.Text = "Mã mặt hàng";
+            // 
+            // mamh
+            // 
+            this.mamh.Location = new System.Drawing.Point(180, 87);
+            this.mamh.Name = "mamh";
+            this.mamh.Size = new System.Drawing.Size(158, 22);
+            this.mamh.TabIndex = 1;
+            this.mamh.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numOnly);
+            // 
             // QuanlyMatHangfrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(896, 604);
+            this.ClientSize = new System.Drawing.Size(700, 604);
+            this.Controls.Add(this.mamh);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.hsd);
             this.Controls.Add(this.button3);
@@ -275,5 +296,7 @@
         private System.Windows.Forms.ToolStripMenuItem sửaMặtHàngToolStripMenuItem;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox mamh;
     }
 }

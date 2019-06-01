@@ -23,8 +23,8 @@ namespace QLDL_DAL
         public bool Them(CHoSoDaiLyDTO HoSo)
         {
             string query = string.Empty;
-            query += "INSERT INTO [tblHoSoDaiLy] ([tenDaiLy], [diachi],[email], [loaiDaiLy], [ngayTiepNhan], [quan], [dienthoai], [nohientai])";
-            query += "VALUES (@tenDaiLy, @diachi, @email, @loaiDaiLy,@ngayTiepNhan , @quan, @dienthoai, @nohientai)";
+            query += "INSERT INTO [tblHoSoDaiLy] ([maDaiLy], [tenDaiLy], [diachi],[email], [loaiDaiLy], [ngayTiepNhan], [quan], [dienthoai], [nohientai])";
+            query += "VALUES (@maDaiLy, @tenDaiLy, @diachi, @email, @loaiDaiLy,@ngayTiepNhan , @quan, @dienthoai, @nohientai)";
             using (SqlConnection con = new SqlConnection(ConnectionString))
             {
 
@@ -33,6 +33,7 @@ namespace QLDL_DAL
                     cmd.Connection = con;
                     cmd.CommandType = System.Data.CommandType.Text;
                     cmd.CommandText = query;
+                    cmd.Parameters.AddWithValue("@maDaiLy", HoSo.madl);
                     cmd.Parameters.AddWithValue("@tenDaiLy", HoSo.tendaily);
                     cmd.Parameters.AddWithValue("@diachi", HoSo.diachi);
                     cmd.Parameters.AddWithValue("@email", HoSo.email);
@@ -61,7 +62,7 @@ namespace QLDL_DAL
         public bool Sua(CHoSoDaiLyDTO HoSo)
         {
             string query = string.Empty;
-            query += "UPDATE tblHoSoDaiLy SET [diachi] = @diachi, [email] = @email, [loaiDaiLy] = @loaiDaiLy, [quan] = @quan, [dienthoai] = @dienthoai, [nohientai] = @nohientai WHERE [tenDaiLy] = @tenDaiLy";
+            query += "UPDATE tblHoSoDaiLy SET [tenDaiLy] = @tenDaiLy, [diachi] = @diachi, [email] = @email, [loaiDaiLy] = @loaiDaiLy, [quan] = @quan, [dienthoai] = @dienthoai, [nohientai] = @nohientai WHERE [maDaiLy] = @maDaiLy";
 
             using (SqlConnection con = new SqlConnection(ConnectionString))
             {
@@ -71,6 +72,7 @@ namespace QLDL_DAL
                     cmd.Connection = con;
                     cmd.CommandType = System.Data.CommandType.Text;
                     cmd.CommandText = query;
+                    cmd.Parameters.AddWithValue("@maDaiLy", HoSo.madl);
                     cmd.Parameters.AddWithValue("@tenDaiLy", HoSo.tendaily);
                     cmd.Parameters.AddWithValue("@diachi", HoSo.diachi);
                     cmd.Parameters.AddWithValue("@email", HoSo.email);
@@ -98,7 +100,7 @@ namespace QLDL_DAL
         public bool Xoa(CHoSoDaiLyDTO HoSo)
         {
             string query = string.Empty;
-            query += "DELETE FROM tblHoSoDaiLy WHERE [tenDaiLy] = @tenDaiLy";
+            query += "DELETE FROM tblHoSoDaiLy WHERE [maDaiLy] = @maDaiLy";
 
             using (SqlConnection con = new SqlConnection(ConnectionString))
             {
@@ -108,7 +110,7 @@ namespace QLDL_DAL
                     cmd.Connection = con;
                     cmd.CommandType = System.Data.CommandType.Text;
                     cmd.CommandText = query;
-                    cmd.Parameters.AddWithValue("@tenDaiLy", HoSo.tendaily);
+                    cmd.Parameters.AddWithValue("@maDaiLy", HoSo.madl);
                     try
                     {
                         con.Open();
@@ -129,7 +131,7 @@ namespace QLDL_DAL
         public List<CHoSoDaiLyDTO> select()
         {
             string query = string.Empty;
-            query += "SELECT [tenDaiLy],[diachi],[email],[loaiDaiLy],[ngayTiepNhan],[quan],[dienthoai],[nohientai]";
+            query += "SELECT [maDaiLy],[tenDaiLy],[diachi],[email],[loaiDaiLy],[ngayTiepNhan],[quan],[dienthoai],[nohientai]";
             query += "FROM [tblHoSoDaiLy]";
 
             List<CHoSoDaiLyDTO> listHoSoDaiLy = new List<CHoSoDaiLyDTO>();
@@ -153,6 +155,7 @@ namespace QLDL_DAL
                             while (reader.Read())
                             {
                                 CHoSoDaiLyDTO hs = new CHoSoDaiLyDTO();
+                                hs.madl = int.Parse(reader["maDaiLy"].ToString());
                                 hs.tendaily = reader["tenDaiLy"].ToString();
                                 hs.diachi = reader["diachi"].ToString();
                                 hs.email = reader["email"].ToString();
@@ -183,7 +186,8 @@ namespace QLDL_DAL
             string query = string.Empty;
             query += " SELECT [tenDaiLy],[diachi],[email],[loaiDaiLy],[ngayTiepNhan],[quan],[dienthoai],[nohientai]";
             query += " FROM [tblHoSoDaiLy]";
-            query += " WHERE ([tenDaiLy] LIKE CONCAT('%',@sKeyword,'%'))";
+            query += " WHERE ([maDaiLy] LIKE CONCAT('%',@sKeyword,'%'))";
+            query += " OR ([tenDaiLy] LIKE CONCAT('%',@sKeyword,'%'))";
             query += " OR ([diachi] LIKE CONCAT('%',@sKeyword,'%'))";
             query += " OR ([email] LIKE CONCAT('%',@sKeyword,'%'))";
             query += " OR ([loaiDaiLy] LIKE CONCAT('%',@sKeyword,'%'))";
@@ -213,6 +217,7 @@ namespace QLDL_DAL
                             while (reader.Read())
                             {
                                 CHoSoDaiLyDTO hs = new CHoSoDaiLyDTO();
+                                hs.madl = int.Parse(reader["maDaiLy"].ToString());
                                 hs.tendaily = reader["tenDaiLy"].ToString();
                                 hs.diachi = reader["diachi"].ToString();
                                 hs.email = reader["email"].ToString();
@@ -224,7 +229,6 @@ namespace QLDL_DAL
                                 listHoSoDaiLy.Add(hs);
                             }
                         }
-
                         con.Close();
                         con.Dispose();
                     }
@@ -252,8 +256,8 @@ namespace QLDL_DAL
         public bool Them(DanhsachmathangDTO MH)
         {
             string query = string.Empty;
-            query += "INSERT INTO [dbo].[tblMatHang] ([tenmathang], [hanSuDung], [gia], [donViTinh])";
-            query += "VALUES (@tenmathang,@hanSuDung, @gia, @donViTinh)";
+            query += "INSERT INTO [dbo].[tblMatHang] ([maMatHang],[tenmathang], [hanSuDung], [gia], [donViTinh])";
+            query += "VALUES (@maMatHang,@tenmathang,@hanSuDung, @gia, @donViTinh)";
             using (SqlConnection con = new SqlConnection(ConnectionString))
             {
 
@@ -262,6 +266,7 @@ namespace QLDL_DAL
                     cmd.Connection = con;
                     cmd.CommandType = System.Data.CommandType.Text;
                     cmd.CommandText = query;
+                    cmd.Parameters.AddWithValue("@maMatHang", MH.mamh);
                     cmd.Parameters.AddWithValue("@tenmathang", MH.tenmh);
                     cmd.Parameters.AddWithValue("@hanSuDung", MH.hansudung);
                     cmd.Parameters.AddWithValue("@gia", MH.gia);
@@ -286,7 +291,7 @@ namespace QLDL_DAL
         public bool Sua(DanhsachmathangDTO MH)
         {
             string query = string.Empty;
-            query += "UPDATE tblMatHang SET [hanSuDung] = @hanSuDung, [gia] = @gia, [donViTinh] = @donViTinh WHERE [tenmathang]=@tenmathang";
+            query += "UPDATE tblMatHang SET [tenmathang]=@tenmathang, [hanSuDung] = @hanSuDung, [gia] = @gia, [donViTinh] = @donViTinh WHERE [maMatHang]=@maMatHang";
             using (SqlConnection con = new SqlConnection(ConnectionString))
             {
 
@@ -295,6 +300,7 @@ namespace QLDL_DAL
                     cmd.Connection = con;
                     cmd.CommandType = System.Data.CommandType.Text;
                     cmd.CommandText = query;
+                    cmd.Parameters.AddWithValue("@maMatHang", MH.mamh);
                     cmd.Parameters.AddWithValue("@tenmathang", MH.tenmh);
                     cmd.Parameters.AddWithValue("@hanSuDung", MH.hansudung);
                     cmd.Parameters.AddWithValue("@gia", MH.gia);
@@ -319,7 +325,7 @@ namespace QLDL_DAL
         public bool Xoa(DanhsachmathangDTO MH)
         {
             string query = string.Empty;
-            query += "DELETE FROM tblMatHang WHERE [tenmathang]=@tenmathang";
+            query += "DELETE FROM tblMatHang WHERE [maMatHang]=@maMatHang";
 
             using (SqlConnection con = new SqlConnection(ConnectionString))
             {
@@ -329,7 +335,7 @@ namespace QLDL_DAL
                     cmd.Connection = con;
                     cmd.CommandType = System.Data.CommandType.Text;
                     cmd.CommandText = query;
-                    cmd.Parameters.AddWithValue("@tenmathang", MH.tenmh);
+                    cmd.Parameters.AddWithValue("@maMatHang", MH.mamh);
                     try
                     {
                         con.Open();
@@ -349,7 +355,7 @@ namespace QLDL_DAL
         public List<DanhsachmathangDTO> select()
         {
             string query = string.Empty;
-            query += "SELECT [tenmathang], [hanSuDung], [gia], [donViTinh]";
+            query += "SELECT [maMatHang], [tenmathang], [hanSuDung], [gia], [donViTinh]";
             query += "FROM [tblMatHang]";
 
             List<DanhsachmathangDTO> listMatHang = new List<DanhsachmathangDTO>();
@@ -373,6 +379,7 @@ namespace QLDL_DAL
                             while (reader.Read())
                             {
                                 DanhsachmathangDTO mh = new DanhsachmathangDTO();
+                                mh.mamh = int.Parse(reader["maMatHang"].ToString());
                                 mh.tenmh = reader["tenmathang"].ToString();
                                 mh.hansudung = Convert.ToDateTime(reader["hanSuDung"].ToString());
                                 mh.gia = int.Parse(reader["gia"].ToString()); 
@@ -399,7 +406,8 @@ namespace QLDL_DAL
             string query = string.Empty;
             query += " SELECT [tenmathang], [hanSuDung], [gia], [donViTinh]";
             query += " FROM [tblMatHang]";
-            query += " WHERE ([tenmathang] LIKE CONCAT('%',@sKeyword,'%'))";
+            query += " WHERE ([maMatHang] LIKE CONCAT('%',@sKeyword,'%'))";
+            query += " OR ([tenmathang] LIKE CONCAT('%',@sKeyword,'%'))";
             query += " OR ([hanSuDung] LIKE CONCAT('%',@sKeyword,'%'))";
             query += " OR ([gia] LIKE CONCAT('%',@sKeyword,'%'))";
             query += " OR ([donViTinh] LIKE CONCAT('%',@sKeyword,'%'))";
@@ -425,6 +433,7 @@ namespace QLDL_DAL
                             while (reader.Read())
                             {
                                 DanhsachmathangDTO mh = new DanhsachmathangDTO();
+                                mh.mamh = int.Parse(reader["maMatHang"].ToString());
                                 mh.tenmh = reader["tenmathang"].ToString();
                                 mh.hansudung = Convert.ToDateTime(reader["hanSuDung"].ToString());
                                 mh.gia = int.Parse(reader["gia"].ToString());
@@ -512,13 +521,11 @@ namespace QLDL_DAL
                         reader = cmd.ExecuteReader();
                         if (reader.HasRows == true)
                         {
-                            while (reader.Read())
-                            {
-                                re.Maxloaidl = int.Parse(reader["maxloaidl"].ToString());
-                                re.Maxsodl = int.Parse(reader["maxdl"].ToString());
-                                re.soluongDVT = int.Parse(reader["soluongdvt"].ToString());
-                                re.soluongMH = int.Parse(reader["soluongmathang"].ToString());
-                            }
+                            reader.Read();                            
+                            re.Maxloaidl = int.Parse(reader["maxloaidl"].ToString());
+                            re.Maxsodl = int.Parse(reader["maxdl"].ToString());
+                            re.soluongDVT = int.Parse(reader["soluongdvt"].ToString());
+                            re.soluongMH = int.Parse(reader["soluongmathang"].ToString());                          
                         }
 
                         con.Close();
@@ -548,7 +555,7 @@ namespace QLDL_DAL
         public bool Sua(LoaiDaiLyDTO LDL)
         {
             string query = string.Empty;
-            query += "UPDATE tblLoaiDaiLy SET [maxno] = @maxno WHERE [loaiDaiLy]=@loaiDaiLy";
+            query += "UPDATE tblLoaiDaiLy SET [loaiDaiLy]=@loaiDaiLy, [maxno] = @maxno WHERE [maLoaiDaiLy]=@maLoaiDaiLy";
             using (SqlConnection con = new SqlConnection(ConnectionString))
             {
 
@@ -557,6 +564,7 @@ namespace QLDL_DAL
                     cmd.Connection = con;
                     cmd.CommandType = System.Data.CommandType.Text;
                     cmd.CommandText = query;
+                    cmd.Parameters.AddWithValue("@maLoaiDaiLy", LDL.maLDL);
                     cmd.Parameters.AddWithValue("@maxno", LDL.MaxNo);
                     cmd.Parameters.AddWithValue("@loaiDaiLy", LDL.loaidaily);
                     try
@@ -578,7 +586,7 @@ namespace QLDL_DAL
         public bool Them(LoaiDaiLyDTO LDL)
         {
             string query = string.Empty;
-            query += "INSERT INTO [dbo].[tblLoaiDaiLy] ([loaiDaiLy], [maxno])";
+            query += "INSERT INTO [dbo].[tblLoaiDaiLy] ([maLoaiDaiLy], [loaiDaiLy], [maxno])";
             query += "VALUES (@loaiDaiLy,@maxno)";
             using (SqlConnection con = new SqlConnection(ConnectionString))
             {
@@ -588,6 +596,7 @@ namespace QLDL_DAL
                     cmd.Connection = con;
                     cmd.CommandType = System.Data.CommandType.Text;
                     cmd.CommandText = query;
+                    cmd.Parameters.AddWithValue("@maLoaiDaiLy", LDL.maLDL);
                     cmd.Parameters.AddWithValue("@maxno", LDL.MaxNo);
                     cmd.Parameters.AddWithValue("@loaiDaiLy", LDL.loaidaily);
                     try
@@ -609,7 +618,7 @@ namespace QLDL_DAL
         public bool Xoa(LoaiDaiLyDTO LDL)
         {
             string query = string.Empty;
-            query += "DELETE FROM tblLoaiDaiLy WHERE [loaiDaiLy]=@loaiDaiLy";
+            query += "DELETE FROM tblLoaiDaiLy WHERE [maLoaiDaiLy]=@maLoaiDaiLy";
 
             using (SqlConnection con = new SqlConnection(ConnectionString))
             {
@@ -619,7 +628,7 @@ namespace QLDL_DAL
                     cmd.Connection = con;
                     cmd.CommandType = System.Data.CommandType.Text;
                     cmd.CommandText = query;
-                    cmd.Parameters.AddWithValue("@loaiDaiLy", LDL.loaidaily);
+                    cmd.Parameters.AddWithValue("@maLoaiDaiLy", LDL.maLDL);
                     try
                     {
                         con.Open();
@@ -639,7 +648,7 @@ namespace QLDL_DAL
         public List<LoaiDaiLyDTO> select()
         {
             string query = string.Empty;
-            query += "SELECT [loaiDaiLy], [maxno]";
+            query += "SELECT [maLoaiDaiLy], [loaiDaiLy], [maxno]";
             query += "FROM [tblLoaiDaiLy]";
 
             List<LoaiDaiLyDTO> listloaidl = new List<LoaiDaiLyDTO>();
@@ -663,6 +672,7 @@ namespace QLDL_DAL
                             while (reader.Read())
                             {
                                 LoaiDaiLyDTO ldl = new LoaiDaiLyDTO();
+                                ldl.maLDL = int.Parse(reader["maLoaiDaiLy"].ToString());
                                 ldl.loaidaily = int.Parse(reader["loaiDaiLy"].ToString());
                                 ldl.MaxNo = int.Parse(reader["maxno"].ToString());
                                 listloaidl.Add(ldl);
@@ -686,7 +696,8 @@ namespace QLDL_DAL
             string query = string.Empty;
             query += " SELECT [loaiDaiLy], [maxno]";
             query += " FROM [tblLoaiDaiLy]";
-            query += " WHERE ([loaiDaiLy] LIKE CONCAT('%',@sKeyword,'%'))";
+            query += " WHERE ([maLoaiDaiLy] LIKE CONCAT('%',@sKeyword,'%'))";
+            query += " OR ([loaiDaiLy] LIKE CONCAT('%',@sKeyword,'%'))";
             query += " OR ([maxno] LIKE CONCAT('%',@sKeyword,'%'))";
 
             List<LoaiDaiLyDTO> listloaidl = new List<LoaiDaiLyDTO>();
@@ -710,6 +721,7 @@ namespace QLDL_DAL
                             while (reader.Read())
                             {
                                 LoaiDaiLyDTO ldl = new LoaiDaiLyDTO();
+                                ldl.maLDL = int.Parse(reader["maLoaiDaiLy"].ToString());
                                 ldl.loaidaily = int.Parse(reader["loaiDaiLy"].ToString());
                                 ldl.MaxNo = int.Parse(reader["maxno"].ToString());
                                 listloaidl.Add(ldl);

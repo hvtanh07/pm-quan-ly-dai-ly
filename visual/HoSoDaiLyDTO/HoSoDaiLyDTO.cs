@@ -9,6 +9,7 @@ namespace QLDL_DTO
 {
     public class CHoSoDaiLyDTO
     {
+        private int maDL;
         private string tenDaiLy;
         private int loaiDaiLy;
         private string Quan;
@@ -17,7 +18,8 @@ namespace QLDL_DTO
         private string Email;
         private int Nohientai;
         private DateTime ngayTiepNhan;
-      
+
+        public int madl { get => maDL; set => maDL = value; }
         public string tendaily { get => tenDaiLy; set => tenDaiLy = value; }
         public string quan { get => Quan; set => Quan = value; }
         public string dienthoai { get => dienThoai; set => dienThoai = value; }
@@ -28,12 +30,14 @@ namespace QLDL_DTO
         public DateTime ngaytiepnhan { get => ngayTiepNhan; set => ngayTiepNhan = value; }
     }
     public class DanhsachmathangDTO
-    {        
+    {
+        private int MaMH;
         private string tenMH;
         private DateTime HanSuDung;
         private int Gia;
         private string DonViTinh;
-        
+
+        public int mamh { get => MaMH; set => MaMH = value; }
         public string tenmh { get => tenMH; set => tenMH = value; }
         public DateTime hansudung { get => HanSuDung; set => HanSuDung = value; }
         public int gia { get => Gia; set => Gia = value; }
@@ -53,8 +57,11 @@ namespace QLDL_DTO
     }
     public class LoaiDaiLyDTO
     {
+        private int maldl;
         private int loaiDaiLy;
         private int maxno;
+
+        public int maLDL { get => maldl; set => maldl = value; }
         public int loaidaily { get => loaiDaiLy; set => loaiDaiLy = value; }
         public int MaxNo { get => maxno; set => maxno = value; }
     }

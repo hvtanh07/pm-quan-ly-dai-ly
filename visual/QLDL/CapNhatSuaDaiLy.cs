@@ -24,6 +24,7 @@ namespace QLDL
         {
             if (this.dlDTO != null)
             {
+                madl.Text = dlDTO.madl.ToString();
                 quantxt.Text = dlDTO.quan.ToString();
                 tentxt.Text = dlDTO.tendaily.ToString();
                 dc.Text = dlDTO.diachi.ToString();
@@ -46,6 +47,7 @@ namespace QLDL
                 return;
             }
             CHoSoDaiLyDTO hs = new CHoSoDaiLyDTO();
+            hs.madl = int.Parse(madl.Text);
             hs.quan = quantxt.Text;
             hs.tendaily = tentxt.Text;
             hs.diachi = dc.Text;
@@ -70,6 +72,7 @@ namespace QLDL
         
         private void clear()
         {
+            madl.Text = "";
             quantxt.Text = "";
             tentxt.Text = "";
             dc.Text = "";
@@ -96,7 +99,7 @@ namespace QLDL
         }
         bool testtext()//kiểm tra ô dữ liệu trống
         {
-
+            
             if (string.IsNullOrWhiteSpace(tentxt.Text))
             {
                 MessageBox.Show(tentxt, "Bạn chưa nhập tên đại lý.");

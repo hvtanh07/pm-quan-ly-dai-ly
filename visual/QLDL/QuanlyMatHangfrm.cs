@@ -32,6 +32,7 @@ namespace QLDL
                 return;
             }
             DanhsachmathangDTO mh = new DanhsachmathangDTO();
+            mh.mamh = int.Parse(mamh.Text);
             mh.tenmh = tmh.Text;
             mh.hansudung = hsd.Value;
             mh.gia = int.Parse(gia.Text);
@@ -62,7 +63,7 @@ namespace QLDL
             if (dlr == DialogResult.Yes)
             {
                 DanhsachmathangDTO mh = new DanhsachmathangDTO();
-                mh.tenmh = tmh.Text;
+                mh.mamh = int.Parse(mamh.Text);
                 //2. Kiểm tra data hợp lệ or not
 
                 //3. Thêm vào DB
@@ -113,6 +114,7 @@ namespace QLDL
         private void Button3_Click(object sender, EventArgs e)
         {
             DanhsachmathangDTO mh = new DanhsachmathangDTO();
+            mh.mamh = int.Parse(mamh.Text);
             mh.tenmh = tmh.Text;
             mh.hansudung = hsd.Value;
             mh.gia = int.Parse(gia.Text);
@@ -137,6 +139,7 @@ namespace QLDL
             if (-1 < currentRowIndex && currentRowIndex < dsmathang.RowCount)
             {
                 DanhsachmathangDTO mh = new DanhsachmathangDTO();
+                mh.mamh = int.Parse(mamh.Text);
                 mh.tenmh = tmh.Text;
                 mh.hansudung = hsd.Value;
                 mh.gia = int.Parse(gia.Text);
@@ -167,10 +170,11 @@ namespace QLDL
         //Lấy dữ liệu nhập vào khung 
         private void Dsmathang_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            tmh.Text = dsmathang.CurrentRow.Cells[0].Value.ToString();
-            hsd.Value = Convert.ToDateTime(dsmathang.CurrentRow.Cells[1].Value.ToString());
-            gia.Text = dsmathang.CurrentRow.Cells[2].Value.ToString();
-            dvt.Text = dsmathang.CurrentRow.Cells[3].Value.ToString();
+            mamh.Text = dsmathang.CurrentRow.Cells[0].Value.ToString();
+            tmh.Text = dsmathang.CurrentRow.Cells[1].Value.ToString();
+            hsd.Value = Convert.ToDateTime(dsmathang.CurrentRow.Cells[2].Value.ToString());
+            gia.Text = dsmathang.CurrentRow.Cells[3].Value.ToString();
+            dvt.Text = dsmathang.CurrentRow.Cells[4].Value.ToString();
         }
         private void loadData_Vao_GridView()
         {
@@ -188,6 +192,12 @@ namespace QLDL
             dsmathang.AutoGenerateColumns = false;
             dsmathang.AllowUserToAddRows = false;
             dsmathang.DataSource = listMatHang;
+
+            DataGridViewTextBoxColumn clMa = new DataGridViewTextBoxColumn();
+            clMa.Name = "maMatHang";
+            clMa.HeaderText = "Mã mặt hàng";
+            clMa.DataPropertyName = "maMatHang";
+            dsmathang.Columns.Add(clMa);
 
             DataGridViewTextBoxColumn clTen = new DataGridViewTextBoxColumn();
             clTen.Name = "tenmh";
@@ -233,6 +243,12 @@ namespace QLDL
             dsmathang.AllowUserToAddRows = false;
             dsmathang.DataSource = listMatHang;
 
+            DataGridViewTextBoxColumn clMa = new DataGridViewTextBoxColumn();
+            clMa.Name = "maMatHang";
+            clMa.HeaderText = "Mã mặt hàng";
+            clMa.DataPropertyName = "maMatHang";
+            dsmathang.Columns.Add(clMa);
+
             DataGridViewTextBoxColumn clTen = new DataGridViewTextBoxColumn();
             clTen.Name = "tenmh";
             clTen.HeaderText = "Tên mặt hàng";
@@ -265,7 +281,8 @@ namespace QLDL
 
         //XÓA CÁC Ô ĐIỀN DỮ LIỆU
         private void clear()
-        {   
+        {
+            mamh.Text = "";
             tmh.Text="";
             hsd.Value = DateTime.Today;
             gia.Text = "";
@@ -274,7 +291,12 @@ namespace QLDL
         //RÀNG BUỘC CỦA DỮ LIỆU NHẬP VÀO
         bool testtext()//kiểm tra ô dữ liệu trống
         {
-
+            if (string.IsNullOrWhiteSpace(mamh.Text))
+            {
+                MessageBox.Show(mamh, "Bạn chưa nhập mã mặt hàng.");
+                mamh.Focus();
+                return false;
+            }//tên
             if (string.IsNullOrWhiteSpace(tmh.Text))
             {
                 MessageBox.Show(tmh, "Bạn chưa nhập tên mặt hàng.");

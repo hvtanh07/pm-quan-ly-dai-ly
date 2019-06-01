@@ -24,6 +24,7 @@ namespace QLDL
                 return;
             }
             CHoSoDaiLyDTO hs = new CHoSoDaiLyDTO();
+            hs.madl = int.Parse(madl.Text);
             hs.quan = quantxt.Text;
             hs.tendaily = tentxt.Text;
             hs.diachi = dc.Text;
@@ -43,6 +44,7 @@ namespace QLDL
             else
             {
                 MessageBox.Show("Thêm hồ sơ thành công");
+                madl.Text = "";
                 quantxt.Text = "";
                 tentxt.Text = "";
                 dc.Text = "";
@@ -68,7 +70,12 @@ namespace QLDL
         }
         bool testtext()//kiểm tra ô dữ liệu trống
         {
-
+            if (string.IsNullOrWhiteSpace(madl.Text))
+            {
+                MessageBox.Show(madl, "Bạn chưa nhập mã đại lý.");
+                madl.Focus();
+                return false;
+            }//ten
             if (string.IsNullOrWhiteSpace(tentxt.Text))
             {
                 MessageBox.Show(tentxt, "Bạn chưa nhập tên đại lý.");
