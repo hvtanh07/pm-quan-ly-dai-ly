@@ -17,7 +17,6 @@ namespace QLDL
         {
             hsBUS = new CHoSoDaiLyBUS();
         }
-
         private void Button1_Click(object sender, EventArgs e)
         {
             if (!testtext())
@@ -25,27 +24,15 @@ namespace QLDL
                 return;
             }
             CHoSoDaiLyDTO hs = new CHoSoDaiLyDTO();
-            hs.madl = int.Parse(matxt.Text);
+            hs.madl = int.Parse(madl.Text);
             hs.quan = quantxt.Text;
-            hs.dientich = int.Parse(dt.Text);
-            hs.sonhanvien = int.Parse(snv.Text);
             hs.tendaily = tentxt.Text;
             hs.diachi = dc.Text;
             hs.email = mail.Text;
             hs.dienthoai = dttxt.Text;
             hs.ngaytiepnhan = DateTime.Today;
-            if (checkBox1.Checked == true)
-            {
-                hs.loaidaily = 1;
-            }
-            else if (checkBox2.Checked == true)
-            {
-                hs.loaidaily = 2;
-            }
-            else
-            {
-                hs.loaidaily = 1;
-            }
+            hs.nohientai = 0;
+            hs.loaidaily = int.Parse(ldl.Text);
 
             //2. Kiểm tra data hợp lệ or not
             //kiểm tra trong quận đã đạt tối đa số đại lý chưa
@@ -57,35 +44,13 @@ namespace QLDL
             else
             {
                 MessageBox.Show("Thêm hồ sơ thành công");
-                matxt.Text = "";
+                madl.Text = "";
                 quantxt.Text = "";
-                dt.Text = "";
-                snv.Text = "";
                 tentxt.Text = "";
                 dc.Text = "";
                 mail.Text = "";
                 dttxt.Text = "";
-                checkBox1.Checked = false;
-                checkBox2.Checked = false;  
-            }
-        }
-
-        
-        
-
-        private void CheckBox1_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkBox1.Checked == true)
-            {
-                checkBox2.Checked = false;
-            }
-        }
-
-        private void CheckBox2_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkBox2.Checked == true)
-            {
-                checkBox1.Checked = false;
+                ldl.Text = "";
             }
         }
         //RÀNG BUỘC CỦA DỮ LIỆU NHẬP VÀO
@@ -105,37 +70,24 @@ namespace QLDL
         }
         bool testtext()//kiểm tra ô dữ liệu trống
         {
-
+            if (string.IsNullOrWhiteSpace(madl.Text))
+            {
+                MessageBox.Show(madl, "Bạn chưa nhập mã đại lý.");
+                madl.Focus();
+                return false;
+            }//ten
             if (string.IsNullOrWhiteSpace(tentxt.Text))
             {
                 MessageBox.Show(tentxt, "Bạn chưa nhập tên đại lý.");
                 tentxt.Focus();
                 return false;
             }//ten
-            if (string.IsNullOrWhiteSpace(matxt.Text))
-            {
-                MessageBox.Show(matxt, "Bạn chưa nhập mã đại lý.");
-                matxt.Focus();
-                return false;
-            }//ma
             if (string.IsNullOrWhiteSpace(dc.Text))
             {
                 MessageBox.Show(dc, "Bạn chưa nhập địa chỉ.");
                 dc.Focus();
                 return false;
             }//dia chi
-            if (string.IsNullOrWhiteSpace(dt.Text))
-            {
-                MessageBox.Show(dt, "Bạn chưa nhập diện tích.");
-                dt.Focus();
-                return false;
-            }//dien tich
-            if (string.IsNullOrWhiteSpace(snv.Text))
-            {
-                MessageBox.Show(snv, "Bạn chưa nhập số nhân viên.");
-                snv.Focus();
-                return false;
-            }//so nhan vien
             if (string.IsNullOrWhiteSpace(quantxt.Text))//quan
             {
                 MessageBox.Show(quantxt, "Bạn chưa nhập địa chỉ quận.");
@@ -167,17 +119,6 @@ namespace QLDL
                     mail.Focus();
                     return false;
                 }
-
-
-                //string match = @"\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*";
-                //Regex reg = new Regex(match);
-                //if (!reg.IsMatch(mail.Text))
-                //{
-                //    MessageBox.Show(mail, "Email Không hợp lệ");
-                //    mail.Text = "";
-                //    mail.Focus();
-                //    return false;
-                //}
             }//email valid or not
 
             return true;//all true then gud to go
