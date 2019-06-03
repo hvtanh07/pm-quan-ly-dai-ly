@@ -18,3 +18,10 @@ D:\Githubclonepath\pm-quan-ly-dai-ly\visual\HoSoDaiLyDTO\obj\Debug\QLDL_DTO.cspr
 D:\Githubclonepath\pm-quan-ly-dai-ly\visual\HoSoDaiLyDTO\obj\Debug\QLDL_DTO.csproj.CoreCompileInputs.cache
 D:\Githubclonepath\pm-quan-ly-dai-ly\visual\HoSoDaiLyDTO\obj\Debug\HoSoDaiLyDTO.dll
 D:\Githubclonepath\pm-quan-ly-dai-ly\visual\HoSoDaiLyDTO\obj\Debug\HoSoDaiLyDTO.pdb
+E:\installer\pm-quan-ly-dai-ly-2\visual\HoSoDaiLyDTO\bin\Debug\HoSoDaiLyDTO.dll.config
+E:\installer\pm-quan-ly-dai-ly-2\visual\HoSoDaiLyDTO\bin\Debug\HoSoDaiLyDTO.dll
+E:\installer\pm-quan-ly-dai-ly-2\visual\HoSoDaiLyDTO\bin\Debug\HoSoDaiLyDTO.pdb
+E:\installer\pm-quan-ly-dai-ly-2\visual\HoSoDaiLyDTO\obj\Debug\QLDL_DTO.csprojAssemblyReference.cache
+E:\installer\pm-quan-ly-dai-ly-2\visual\HoSoDaiLyDTO\obj\Debug\QLDL_DTO.csproj.CoreCompileInputs.cache
+E:\installer\pm-quan-ly-dai-ly-2\visual\HoSoDaiLyDTO\obj\Debug\HoSoDaiLyDTO.dll
+E:\installer\pm-quan-ly-dai-ly-2\visual\HoSoDaiLyDTO\obj\Debug\HoSoDaiLyDTO.pdb

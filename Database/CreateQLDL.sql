@@ -1,7 +1,7 @@
-/****** To insert Vietnames:  ******/
+﻿/****** To insert Vietnames:  ******/
 /****** 1. make sure script in Unicode-16 ******/
 /****** 2. Put N before Vietnames text ******/
-/******    Example: N'Nguy?n C�ng Hoan' ******/
+/******    Example: N'Nguy?n Công Hoan' ******/
 
 USE [master]
 GO
@@ -22,98 +22,116 @@ CREATE DATABASE [QLDL]
 GO
 USE [QLDL]
 GO
-CREATE TABLE [dbo].[tblMatHang]
-(
-	[maMatHang] int NOT NULL PRIMARY KEY,
-	[soluong]	int NOT NULL,
-	[tenmathang] nvarchar(50) NOT NULL,
-	[khoiluong] int NOT NULL,
-	[hanSuDung] datetime NOT NULL,
-	[gia]		int NOT NULL,
-	[donViTinh] nvarchar(50)
+CREATE TABLE [dbo].[tblLoaiDaiLy]
+(	
+	[maLoaiDaiLy] nvarchar(10) NOT NULL PRIMARY KEY,
+	[loaiDaiLy]	int NOT NULL,	
+	[maxno] int NOT NULL
 )
-
+CREATE TABLE [dbo].[tblMatHang]
+(	
+	[maMatHang] nvarchar(10) NOT NULL PRIMARY KEY,
+	[tenmathang] nvarchar(50) NOT NULL,		
+	[hanSuDung] datetime2(7) NOT NULL,
+	[gia]		int NOT NULL,
+	[donViTinh] nvarchar(50)	
+)
 CREATE TABLE [dbo].[tblHoSoDaiLy]
-(
-	[maDaiLy]	int NOT NULL PRIMARY KEY,
+(	
+	[maDaiLy]	nvarchar(10) NOT NULL PRIMARY KEY,
 	[tenDaiLy]	nvarchar(50) NOT NULL,
 	[diachi]	nvarchar(50) NOT NULL,
 	[email]		nvarchar(30),
-	[loaiDaiLy]	int	NOT NULL,
-	[ngayTiepNhan]	datetime NOT NULL,
+	[maloaiDaiLy]	nvarchar(10)	NOT NULL,
+	[ngayTiepNhan]	datetime2(7) NOT NULL,
 	[quan]		nvarchar(20) NOT NULL,
-	[dienthoai]	int NOT NULL
-)
-
-CREATE TABLE [dbo].[tblDanhSachDaiLy]
-(
-	[STT]	int NOT NULL,
-	[maDaiLy] int NOT NULL PRIMARY KEY,
-	[loai]	int NOT NULL,
-	[quan]	nvarchar(15) NOT NULL,
-	[tienno]	int NOT NULL
+	[dienthoai]	nvarchar(20) NOT NULL,
+	[nohientai] int NOT NULL,
+	FOREIGN KEY (maloaiDaiLy) REFERENCES tblLoaiDaiLy(maloaiDaiLy),
 )
 CREATE TABLE [dbo].[tblPhieuThuTien]
 (
 	[maPhieu]	int	NOT NULL PRIMARY KEY,
-	[maDaiLy]	int NOT NULL,
-	[tenDaiLy]	nvarchar(50) NOT NULL,
-	[diachi]	nvarchar(50) NOT NULL,
-	[email]		nvarchar(30),
-	[dienthoai]	int NOT NULL,
+	[maDaiLy]	nvarchar(10) NOT NULL,	
 	[ngayThuTien] datetime NOT NULL,
-	[soTienThu] int NOT NULL,
+	[soTienThu] int NOT NULL
+	FOREIGN KEY (maDaiLy) REFERENCES tblHoSoDaiLy(maDaiLy),
 )
 CREATE TABLE [dbo].[tblPhieuXuatHang]
 (
-	[maXuatHang]	int NOT NULL PRIMARY KEY,
-	[maDaiLy]		int NOT NULL,
-	[ngayLapPhieu]	datetime NOT NULL,
-	[thanhtien]		int NOT NULL
+	[maXuatHang]	 int NOT NULL PRIMARY KEY,
+	[maDaiLy]	     nvarchar(10) NOT NULL,
+	[ngayLapPhieu]	 datetime NOT NULL,
+	[tongtien]		 int NOT NULL,
+	FOREIGN KEY (maDaiLy) REFERENCES tblHoSoDaiLy(maDaiLy),
 )
-CREATE TABLE [dbo].[tblChiTietPhieuXH]
+CREATE TABLE [dbo].[tblNoDaiLy]
+(		
+	[maDaiLy]	nvarchar(10) NOT NULL PRIMARY KEY,
+	[noDau] 	int NOT NULL,
+	[noCuoi]	int NOT NULL,
+	[phatSinh]	int NOT NULL,
+	FOREIGN KEY (maDaiLy) REFERENCES tblHoSoDaiLy(maDaiLy),
+)
+CREATE TABLE [dbo].[tblPhieubaocaoCongNo]
 (
-	[maXuatHang] int NOT NULL PRIMARY KEY,
-	[maMatHang] int NOT NULL,
-	[soluong]	int NOT NULL,
-	[donViTinh]	nvarchar(50) NOT NULL,
-	[dongia] int NOT NULL
+	[maPhieu] int NOT NULL PRIMARY KEY,			
+	[thang] int NOT NULL	
 )
-
-CREATE TABLE [dbo].[tblLoaiDaiLy]
+CREATE TABLE [dbo].[tblPhieubaocaoDoanhThu]
 (
-	[maLoaiDaiLy] int NOT NULL PRIMARY KEY,
-	[tenLoaiDaiLy]	nvarchar(30) NOT NULL
+	[maPhieu] int NOT NULL PRIMARY KEY,		
+	[tongDoanhThu]	int NOT NULL,	
+	[thang] int NOT NULL	
 )
-USE [QLDL]
-GO
-ALTER TABLE [dbo].[tblHoSoDaiLy]
-ADD CONSTRAINT FK_LOAIDL FOREIGN KEY (loaiDaiLy) REFERENCES [dbo].[tblLoaiDaiLy](maLoaiDaiLy)
-GO
-ALTER TABLE [dbo].[tblDanhSachDaiLy]
-ADD CONSTRAINT FK_MADL FOREIGN KEY (maDaiLy) REFERENCES [dbo].[tblHoSoDaiLy](maDaiLy)
-GO
-ALTER TABLE [dbo].[tblPhieuThuTien]
-ADD CONSTRAINT FK_MADL_PTT FOREIGN KEY (maDaiLy) REFERENCES [dbo].[tblHoSoDaiLy](maDaiLy)
-GO
-ALTER TABLE [dbo].[tblPhieuXuatHang]
-ADD CONSTRAINT FK_MADL_PXH FOREIGN KEY (maDaiLy) REFERENCES [dbo].[tblHoSoDaiLy](maDaiLy)
-GO
-ALTER TABLE [dbo].[tblChiTietPhieuXH]
-ADD CONSTRAINT FK_MAXH FOREIGN KEY (maXuatHang) REFERENCES [dbo].[tblPhieuXuatHang](maXuatHang)
+CREATE TABLE [dbo].[tblQuiDinh]
+(
+	[getkey] int NOT NULL primary key,
+	[maxloaidl]    int NOT NULL,	
+	[soluongmathang]	int NOT NULL,
+	[soluongdvt]	int NOT NULL,	
+	[maxdl]	int NOT NULL,--max so dl trong 1 quan
+)	
 
-GO
-INSERT INTO [dbo].[tblLoaiDaiLy] VALUES ('1','Loai Dai Ly 1')
-GO
-INSERT INTO [dbo].[tblLoaiDaiLy] VALUES ('2','Loai Dai Ly 2')
-GO
-INSERT INTO [dbo].[tblLoaiDaiLy] VALUES ('3','Loai Dai Ly 3')
-GO
-INSERT INTO [dbo].[tblHoSoDaiLy] ([maDaiLy], [tenDaiLy], [diachi],[email], [loaiDaiLy], [ngayTiepNhan], [quan], [dienthoai]) 
-VALUES ('1','Dai Ly A','Dia Chi Dai Ly A','DLA@email.com','1','20/03/1999','12','0909111222')
-GO
-INSERT INTO [dbo].[tblHoSoDaiLy] VALUES ('2','Dai Ly B','Dia Chi Dai Ly B','DLB@email.com','2','30/04/1975','9','0909222333')
-GO
-INSERT INTO [dbo].[tblHoSoDaiLy] VALUES ('3','Dai Ly C','Dia Chi Dai Ly C','DLC@email.com','3','19/05/1890','9','0930041975')
-UPDATE tblHoSoDaiLy SET [tenDaiLy] = 'test', [diachi] = 'test', [email] = 'test', [loaiDaiLy] = '1', [quan] = '2', [dienthoai] = '123', [dientich] = '30', [sonhanvien] = '7' WHERE [maDaiLy] = '9'
-DELETE FROM tblHoSoDaiLy WHERE [maDaiLy] = '1'
+--drop table tblLoaiDaiLy
+--drop table tblMatHang
+--drop table tblHoSoDaiLy
+--drop table tblPhieuThuTien
+--drop table tblPhieuXuatHang
+--drop table tblNoDaiLy
+--drop table tblPhieubaocaoCongNo
+--drop table tblPhieubaocaoDoanhThu
+--drop table tblQuiDinh
+
+
+--dữ liệu có trước--
+SET DATEFORMAT dmy;  
+INSERT INTO tblLoaiDaiLy (maLoaiDaiLy, loaiDaiLy, maxno)
+VALUES ('loai1', 1, 20000);
+INSERT INTO tblLoaiDaiLy (maLoaiDaiLy, loaiDaiLy, maxno)
+VALUES ('loai2', 2, 50);
+
+INSERT INTO tblQuiDinh (getkey, maxloaidl, soluongmathang, soluongdvt, maxdl)
+VALUES (1, 2, 5, 3, 4);
+
+INSERT INTO tblMatHang (maMatHang, tenmathang, hanSuDung, gia, donViTinh) 
+VALUES ('mh1', N'Sữa', '9/10/2020', 3000, 'dv1');
+INSERT INTO tblMatHang (maMatHang, tenmathang, hanSuDung, gia, donViTinh)
+VALUES ('mh2', N'Đường', '7/9/2020', 4000, 'dv2');
+INSERT INTO tblMatHang (maMatHang, tenmathang, hanSuDung, gia, donViTinh)
+VALUES ('mh3', N'Muối', '17/6/2020', 5000, 'dv1');
+INSERT INTO tblMatHang (maMatHang, tenmathang, hanSuDung, gia, donViTinh)
+VALUES ('mh4', 'Snack', '6/12/2020', 6000, 'dv3');
+INSERT INTO tblMatHang (maMatHang, tenmathang, hanSuDung, gia, donViTinh)
+VALUES ('mh5', 'Kem', '20/8/2020', 7000, 'dv3');
+
+INSERT INTO tblHoSoDaiLy (maDaiLy, tenDaiLy, diachi, email, maloaiDaiLy, ngayTiepNhan, quan, dienthoai, nohientai)
+VALUES ('dl1', N'Đại lý 1', 'dc1', 'dl1@gmail.com', 'loai1', '2/6/2019', N'Quận 7', 3243443, 0);
+INSERT INTO tblHoSoDaiLy (maDaiLy, tenDaiLy, diachi, email, maloaiDaiLy, ngayTiepNhan, quan, dienthoai, nohientai)
+VALUES ('dl2', N'Đại lý 2', 'dc2', 'dl2@gmail.com', 'loai2', '12/9/2019', N'Quận 10', 33443, 10);
+INSERT INTO tblHoSoDaiLy (maDaiLy, tenDaiLy, diachi, email, maloaiDaiLy, ngayTiepNhan, quan, dienthoai, nohientai)
+VALUES ('dl3', N'Đại lý 3', 'dc3', 'dl3@gmail.com', 'loai2', '3/7/2019', N'Quận 4', 3243443, 5);
+INSERT INTO tblHoSoDaiLy (maDaiLy, tenDaiLy, diachi, email, maloaiDaiLy, ngayTiepNhan, quan, dienthoai, nohientai)
+VALUES ('dl4', N'Đại lý 4', 'dc4', 'dl4@gmail.com', 'loai1', '20/12/2019', N'Quận Bình Thạnh', 324233, 400);
+INSERT INTO tblHoSoDaiLy (maDaiLy, tenDaiLy, diachi, email, maloaiDaiLy, ngayTiepNhan, quan, dienthoai, nohientai)
+VALUES ('dl5', N'Đại lý 5', 'dc5', 'dl5@gmail.com', 'loai2', '9/2/2019', N'Quận Thủ Đức', 3903443, 15);

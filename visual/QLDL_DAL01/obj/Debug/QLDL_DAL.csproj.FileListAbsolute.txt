@@ -31,3 +31,14 @@ D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL_DAL01\obj\Debug\QLDL_DAL.csproj
 D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL_DAL01\obj\Debug\QLDL_DAL.csproj.CopyComplete
 D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL_DAL01\obj\Debug\QLDL_DAL01.dll
 D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL_DAL01\obj\Debug\QLDL_DAL01.pdb
+E:\installer\pm-quan-ly-dai-ly-2\visual\QLDL_DAL01\bin\Debug\QLDL_DAL01.dll.config
+E:\installer\pm-quan-ly-dai-ly-2\visual\QLDL_DAL01\bin\Debug\QLDL_DAL01.dll
+E:\installer\pm-quan-ly-dai-ly-2\visual\QLDL_DAL01\bin\Debug\QLDL_DAL01.pdb
+E:\installer\pm-quan-ly-dai-ly-2\visual\QLDL_DAL01\bin\Debug\HoSoDaiLyDTO.dll
+E:\installer\pm-quan-ly-dai-ly-2\visual\QLDL_DAL01\bin\Debug\HoSoDaiLyDTO.pdb
+E:\installer\pm-quan-ly-dai-ly-2\visual\QLDL_DAL01\bin\Debug\HoSoDaiLyDTO.dll.config
+E:\installer\pm-quan-ly-dai-ly-2\visual\QLDL_DAL01\obj\Debug\QLDL_DAL.csprojAssemblyReference.cache
+E:\installer\pm-quan-ly-dai-ly-2\visual\QLDL_DAL01\obj\Debug\QLDL_DAL.csproj.CoreCompileInputs.cache
+E:\installer\pm-quan-ly-dai-ly-2\visual\QLDL_DAL01\obj\Debug\QLDL_DAL.csproj.CopyComplete
+E:\installer\pm-quan-ly-dai-ly-2\visual\QLDL_DAL01\obj\Debug\QLDL_DAL01.dll
+E:\installer\pm-quan-ly-dai-ly-2\visual\QLDL_DAL01\obj\Debug\QLDL_DAL01.pdb

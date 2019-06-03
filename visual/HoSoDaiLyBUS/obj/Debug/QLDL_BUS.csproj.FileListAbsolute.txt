@@ -40,3 +40,17 @@ D:\Githubclonepath\pm-quan-ly-dai-ly\visual\HoSoDaiLyBUS\obj\Debug\QLDL_BUS.cspr
 D:\Githubclonepath\pm-quan-ly-dai-ly\visual\HoSoDaiLyBUS\obj\Debug\QLDL_BUS.csproj.CopyComplete
 D:\Githubclonepath\pm-quan-ly-dai-ly\visual\HoSoDaiLyBUS\obj\Debug\HoSoDaiLyBUS.dll
 D:\Githubclonepath\pm-quan-ly-dai-ly\visual\HoSoDaiLyBUS\obj\Debug\HoSoDaiLyBUS.pdb
+E:\installer\pm-quan-ly-dai-ly-2\visual\HoSoDaiLyBUS\bin\Debug\HoSoDaiLyBUS.dll.config
+E:\installer\pm-quan-ly-dai-ly-2\visual\HoSoDaiLyBUS\bin\Debug\HoSoDaiLyBUS.dll
+E:\installer\pm-quan-ly-dai-ly-2\visual\HoSoDaiLyBUS\bin\Debug\HoSoDaiLyBUS.pdb
+E:\installer\pm-quan-ly-dai-ly-2\visual\HoSoDaiLyBUS\bin\Debug\HoSoDaiLyDTO.dll
+E:\installer\pm-quan-ly-dai-ly-2\visual\HoSoDaiLyBUS\bin\Debug\QLDL_DAL01.dll
+E:\installer\pm-quan-ly-dai-ly-2\visual\HoSoDaiLyBUS\bin\Debug\HoSoDaiLyDTO.pdb
+E:\installer\pm-quan-ly-dai-ly-2\visual\HoSoDaiLyBUS\bin\Debug\HoSoDaiLyDTO.dll.config
+E:\installer\pm-quan-ly-dai-ly-2\visual\HoSoDaiLyBUS\bin\Debug\QLDL_DAL01.pdb
+E:\installer\pm-quan-ly-dai-ly-2\visual\HoSoDaiLyBUS\bin\Debug\QLDL_DAL01.dll.config
+E:\installer\pm-quan-ly-dai-ly-2\visual\HoSoDaiLyBUS\obj\Debug\QLDL_BUS.csprojAssemblyReference.cache
+E:\installer\pm-quan-ly-dai-ly-2\visual\HoSoDaiLyBUS\obj\Debug\QLDL_BUS.csproj.CoreCompileInputs.cache
+E:\installer\pm-quan-ly-dai-ly-2\visual\HoSoDaiLyBUS\obj\Debug\QLDL_BUS.csproj.CopyComplete
+E:\installer\pm-quan-ly-dai-ly-2\visual\HoSoDaiLyBUS\obj\Debug\HoSoDaiLyBUS.dll
+E:\installer\pm-quan-ly-dai-ly-2\visual\HoSoDaiLyBUS\obj\Debug\HoSoDaiLyBUS.pdb
