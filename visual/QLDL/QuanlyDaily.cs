@@ -23,7 +23,7 @@ namespace QLDL
         private void QuanlyDaily_Load(object sender, EventArgs e)
         {
             hsBUS = new CHoSoDaiLyBUS();
-            this.loadData_Vao_GridView();
+            this.loadData_Vao_GridView();           
         }
         
         private void autosize()
@@ -169,6 +169,7 @@ namespace QLDL
 
             CurrencyManager myCurrencyManager = (CurrencyManager)this.BindingContext[dgvBangDanhSach.DataSource];
             myCurrencyManager.Refresh();
+            autosize();
         }
         private void loadData_Vao_GridView()
         {
@@ -243,7 +244,7 @@ namespace QLDL
 
             CurrencyManager myCurrencyManager = (CurrencyManager)this.BindingContext[dgvBangDanhSach.DataSource];
             myCurrencyManager.Refresh();
-
+            autosize();
         }
     }
 }

@@ -61,7 +61,7 @@ namespace QLDL
           
             CurrencyManager myCurrencyManager = (CurrencyManager)this.BindingContext[danhsachldl.DataSource];
             myCurrencyManager.Refresh();
-
+            autosize();
         }
         private void loadData_Vao_GridView(List<LoaiDaiLyDTO> listldl)
         {
@@ -98,7 +98,7 @@ namespace QLDL
 
             CurrencyManager myCurrencyManager = (CurrencyManager)this.BindingContext[danhsachldl.DataSource];
             myCurrencyManager.Refresh();
-
+            autosize();
         }
         //them
         private void Button1_Click(object sender, EventArgs e)
@@ -231,7 +231,13 @@ namespace QLDL
                 e.Handled = true;
             }
         }
-
+        private void autosize()
+        {
+            for (int i = 0; i < danhsachldl.Columns.Count; i++)
+            {
+                danhsachldl.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            }
+        }
         private void Danhsachldl_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             maldl.Text = danhsachldl.CurrentRow.Cells[0].Value.ToString();

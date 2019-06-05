@@ -226,7 +226,7 @@ namespace QLDL
             
             CurrencyManager myCurrencyManager = (CurrencyManager)this.BindingContext[dsmathang.DataSource];
             myCurrencyManager.Refresh();
-
+            autosize();
         }
         private void loadData_Vao_GridView(List<DanhsachmathangDTO> listMatHang)
         {
@@ -276,7 +276,7 @@ namespace QLDL
 
             CurrencyManager myCurrencyManager = (CurrencyManager)this.BindingContext[dsmathang.DataSource];
             myCurrencyManager.Refresh();
-
+            autosize();
         }
 
         //XÓA CÁC Ô ĐIỀN DỮ LIỆU
@@ -336,6 +336,13 @@ namespace QLDL
             if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
             {
                 e.Handled = true;
+            }
+        }
+        private void autosize()
+        {
+            for (int i = 0; i < dsmathang.Columns.Count; i++)
+            {
+                dsmathang.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             }
         }
     }

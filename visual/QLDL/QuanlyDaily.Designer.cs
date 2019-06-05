@@ -35,19 +35,22 @@
             this.xóaĐạiLýToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.txtKeyword = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBangDanhSach)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvBangDanhSach
             // 
             this.dgvBangDanhSach.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvBangDanhSach.ContextMenuStrip = this.contextMenuStrip1;
-            this.dgvBangDanhSach.Location = new System.Drawing.Point(12, 76);
+            this.dgvBangDanhSach.Location = new System.Drawing.Point(6, 21);
             this.dgvBangDanhSach.Name = "dgvBangDanhSach";
+            this.dgvBangDanhSach.RowHeadersVisible = false;
             this.dgvBangDanhSach.RowHeadersWidth = 51;
             this.dgvBangDanhSach.RowTemplate.Height = 24;
-            this.dgvBangDanhSach.Size = new System.Drawing.Size(921, 362);
+            this.dgvBangDanhSach.Size = new System.Drawing.Size(855, 390);
             this.dgvBangDanhSach.TabIndex = 0;
             // 
             // contextMenuStrip1
@@ -75,14 +78,14 @@
             // 
             // txtKeyword
             // 
-            this.txtKeyword.Location = new System.Drawing.Point(282, 29);
+            this.txtKeyword.Location = new System.Drawing.Point(221, 25);
             this.txtKeyword.Name = "txtKeyword";
             this.txtKeyword.Size = new System.Drawing.Size(296, 22);
             this.txtKeyword.TabIndex = 1;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(584, 29);
+            this.button1.Location = new System.Drawing.Point(523, 21);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(95, 30);
             this.button1.TabIndex = 2;
@@ -90,19 +93,30 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.dgvBangDanhSach);
+            this.groupBox1.Location = new System.Drawing.Point(12, 57);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(867, 417);
+            this.groupBox1.TabIndex = 3;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Danh sách các đại lý";
+            // 
             // QuanlyDaily
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(945, 450);
+            this.ClientSize = new System.Drawing.Size(892, 486);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtKeyword);
-            this.Controls.Add(this.dgvBangDanhSach);
             this.Name = "QuanlyDaily";
             this.Text = "QuanlyDaily";
             this.Load += new System.EventHandler(this.QuanlyDaily_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBangDanhSach)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -116,5 +130,6 @@
         private System.Windows.Forms.ToolStripMenuItem xóaĐạiLýToolStripMenuItem;
         private System.Windows.Forms.TextBox txtKeyword;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
