@@ -70,5 +70,29 @@ namespace QLDL_DTO
         private string DonViTinh;
         public string donvitinh { get => DonViTinh; set => DonViTinh = value; }
     }
-  
+    public class PhieuxuathangDTO
+    {
+        private string MaXH;
+        private string MaDL;
+        private DateTime Ngaylap;
+        private int Tongtien;
+        
+        public string maxh { get => MaXH; set => MaXH = value; }
+        public string madl { get => MaDL; set => MaDL = value; }
+        public DateTime ngaylap { get => Ngaylap; set => Ngaylap = value; }
+        public int tongtien { get => Tongtien; set => Tongtien = value; }
+    }
+    public class ChitietphieuxuatDTO
+    {       
+        private string MaXH;
+        private string MaMH;
+        private int Soluong;
+        private int Tongtien;
+       
+        public string maxh { get => MaXH; set => MaXH = value; }
+        public string mamh { get => MaMH; set => MaMH = value; }      
+        public int soluong { get => Soluong; set => Soluong = value; }
+        public int tongtien { get => Tongtien; set => Tongtien = value; }
+    }
+
 }

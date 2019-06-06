@@ -53,17 +53,26 @@ CREATE TABLE [dbo].[tblPhieuThuTien]
 (
 	[maPhieu]	int	NOT NULL PRIMARY KEY,
 	[maDaiLy]	nvarchar(10) NOT NULL,	
-	[ngayThuTien] datetime NOT NULL,
+	[ngayThuTien] datetime2(7) NOT NULL,
 	[soTienThu] int NOT NULL
 	FOREIGN KEY (maDaiLy) REFERENCES tblHoSoDaiLy(maDaiLy),
 )
 CREATE TABLE [dbo].[tblPhieuXuatHang]
 (
-	[maXuatHang]	 int NOT NULL PRIMARY KEY,
+	[maXuatHang]	 nvarchar(10) NOT NULL PRIMARY KEY,
 	[maDaiLy]	     nvarchar(10) NOT NULL,
-	[ngayLapPhieu]	 datetime NOT NULL,
-	[tongtien]		 int NOT NULL,
+	[ngayLapPhieu]	 datetime2(7) NOT NULL,
+	[tongtien]		 int,--tong toan bo phieu xuat--
 	FOREIGN KEY (maDaiLy) REFERENCES tblHoSoDaiLy(maDaiLy),
+)
+CREATE TABLE [dbo].[tblChitietPhieuXuatHang]
+(	
+	[maXuatHang]	 nvarchar(10) NOT NULL,
+	[maMatHang]	     nvarchar(10) NOT NULL,
+	[soluong]	int NOT NULL,
+	[tongtien]		 int NOT NULL,--tong cua mat hang--
+	FOREIGN KEY ([maXuatHang]) REFERENCES [tblPhieuXuatHang]([maXuatHang]),
+	FOREIGN KEY ([maMatHang]) REFERENCES [tblMatHang]([maMatHang]),
 )
 CREATE TABLE [dbo].[tblNoDaiLy]
 (		
@@ -98,6 +107,7 @@ CREATE TABLE [dbo].[tblQuiDinh]
 --drop table tblHoSoDaiLy
 --drop table tblPhieuThuTien
 --drop table tblPhieuXuatHang
+--drop table tblChitietPhieuXuatHang
 --drop table tblNoDaiLy
 --drop table tblPhieubaocaoCongNo
 --drop table tblPhieubaocaoDoanhThu
@@ -135,3 +145,17 @@ INSERT INTO tblHoSoDaiLy (maDaiLy, tenDaiLy, diachi, email, maloaiDaiLy, ngayTie
 VALUES ('dl4', N'Đại lý 4', 'dc4', 'dl4@gmail.com', 'loai1', '20/12/2019', N'Quận Bình Thạnh', 324233, 400);
 INSERT INTO tblHoSoDaiLy (maDaiLy, tenDaiLy, diachi, email, maloaiDaiLy, ngayTiepNhan, quan, dienthoai, nohientai)
 VALUES ('dl5', N'Đại lý 5', 'dc5', 'dl5@gmail.com', 'loai2', '9/2/2019', N'Quận Thủ Đức', 3903443, 15);
+
+INSERT INTO [tblPhieuXuatHang] ([maXuatHang], [maDaiLy], [ngayLapPhieu], [tongtien])
+VALUES ('xh1', 'dl1', '9/2/2019', 15);
+INSERT INTO [tblPhieuXuatHang] ([maXuatHang], [maDaiLy], [ngayLapPhieu], [tongtien])
+VALUES ('xh2', 'dl4', '6/7/2019', 20);
+INSERT INTO [tblPhieuXuatHang] ([maXuatHang], [maDaiLy], [ngayLapPhieu], [tongtien])
+VALUES ('xh3', 'dl3', '10/9/2019', 300);
+INSERT INTO [tblPhieuXuatHang] ([maXuatHang], [maDaiLy], [ngayLapPhieu])
+VALUES ('xh4', 'dl3', '11/9/2019');
+
+
+----TESTING----
+
+

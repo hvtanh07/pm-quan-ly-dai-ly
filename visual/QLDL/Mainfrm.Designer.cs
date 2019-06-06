@@ -74,20 +74,21 @@
             // tiếpNhậnĐạiLýToolStripMenuItem
             // 
             this.tiếpNhậnĐạiLýToolStripMenuItem.Name = "tiếpNhậnĐạiLýToolStripMenuItem";
-            this.tiếpNhậnĐạiLýToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.tiếpNhậnĐạiLýToolStripMenuItem.Size = new System.Drawing.Size(211, 26);
             this.tiếpNhậnĐạiLýToolStripMenuItem.Text = "Tiếp nhận đại lý";
             this.tiếpNhậnĐạiLýToolStripMenuItem.Click += new System.EventHandler(this.TiếpNhậnĐạiLýToolStripMenuItem_Click);
             // 
             // lậpPhiếuThuTiềnToolStripMenuItem
             // 
             this.lậpPhiếuThuTiềnToolStripMenuItem.Name = "lậpPhiếuThuTiềnToolStripMenuItem";
-            this.lậpPhiếuThuTiềnToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.lậpPhiếuThuTiềnToolStripMenuItem.Size = new System.Drawing.Size(211, 26);
             this.lậpPhiếuThuTiềnToolStripMenuItem.Text = "Lập phiếu thu tiền";
+            this.lậpPhiếuThuTiềnToolStripMenuItem.Click += new System.EventHandler(this.LậpPhiếuThuTiềnToolStripMenuItem_Click);
             // 
             // quảnLýĐạiLýToolStripMenuItem
             // 
             this.quảnLýĐạiLýToolStripMenuItem.Name = "quảnLýĐạiLýToolStripMenuItem";
-            this.quảnLýĐạiLýToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.quảnLýĐạiLýToolStripMenuItem.Size = new System.Drawing.Size(211, 26);
             this.quảnLýĐạiLýToolStripMenuItem.Text = "Quản lý đại lý";
             this.quảnLýĐạiLýToolStripMenuItem.Click += new System.EventHandler(this.QuảnLýĐạiLýToolStripMenuItem_Click);
             // 
@@ -105,6 +106,7 @@
             this.lậpPhiếuXuấtHàngToolStripMenuItem.Name = "lậpPhiếuXuấtHàngToolStripMenuItem";
             this.lậpPhiếuXuấtHàngToolStripMenuItem.Size = new System.Drawing.Size(226, 26);
             this.lậpPhiếuXuấtHàngToolStripMenuItem.Text = "Lập phiếu xuất hàng";
+            this.lậpPhiếuXuấtHàngToolStripMenuItem.Click += new System.EventHandler(this.LậpPhiếuXuấtHàngToolStripMenuItem_Click);
             // 
             // thêmXóaMặtHàngToolStripMenuItem
             // 

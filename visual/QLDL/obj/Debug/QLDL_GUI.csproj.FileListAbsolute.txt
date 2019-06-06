@@ -325,3 +325,6 @@ E:\installer\pm-quan-ly-dai-ly-2\visual\QLDL\bin\Debug\ru\DevExpress.Office.v18.
 E:\installer\pm-quan-ly-dai-ly-2\visual\QLDL\obj\Debug\QLDL_GUI.csproj.CopyComplete
 E:\installer\pm-quan-ly-dai-ly-2\visual\QLDL\obj\Debug\QLDL.SuaDaiLy.resources
 D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\obj\Debug\QLDL.SuaDaiLy.resources
+D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\obj\Debug\QLDL.PhieuThuTien.resources
+D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\obj\Debug\QLDL.PhieuXuatHang.resources
+D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\obj\Debug\QLDL.LapPhieuXuatHang.resources

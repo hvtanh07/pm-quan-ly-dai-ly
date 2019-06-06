@@ -147,32 +147,25 @@ namespace QLDL
             DialogResult dlr = MessageBox.Show("Bạn có chắc muốn xóa loại đại lý này không ?", "Xóa thông tin", MessageBoxButtons.YesNo);
             if (dlr == DialogResult.Yes)
             {
+                int currentRowIndex = danhsachldl.CurrentCellAddress.Y;// 'current row selected
+                if (-1 < currentRowIndex && currentRowIndex < danhsachldl.RowCount)
                 {
-                    // ' Get the current cell location.
-                    int currentRowIndex = danhsachldl.CurrentCellAddress.Y;// 'current row selected
-
-
-                    //'Verify that indexing OK
-                    if (-1 < currentRowIndex && currentRowIndex < danhsachldl.RowCount)
+                    LoaiDaiLyDTO ldl = (LoaiDaiLyDTO)danhsachldl.Rows[currentRowIndex].DataBoundItem;
+                    if (ldl != null)
                     {
-                        LoaiDaiLyDTO ldl = (LoaiDaiLyDTO)danhsachldl.Rows[currentRowIndex].DataBoundItem;
-                        if (ldl != null)
+                        bool kq = ldlbus.Xoa(ldl);
+                        if (kq == false)
+                            MessageBox.Show("Xóa loại đại lý thất bại. Vui lòng kiểm tra lại dũ liệu");
+                        else
                         {
-                            bool kq = ldlbus.Xoa(ldl);
-                            if (kq == false)
-                                MessageBox.Show("Xóa loại đại lý thất bại. Vui lòng kiểm tra lại dũ liệu");
-                            else
-                            {
-                                MessageBox.Show("Xóa loại đại lý thành công");
-                                this.loadData_Vao_GridView();
-                            }
-
+                            MessageBox.Show("Xóa loại đại lý thành công");
+                            this.loadData_Vao_GridView();
                         }
+
                     }
-                    this.loadData_Vao_GridView();
                 }
+
             }
-            loadData_Vao_GridView();
         }
         //tim kiem
         private void Button4_Click(object sender, EventArgs e)
