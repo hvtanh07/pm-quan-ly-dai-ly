@@ -51,6 +51,7 @@ namespace QLDL
                 }
             }
             this.loadData_Vao_GridView();
+            autosize();
         }
         //XÓA
         private void XóaĐạiLýToolStripMenuItem_Click(object sender, EventArgs e)

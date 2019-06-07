@@ -60,6 +60,12 @@
     <Compile Include="LapPhieuXuatHang.Designer.cs">
       <DependentUpon>LapPhieuXuatHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="PhieuBaocaoDT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PhieuBaocaoDT.Designer.cs">
+      <DependentUpon>PhieuBaocaoDT.cs</DependentUpon>
+    </Compile>
     <Compile Include="PhieuThuTien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,11 +98,11 @@
     <Compile Include="QuanlyDaily.Designer.cs">
       <DependentUpon>QuanlyDaily.cs</DependentUpon>
     </Compile>
-    <Compile Include="QuanLyLoaiDaily.cs">
+    <Compile Include="QuanLyLoaiDailyDonvi.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="QuanLyLoaiDaily.Designer.cs">
-      <DependentUpon>QuanLyLoaiDaily.cs</DependentUpon>
+    <Compile Include="QuanLyLoaiDailyDonvi.Designer.cs">
+      <DependentUpon>QuanLyLoaiDailyDonvi.cs</DependentUpon>
     </Compile>
     <Compile Include="QuanlyMatHangfrm.cs">
       <SubType>Form</SubType>
@@ -118,6 +124,9 @@
     </Compile>
     <EmbeddedResource Include="LapPhieuXuatHang.resx">
       <DependentUpon>LapPhieuXuatHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhieuBaocaoDT.resx">
+      <DependentUpon>PhieuBaocaoDT.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PhieuThuTien.resx">
       <DependentUpon>PhieuThuTien.cs</DependentUpon>
@@ -145,8 +154,8 @@
     <EmbeddedResource Include="QuanlyDaily.resx">
       <DependentUpon>QuanlyDaily.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="QuanLyLoaiDaily.resx">
-      <DependentUpon>QuanLyLoaiDaily.cs</DependentUpon>
+    <EmbeddedResource Include="QuanLyLoaiDailyDonvi.resx">
+      <DependentUpon>QuanLyLoaiDailyDonvi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QuanlyMatHangfrm.resx">
       <DependentUpon>QuanlyMatHangfrm.cs</DependentUpon>

@@ -1,21 +1,37 @@
 ﻿using QLDL_BUS;
 using QLDL_DTO;
 using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Text.RegularExpressions;
-
 namespace QLDL
 {
     public partial class TiepNhanDaiLyfrm : Form
     {
         private CHoSoDaiLyBUS hsBUS;
+        private CQuyDinhBUS qdBUS;
+        private CLoaiDaiLyBUS ldlBUS;
         public TiepNhanDaiLyfrm()
         {
             InitializeComponent();
         }
         private void TiepNhanDaiLyfrm_Load(object sender, EventArgs e)
         {
+            qdBUS = new CQuyDinhBUS();
             hsBUS = new CHoSoDaiLyBUS();
+            ldlBUS = new CLoaiDaiLyBUS();
+            Taodatasource();
+        }
+        private void Taodatasource()
+        {
+            List<string> maldl = new List<string>();
+            maldl = ldlBUS.Layloaidl();
+            ldl.DataSource = maldl;
         }
         private void Button1_Click(object sender, EventArgs e)
         {
@@ -35,8 +51,13 @@ namespace QLDL
             hs.loaidaily = ldl.Text;
 
             //2. Kiểm tra data hợp lệ or not
-            //kiểm tra trong quận đã đạt tối đa số đại lý chưa
-                    
+            QuiDinhDTO qd = qdBUS.Laydulieu();
+            int sodl = hsBUS.Laysodaily(quantxt.Text);
+            if (sodl >= qd.Maxsodl)
+            {
+                MessageBox.Show("Thêm hồ sơ thất bại. Số đại lý trong " + quantxt.Text + " đã đạt tối đa theo quy định");
+                return;
+            }
             //3. Thêm vào DB
             bool kq = hsBUS.Them(hs);
             if (kq == false)
@@ -52,6 +73,8 @@ namespace QLDL
                 dttxt.Text = "";
                 ldl.Text = "";
             }
+            QuanlyDaily frm = new QuanlyDaily();
+            frm.ShowDialog();
         }
         //RÀNG BUỘC CỦA DỮ LIỆU NHẬP VÀO
         private void numOnly(object sender, KeyPressEventArgs e)// I have no idea how this shit work, so dont touch it

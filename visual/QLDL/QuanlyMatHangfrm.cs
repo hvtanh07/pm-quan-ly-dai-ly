@@ -14,15 +14,27 @@ namespace QLDL
 {
     public partial class QuanlyMatHangfrm : Form
     {
+        private CQuyDinhBUS qdBUS;
+        private CMatHangBUS mhbus;
+        private DanhsachDonviBUS dvBUS;
         public QuanlyMatHangfrm()
         {
             InitializeComponent();
         }
-        private CMatHangBUS mhbus;
+        
         private void ThemXoaSuaMatHangfrm_Load(object sender, EventArgs e)
         {
+            dvBUS = new DanhsachDonviBUS();
+            qdBUS = new CQuyDinhBUS();
             mhbus = new CMatHangBUS();
             this.loadData_Vao_GridView();
+            Taodatasource();
+        }
+        private void Taodatasource()
+        {
+            List<string> madv = new List<string>();
+            madv = dvBUS.Laydonvi();
+            dvt.DataSource = madv;
         }
         //THEM ---- Kiểm tra qui định thì thêm ở đây này
         private void Button1_Click(object sender, EventArgs e)
@@ -38,7 +50,13 @@ namespace QLDL
             mh.gia = int.Parse(gia.Text);
             mh.donvitinh = dvt.Text;
             //2. Kiểm tra data hợp lệ or not
-            // số lượng mặt hàng quá 5 chưa, số lương dơn vị tính có quá 3 chưa
+            QuiDinhDTO qd = qdBUS.Laydulieu();
+            int somh = mhbus.Laysomathang();
+            if (somh >= qd.soluongDVT)
+            {
+                MessageBox.Show("Thêm mặt hàng thất bại. Số mặt hàng đã đạt tối đa theo qui định");
+                return;
+            }
             //3. Thêm vào DB
             bool kq = mhbus.Them(mh);
             if (kq == false)
@@ -86,8 +104,6 @@ namespace QLDL
                 {
                     // ' Get the current cell location.
                     int currentRowIndex = dsmathang.CurrentCellAddress.Y;// 'current row selected
-
-
                     //'Verify that indexing OK
                     if (-1 < currentRowIndex && currentRowIndex < dsmathang.RowCount)
                     {
@@ -102,10 +118,8 @@ namespace QLDL
                                 MessageBox.Show("Xóa mặt hàng thành công");
                                 this.loadData_Vao_GridView();
                             }
-
                         }
-                    }
-                    this.loadData_Vao_GridView();
+                    } 
                 }
             }
             loadData_Vao_GridView();
@@ -222,8 +236,7 @@ namespace QLDL
             cldvt.HeaderText = "Đơn vị tính";
             cldvt.DataPropertyName = "donViTinh";
             dsmathang.Columns.Add(cldvt);
-
-            
+       
             CurrencyManager myCurrencyManager = (CurrencyManager)this.BindingContext[dsmathang.DataSource];
             myCurrencyManager.Refresh();
             autosize();
@@ -273,12 +286,10 @@ namespace QLDL
             cldvt.DataPropertyName = "donViTinh";
             dsmathang.Columns.Add(cldvt);
 
-
             CurrencyManager myCurrencyManager = (CurrencyManager)this.BindingContext[dsmathang.DataSource];
             myCurrencyManager.Refresh();
             autosize();
         }
-
         //XÓA CÁC Ô ĐIỀN DỮ LIỆU
         private void clear()
         {
@@ -323,7 +334,6 @@ namespace QLDL
             
             return true;//all true then gud to go
         }
-
         private void numOnly(object sender, KeyPressEventArgs e)// I have no idea how this shit work, so dont touch it
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&

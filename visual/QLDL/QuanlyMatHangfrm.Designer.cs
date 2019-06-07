@@ -36,7 +36,6 @@
             this.tmh = new System.Windows.Forms.TextBox();
             this.gia = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.dvt = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.hsd = new System.Windows.Forms.DateTimePicker();
             this.dsmathang = new System.Windows.Forms.DataGridView();
@@ -50,6 +49,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.mamh = new System.Windows.Forms.TextBox();
+            this.dvt = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dsmathang)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -115,13 +115,6 @@
             this.label8.Size = new System.Drawing.Size(75, 17);
             this.label8.TabIndex = 13;
             this.label8.Text = "Đơn vị tính";
-            // 
-            // dvt
-            // 
-            this.dvt.Location = new System.Drawing.Point(351, 169);
-            this.dvt.Name = "dvt";
-            this.dvt.Size = new System.Drawing.Size(101, 22);
-            this.dvt.TabIndex = 5;
             // 
             // button1
             // 
@@ -242,11 +235,20 @@
             this.mamh.Size = new System.Drawing.Size(181, 22);
             this.mamh.TabIndex = 1;
             // 
+            // dvt
+            // 
+            this.dvt.FormattingEnabled = true;
+            this.dvt.Location = new System.Drawing.Point(351, 169);
+            this.dvt.Name = "dvt";
+            this.dvt.Size = new System.Drawing.Size(121, 24);
+            this.dvt.TabIndex = 22;
+            // 
             // QuanlyMatHangfrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(700, 604);
+            this.Controls.Add(this.dvt);
             this.Controls.Add(this.mamh);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.groupBox1);
@@ -254,7 +256,6 @@
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.dvt);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.gia);
             this.Controls.Add(this.tmh);
@@ -283,7 +284,6 @@
         private System.Windows.Forms.TextBox tmh;
         private System.Windows.Forms.TextBox gia;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox dvt;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DateTimePicker hsd;
         private System.Windows.Forms.DataGridView dsmathang;
@@ -297,5 +297,6 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox mamh;
+        private System.Windows.Forms.ComboBox dvt;
     }
 }

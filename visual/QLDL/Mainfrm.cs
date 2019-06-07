@@ -47,7 +47,7 @@ namespace QLDL
 
         private void ThayĐổiSốLượngCácĐạiLýToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            QuanLyLoaiDaily frm = new QuanLyLoaiDaily();
+            QuanLyLoaiDailyDonvi frm = new QuanLyLoaiDailyDonvi();
             frm.MdiParent = this;
             frm.Show();
         }
@@ -69,6 +69,13 @@ namespace QLDL
         private void LậpPhiếuXuấtHàngToolStripMenuItem_Click(object sender, EventArgs e)
         {
             LapPhieuXuatHang frm = new LapPhieuXuatHang();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void BáoCáoDoanhSốToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PhieuBaocaoDT frm = new PhieuBaocaoDT();
             frm.MdiParent = this;
             frm.Show();
         }

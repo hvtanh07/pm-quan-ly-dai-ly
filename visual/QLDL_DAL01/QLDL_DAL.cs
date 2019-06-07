@@ -23,8 +23,8 @@ namespace QLDL_DAL
         public bool Them(CHoSoDaiLyDTO HoSo)
         {
             string query = string.Empty;
-            query += "INSERT INTO [tblHoSoDaiLy] ([maDaiLy], [tenDaiLy], [diachi],[email], [maloaiDaiLy], [ngayTiepNhan], [quan], [dienthoai], [nohientai])";
-            query += "VALUES (@maDaiLy, @tenDaiLy, @diachi, @email, @maloaiDaiLy,@ngayTiepNhan , @quan, @dienthoai, @nohientai)";
+            query += " INSERT INTO [tblHoSoDaiLy] ([maDaiLy], [tenDaiLy], [diachi],[email], [maloaiDaiLy], [ngayTiepNhan], [quan], [dienthoai], [nohientai])";
+            query += " VALUES (@maDaiLy, @tenDaiLy, @diachi, @email, @maloaiDaiLy,@ngayTiepNhan , @quan, @dienthoai, @nohientai)";
             using (SqlConnection con = new SqlConnection(ConnectionString))
             {
 
@@ -43,18 +43,18 @@ namespace QLDL_DAL
                     cmd.Parameters.AddWithValue("@dienthoai", HoSo.dienthoai);
                     cmd.Parameters.AddWithValue("@nohientai", HoSo.nohientai);
 
-                    //try
-                    //{
+                    try
+                    {
                         con.Open();
                         cmd.ExecuteNonQuery();
                         con.Close();
                         con.Dispose();
-                    //}
-                    //catch (Exception ex)
-                    //{
-                    //    con.Close();
-                    //    return false;
-                    //}
+                    }
+                    catch (Exception ex)
+                    {
+                        con.Close();
+                        return false;
+                    }
                 }
             }
             return true;
@@ -62,7 +62,7 @@ namespace QLDL_DAL
         public bool Sua(CHoSoDaiLyDTO HoSo)
         {
             string query = string.Empty;
-            query += "UPDATE tblHoSoDaiLy SET [tenDaiLy] = @tenDaiLy, [diachi] = @diachi, [email] = @email, [maloaiDaiLy] = @maloaiDaiLy, [quan] = @quan, [dienthoai] = @dienthoai, [nohientai] = @nohientai WHERE [maDaiLy] = @maDaiLy";
+            query += " UPDATE tblHoSoDaiLy SET [tenDaiLy] = @tenDaiLy, [diachi] = @diachi, [email] = @email, [maloaiDaiLy] = @maloaiDaiLy, [quan] = @quan, [dienthoai] = @dienthoai, [nohientai] = @nohientai WHERE [maDaiLy] = @maDaiLy";
 
             using (SqlConnection con = new SqlConnection(ConnectionString))
             {
@@ -96,11 +96,10 @@ namespace QLDL_DAL
             }
             return true;
         }
-
         public bool Xoa(CHoSoDaiLyDTO HoSo)
         {
             string query = string.Empty;
-            query += "DELETE FROM tblHoSoDaiLy WHERE [maDaiLy] = @maDaiLy";
+            query += " DELETE FROM tblHoSoDaiLy WHERE [maDaiLy] = @maDaiLy";
 
             using (SqlConnection con = new SqlConnection(ConnectionString))
             {
@@ -127,12 +126,11 @@ namespace QLDL_DAL
             }
             return true;
         }
-
         public List<CHoSoDaiLyDTO> select()
         {
             string query = string.Empty;
-            query += "SELECT [maDaiLy],[tenDaiLy],[diachi],[email],[maloaiDaiLy],[ngayTiepNhan],[quan],[dienthoai],[nohientai]";
-            query += "FROM [tblHoSoDaiLy]";
+            query += " SELECT [maDaiLy],[tenDaiLy],[diachi],[email],[maloaiDaiLy],[ngayTiepNhan],[quan],[dienthoai],[nohientai]";
+            query += " FROM [tblHoSoDaiLy]";
 
             List<CHoSoDaiLyDTO> listHoSoDaiLy = new List<CHoSoDaiLyDTO>();
 
@@ -179,7 +177,6 @@ namespace QLDL_DAL
             }
             return listHoSoDaiLy;
         }
-
         public List<CHoSoDaiLyDTO> selectByKeyWord(string sKeyword)
         {
             string query = string.Empty;
@@ -279,6 +276,82 @@ namespace QLDL_DAL
             }
             return dsmadl;
         }
+        public int Laytienno(string madl)
+        {
+            int tienno = 0;
+            string query = string.Empty;
+            query += " SELECT [nohientai]";
+            query += " FROM [tblHoSoDaiLy]";
+            query += " WHERE ([maDaiLy] LIKE CONCAT('%',@sKeyword,'%'))";
+            using (SqlConnection con = new SqlConnection(ConnectionString))
+            {
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cmd.Connection = con;
+                    cmd.CommandType = System.Data.CommandType.Text;
+                    cmd.CommandText = query;
+                    cmd.Parameters.AddWithValue("@sKeyword", madl);
+                    try
+                    {
+                        con.Open();
+                        SqlDataReader reader = null;
+                        reader = cmd.ExecuteReader();
+                        if (reader.HasRows == true)
+                        {
+                            reader.Read();
+                            tienno = int.Parse(reader["nohientai"].ToString());
+                        }
+
+                        con.Close();
+                        con.Dispose();
+                    }
+                    catch (Exception ex)
+                    {
+                        con.Close();
+                        return 0;
+                    }
+                }
+            }
+            return tienno;
+        }
+        public int Laysodaily(string quan)
+        {
+            int sodl = 0;
+            string query = string.Empty;
+            query += " SELECT COUNT(*) as [sodl]";
+            query += " FROM tblHoSoDaiLy";
+            query += " WHERE quan = @sKeyword";
+            using (SqlConnection con = new SqlConnection(ConnectionString))
+            {
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cmd.Connection = con;
+                    cmd.CommandType = System.Data.CommandType.Text;
+                    cmd.CommandText = query;
+                    cmd.Parameters.AddWithValue("@sKeyword", quan);
+                    try
+                    {
+                        con.Open();
+                        SqlDataReader reader = null;
+                        reader = cmd.ExecuteReader();
+                        if (reader.HasRows == true)
+                        {
+                            reader.Read();
+                            sodl = int.Parse(reader["sodl"].ToString());
+                        }
+
+                        con.Close();
+                        con.Dispose();
+                    }
+                    catch (Exception ex)
+                    {
+                        con.Close();
+                        return 0;
+                    }
+                }
+            }
+            return sodl;
+        }
     }
     public class CMatHangDAL
     {
@@ -294,8 +367,8 @@ namespace QLDL_DAL
         public bool Them(DanhsachmathangDTO MH)
         {
             string query = string.Empty;
-            query += "INSERT INTO [dbo].[tblMatHang] ([maMatHang],[tenmathang], [hanSuDung], [gia], [donViTinh])";
-            query += "VALUES (@maMatHang,@tenmathang,@hanSuDung, @gia, @donViTinh)";
+            query += " INSERT INTO [dbo].[tblMatHang] ([maMatHang],[tenmathang], [hanSuDung], [gia], [donViTinh])";
+            query += " VALUES (@maMatHang,@tenmathang,@hanSuDung, @gia, @donViTinh)";
             using (SqlConnection con = new SqlConnection(ConnectionString))
             {
 
@@ -359,7 +432,6 @@ namespace QLDL_DAL
             }
             return true;
         }
-
         public bool Xoa(DanhsachmathangDTO MH)
         {
             string query = string.Empty;
@@ -393,8 +465,8 @@ namespace QLDL_DAL
         public List<DanhsachmathangDTO> select()
         {
             string query = string.Empty;
-            query += "SELECT [maMatHang], [tenmathang], [hanSuDung], [gia], [donViTinh]";
-            query += "FROM [tblMatHang]";
+            query += " SELECT [maMatHang], [tenmathang], [hanSuDung], [gia], [donViTinh]";
+            query += " FROM [tblMatHang]";
 
             List<DanhsachmathangDTO> listMatHang = new List<DanhsachmathangDTO>();
 
@@ -567,7 +639,42 @@ namespace QLDL_DAL
             }
             return gia;
         }
+        public int Laysomathang()
+        {
+            int somh = 0;
+            string query = string.Empty;
+            query += " SELECT COUNT(*) as [somh]";
+            query += " FROM tblHoSoDaiLy";
+            using (SqlConnection con = new SqlConnection(ConnectionString))
+            {
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cmd.Connection = con;
+                    cmd.CommandType = System.Data.CommandType.Text;
+                    cmd.CommandText = query;
+                    try
+                    {
+                        con.Open();
+                        SqlDataReader reader = null;
+                        reader = cmd.ExecuteReader();
+                        if (reader.HasRows == true)
+                        {
+                            reader.Read();
+                            somh = int.Parse(reader["somh"].ToString());
+                        }
 
+                        con.Close();
+                        con.Dispose();
+                    }
+                    catch (Exception ex)
+                    {
+                        con.Close();
+                        return 0;
+                    }
+                }
+            }
+            return somh;
+        }
     }
     public class CQuiDinhDAL
     {
@@ -583,7 +690,7 @@ namespace QLDL_DAL
         public bool Sua(QuiDinhDTO QD)
         {
             string query = string.Empty;
-            query += "UPDATE tblQuiDinh SET [maxloaidl] = @maxloaidl, [soluongmathang] = @soluongmathang, [soluongdvt] = @soluongdvt, [maxdl] = @maxdl WHERE [getkey]=@getkey";
+            query += " UPDATE tblQuiDinh SET [maxloaidl] = @maxloaidl, [soluongmathang] = @soluongmathang, [soluongdvt] = @soluongdvt, [maxdl] = @maxdl WHERE [getkey]=@getkey";
             using (SqlConnection con = new SqlConnection(ConnectionString))
             {
 
@@ -652,19 +759,16 @@ namespace QLDL_DAL
                 }
             }
             return re;
-        }
+        }        
     }
     public class CLoaiDaiLyDAL
     {
         private string connectionString;
-
         public CLoaiDaiLyDAL()
         {
             connectionString = ConfigurationManager.AppSettings["ConnectionString"];
         }
-
         public string ConnectionString { get => connectionString; set => connectionString = value; }//chỉnh sửa qui định
-
         public bool Sua(LoaiDaiLyDTO LDL)
         {
             string query = string.Empty;
@@ -758,11 +862,50 @@ namespace QLDL_DAL
             }
             return true;
         }
+        public List<string> Layloaidl()
+        {
+            List<string> dsmaldl = new List<string>();
+            string query = string.Empty;
+            query += " SELECT [maLoaiDaiLy]";
+            query += " FROM [tblLoaiDaiLy]";
+            using (SqlConnection con = new SqlConnection(ConnectionString))
+            {
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cmd.Connection = con;
+                    cmd.CommandType = System.Data.CommandType.Text;
+                    cmd.CommandText = query;
+                    try
+                    {
+                        con.Open();
+                        SqlDataReader reader = null;
+                        reader = cmd.ExecuteReader();
+                        if (reader.HasRows == true)
+                        {
+                            while (reader.Read())
+                            {
+                                string maldl = reader["maLoaiDaiLy"].ToString();
+                                dsmaldl.Add(maldl);
+                            }
+                        }
+
+                        con.Close();
+                        con.Dispose();
+                    }
+                    catch (Exception ex)
+                    {
+                        con.Close();
+                        return null;
+                    }
+                }
+            }
+            return dsmaldl;
+        }
         public List<LoaiDaiLyDTO> select()
         {
             string query = string.Empty;
-            query += "SELECT [maLoaiDaiLy], [loaiDaiLy], [maxno]";
-            query += "FROM [tblLoaiDaiLy]";
+            query += " SELECT [maLoaiDaiLy], [loaiDaiLy], [maxno]";
+            query += " FROM [tblLoaiDaiLy]";
 
             List<LoaiDaiLyDTO> listloaidl = new List<LoaiDaiLyDTO>();
 
@@ -853,7 +996,42 @@ namespace QLDL_DAL
             }
             return listloaidl;
         }
+        public int Laysoloaidl()
+        {
+            int soldl = 0;
+            string query = string.Empty;
+            query += " SELECT COUNT(*) as [soldl]";
+            query += " FROM tblHoSoDaiLy";
+            using (SqlConnection con = new SqlConnection(ConnectionString))
+            {
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cmd.Connection = con;
+                    cmd.CommandType = System.Data.CommandType.Text;
+                    cmd.CommandText = query;
+                    try
+                    {
+                        con.Open();
+                        SqlDataReader reader = null;
+                        reader = cmd.ExecuteReader();
+                        if (reader.HasRows == true)
+                        {
+                            reader.Read();
+                            soldl = int.Parse(reader["soldl"].ToString());
+                        }
 
+                        con.Close();
+                        con.Dispose();
+                    }
+                    catch (Exception ex)
+                    {
+                        con.Close();
+                        return 0;
+                    }
+                }
+            }
+            return soldl;
+        }
     }
     public class DanhsachDonviDAL
     {
@@ -926,11 +1104,50 @@ namespace QLDL_DAL
             }
             return true;
         }
+        public List<string> Laydonvi()
+        {
+            List<string> dsdv = new List<string>();
+            string query = string.Empty;
+            query += " SELECT [donViTinh]";
+            query += " FROM [tblDonvi]";
+            using (SqlConnection con = new SqlConnection(ConnectionString))
+            {
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cmd.Connection = con;
+                    cmd.CommandType = System.Data.CommandType.Text;
+                    cmd.CommandText = query;
+                    try
+                    {
+                        con.Open();
+                        SqlDataReader reader = null;
+                        reader = cmd.ExecuteReader();
+                        if (reader.HasRows == true)
+                        {
+                            while (reader.Read())
+                            {
+                                string madv = reader["donViTinh"].ToString();
+                                dsdv.Add(madv);
+                            }
+                        }
+
+                        con.Close();
+                        con.Dispose();
+                    }
+                    catch (Exception ex)
+                    {
+                        con.Close();
+                        return null;
+                    }
+                }
+            }
+            return dsdv;
+        }
         public List<DanhsachDonviDTO> select()
         {
             string query = string.Empty;
-            query += "SELECT  [donViTinh]";
-            query += "FROM [tblDonvi]";
+            query += " SELECT  [donViTinh]";
+            query += " FROM [tblDonvi]";
 
             List<DanhsachDonviDTO> listdonvi = new List<DanhsachDonviDTO>();
 
@@ -988,8 +1205,8 @@ namespace QLDL_DAL
                     cmd.CommandType = System.Data.CommandType.Text;
                     cmd.CommandText = query;
                     cmd.Parameters.AddWithValue("@sKeyword", sKeyword);
-                    try
-                    {
+                    //try
+                    //{
                         con.Open();
                         SqlDataReader reader = null;
                         reader = cmd.ExecuteReader();
@@ -998,9 +1215,45 @@ namespace QLDL_DAL
                             while (reader.Read())
                             {
                                 DanhsachDonviDTO dv = new DanhsachDonviDTO();
-                                dv.donvitinh= reader["loaiDaiLy"].ToString();
+                                dv.donvitinh= reader["donViTinh"].ToString();
                                 listdonvi.Add(dv);
                             }
+                        }
+
+                        con.Close();
+                        con.Dispose();
+                    //}
+                    //catch (Exception ex)
+                    //{
+                    //    con.Close();
+                    //    return null;
+                    //}
+                }
+            }
+            return listdonvi;
+        }
+        public int Laysodonvi()
+        {
+            int sodv = 0;
+            string query = string.Empty;
+            query += " SELECT COUNT(*) as [sodv]";
+            query += " FROM tblHoSoDaiLy";
+            using (SqlConnection con = new SqlConnection(ConnectionString))
+            {
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cmd.Connection = con;
+                    cmd.CommandType = System.Data.CommandType.Text;
+                    cmd.CommandText = query;
+                    try
+                    {
+                        con.Open();
+                        SqlDataReader reader = null;
+                        reader = cmd.ExecuteReader();
+                        if (reader.HasRows == true)
+                        {
+                            reader.Read();
+                            sodv = int.Parse(reader["sodv"].ToString());
                         }
 
                         con.Close();
@@ -1009,13 +1262,12 @@ namespace QLDL_DAL
                     catch (Exception ex)
                     {
                         con.Close();
-                        return null;
+                        return 0;
                     }
                 }
             }
-            return listdonvi;
+            return sodv;
         }
-
     }
     public class PhieuxuathangDAL
     {
@@ -1125,8 +1377,8 @@ namespace QLDL_DAL
         public List<PhieuxuathangDTO> select()
         {
             string query = string.Empty;
-            query += "SELECT [maXuatHang], [maDaiLy], [ngayLapPhieu], [tongtien]";
-            query += "FROM [tblPhieuXuatHang]";
+            query += " SELECT [maXuatHang], [maDaiLy], [ngayLapPhieu], [tongtien]";
+            query += " FROM [tblPhieuXuatHang]";
 
             List<PhieuxuathangDTO> listXuatHang = new List<PhieuxuathangDTO>();
 
@@ -1172,8 +1424,8 @@ namespace QLDL_DAL
         public List<PhieuxuathangDTO> selectByKeyWord(string sKeyword)
         {
             string query = string.Empty;
-            query += "SELECT [maXuatHang], [maDaiLy], [ngayLapPhieu], [tongtien]";
-            query += "FROM [tblPhieuXuatHang]";
+            query += " SELECT [maXuatHang], [maDaiLy], [ngayLapPhieu], [tongtien]";
+            query += " FROM [tblPhieuXuatHang]";
             query += " WHERE ([maXuatHang] LIKE CONCAT('%',@sKeyword,'%'))";
             query += " OR ([maDaiLy] LIKE CONCAT('%',@sKeyword,'%'))";
             query += " OR ([ngayLapPhieu] LIKE CONCAT('%',@sKeyword,'%'))";
@@ -1360,9 +1612,9 @@ namespace QLDL_DAL
         public List<ChitietphieuxuatDTO> select(string maxh)
         {
             string query = string.Empty;
-            query += "SELECT [maMatHang], [soluong], [tongtien]";
-            query += "FROM [tblChitietPhieuXuatHang]";
-            query += "WHERE [maXuatHang]=@maXuatHang";
+            query += " SELECT [maMatHang], [soluong], [tongtien]";
+            query += " FROM [tblChitietPhieuXuatHang]";
+            query += " WHERE [maXuatHang]=@maXuatHang";
             List<ChitietphieuxuatDTO> listCTXuatHang = new List<ChitietphieuxuatDTO>();
 
             using (SqlConnection con = new SqlConnection(connectionString))
@@ -1406,13 +1658,12 @@ namespace QLDL_DAL
         public List<ChitietphieuxuatDTO> selectByKeyWord(string sKeyword, string maxh)
         {
             string query = string.Empty;
-            query += "SELECT [maMatHang], [soluong], [tongtien]";
-            query += "FROM [tblPhieuXuatHang]";
-            query += "WHERE [maXuatHang]=@maXuatHang";
-            query += " WHERE ([maXuatHang] LIKE CONCAT('%',@sKeyword,'%'))";
-            query += " WHERE ([maMatHang] LIKE CONCAT('%',@sKeyword,'%'))";
-            query += " WHERE ([soluong] LIKE CONCAT('%',@sKeyword,'%'))";
-            query += " WHERE ([tongtien] LIKE CONCAT('%',@sKeyword,'%'))";
+            query += " SELECT [maMatHang], [soluong], [tongtien]";
+            query += " FROM [tblChitietPhieuXuatHang]";
+            query += " WHERE [maXuatHang]=@maXuatHang";            
+            query += " AND (([maMatHang] LIKE CONCAT('%',@sKeyword,'%'))";
+            query += " OR ([soluong] LIKE CONCAT('%',@sKeyword,'%'))";
+            query += " OR ([tongtien] LIKE CONCAT('%',@sKeyword,'%')))";
 
             List<ChitietphieuxuatDTO> listCTXuatHang = new List<ChitietphieuxuatDTO>();
 
@@ -1436,13 +1687,12 @@ namespace QLDL_DAL
                             while (reader.Read())
                             {
                                 ChitietphieuxuatDTO CTXH = new ChitietphieuxuatDTO();
-                                CTXH.maxh = reader["maXuatHang"].ToString();
+                                CTXH.mamh = reader["maMatHang"].ToString();
                                 CTXH.soluong = int.Parse(reader["soluong"].ToString());
                                 CTXH.tongtien = int.Parse(reader["tongtien"].ToString());
                                 listCTXuatHang.Add(CTXH);
                             }
                         }
-
                         con.Close();
                         con.Dispose();
                     }
@@ -1456,5 +1706,589 @@ namespace QLDL_DAL
             return listCTXuatHang;
         }
     }
+    public class PhieuThuTienDAL
+    {
+        private string connectionString;
 
+        public PhieuThuTienDAL()
+        {
+            connectionString = ConfigurationManager.AppSettings["ConnectionString"];
+        }
+
+        public string ConnectionString { get => connectionString; set => connectionString = value; }
+
+        public bool Them(PhieuThuTienDTO PTT)
+        {
+            string query = string.Empty;
+            query += "INSERT INTO [tblPhieuThuTien] ([maPhieu], [maDaiLy], [ngayThuTien], [soTienThu])";
+            query += "VALUES (@maPhieu, @maDaiLy, @ngayThuTien, @soTienThu)";
+            using (SqlConnection con = new SqlConnection(ConnectionString))
+            {
+
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cmd.Connection = con;
+                    cmd.CommandType = System.Data.CommandType.Text;
+                    cmd.CommandText = query;
+                    cmd.Parameters.AddWithValue("@maPhieu", PTT.mathutien);
+                    cmd.Parameters.AddWithValue("@maDaiLy", PTT.madl);
+                    cmd.Parameters.AddWithValue("@ngayThuTien", PTT.ngaythu);
+                    cmd.Parameters.AddWithValue("@soTienThu", PTT.sotienthu);
+                    try
+                    {
+                        con.Open();
+                        cmd.ExecuteNonQuery();
+                        con.Close();
+                        con.Dispose();
+                    }
+                    catch (Exception ex)
+                    {
+                        con.Close();
+                        return false;
+                    }
+                }
+            }
+            return true;
+        }
+        public bool Sua(PhieuThuTienDTO PTT)
+        {
+            string query = string.Empty;
+            query += "UPDATE tblPhieuThuTien SET [ngayThuTien] = @ngayThuTien, [soTienThu] = @soTienThu WHERE [maPhieu] = @maPhieu";
+
+            using (SqlConnection con = new SqlConnection(ConnectionString))
+            {
+
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cmd.Connection = con;
+                    cmd.CommandType = System.Data.CommandType.Text;
+                    cmd.CommandText = query;
+                    cmd.Parameters.AddWithValue("@maPhieu", PTT.mathutien);
+                    cmd.Parameters.AddWithValue("@ngayThuTien", PTT.ngaythu);
+                    cmd.Parameters.AddWithValue("@soTienThu", PTT.sotienthu);
+                    try
+                    {
+                        con.Open();
+                        cmd.ExecuteNonQuery();
+                        con.Close();
+                        con.Dispose();
+                    }
+                    catch (Exception ex)
+                    {
+                        con.Close();
+                        return false;
+                    }
+                }
+            }
+            return true;
+        }
+        public bool Xoa(PhieuThuTienDTO PTT)
+        {
+            string query = string.Empty;
+            query += "DELETE FROM tblPhieuThuTien WHERE [maPhieu] = @maPhieu";
+
+            using (SqlConnection con = new SqlConnection(ConnectionString))
+            {
+
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cmd.Connection = con;
+                    cmd.CommandType = System.Data.CommandType.Text;
+                    cmd.CommandText = query;
+                    cmd.Parameters.AddWithValue("@maPhieu", PTT.mathutien);
+                    try
+                    {
+                        con.Open();
+                        cmd.ExecuteNonQuery();
+                        con.Close();
+                        con.Dispose();
+                    }
+                    catch (Exception ex)
+                    {
+                        con.Close();
+                        return false;
+                    }
+                }
+            }
+            return true;
+        }
+
+        public List<PhieuThuTienDTO> select()
+        {
+            string query = string.Empty;
+            query += " SELECT ptt.maPhieu, hsdl.maDaiLy, hsdl.diachi, hsdl.dienthoai, hsdl.email, ptt.ngayThuTien , ptt.soTienThu";
+            query += " FROM tblHoSoDaiLy hsdl, tblPhieuThuTien ptt";
+            query += " WHERE hsdl.maDaiLy = ptt.maDaiLy";
+            List<PhieuThuTienDTO> listphieuthu = new List<PhieuThuTienDTO>();
+
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cmd.Connection = con;
+                    cmd.CommandType = System.Data.CommandType.Text;
+                    cmd.CommandText = query;
+                    try
+                    {
+                        con.Open();
+                        SqlDataReader reader = null;
+                        reader = cmd.ExecuteReader();
+                        if (reader.HasRows == true)
+                        {
+                            while (reader.Read())
+                            {
+                                PhieuThuTienDTO ptt = new PhieuThuTienDTO();
+                                ptt.mathutien = reader["maPhieu"].ToString();
+                                ptt.madl = reader["maDaiLy"].ToString();
+                                ptt.diachi = reader["diachi"].ToString();
+                                ptt.dienthoai = reader["dienthoai"].ToString();
+                                ptt.email = reader["email"].ToString();                            
+                                ptt.ngaythu = Convert.ToDateTime(reader["ngayThuTien"].ToString());
+                                ptt.sotienthu = int.Parse(reader["soTienThu"].ToString());
+                                listphieuthu.Add(ptt);
+                            }
+                        }
+
+                        con.Close();
+                        con.Dispose();
+                    }
+                    catch (Exception ex)
+                    {
+                        con.Close();
+                        return null;
+                    }
+                }
+            }
+            return listphieuthu;
+        }
+
+        public List<PhieuThuTienDTO> selectByKeyWord(string sKeyword)
+        {
+            string query = string.Empty;
+            query += " SELECT ptt.maPhieu, hsdl.maDaiLy, hsdl.diachi, hsdl.dienthoai, hsdl.email, ptt.ngayThuTien , ptt.soTienThu";
+            query += " FROM tblHoSoDaiLy hsdl, tblPhieuThuTien ptt";
+            query += " WHERE hsdl.maDaiLy = ptt.maDaiLy";
+            query += " AND((hsdl.[maDaiLy] LIKE CONCAT('%',@sKeyword,'%'))";
+            query += " OR ([maPhieu] LIKE CONCAT('%',@sKeyword,'%'))";
+            query += " OR ([diachi] LIKE CONCAT('%',@sKeyword,'%'))";
+            query += " OR ([email] LIKE CONCAT('%',@sKeyword,'%'))";
+            query += " OR ([dienthoai] LIKE CONCAT('%',@sKeyword,'%'))";
+            query += " OR ([ngayThuTien] LIKE CONCAT('%',@sKeyword,'%'))";
+            query += " OR ([soTienThu] LIKE CONCAT('%',@sKeyword,'%')))";
+
+            List<PhieuThuTienDTO> listphieuthu = new List<PhieuThuTienDTO>();
+
+            using (SqlConnection con = new SqlConnection(ConnectionString))
+            {
+
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cmd.Connection = con;
+                    cmd.CommandType = System.Data.CommandType.Text;
+                    cmd.CommandText = query;
+                    cmd.Parameters.AddWithValue("@sKeyword", sKeyword);
+                    try
+                    {
+                        con.Open();
+                        SqlDataReader reader = null;
+                        reader = cmd.ExecuteReader();
+                        if (reader.HasRows == true)
+                        {
+                            while (reader.Read())
+                            {
+                                PhieuThuTienDTO ptt = new PhieuThuTienDTO();
+                                ptt.mathutien = reader["maPhieu"].ToString();
+                                ptt.madl = reader["maDaiLy"].ToString();
+                                ptt.diachi = reader["diachi"].ToString();
+                                ptt.dienthoai = reader["dienthoai"].ToString();
+                                ptt.email = reader["email"].ToString();
+                                ptt.ngaythu = Convert.ToDateTime(reader["ngayThuTien"].ToString());
+                                ptt.sotienthu = int.Parse(reader["soTienThu"].ToString());
+                                listphieuthu.Add(ptt);
+                            }
+                        }
+                        con.Close();
+                        con.Dispose();
+                    }
+                    catch (Exception ex)
+                    {
+                        con.Close();
+                        return null;
+                    }
+                }
+            }
+            return listphieuthu;
+        }        
+    }
+    public class PhieubaocaodtDAL
+    {
+        private string connectionString;
+
+        public PhieubaocaodtDAL()
+        {
+            connectionString = ConfigurationManager.AppSettings["ConnectionString"];
+        }
+
+        public string ConnectionString { get => connectionString; set => connectionString = value; }
+
+        public bool Them(PhieubaocaodtDTO DT)
+        {
+            string query = string.Empty;
+            query += "INSERT INTO [dbo].[tblPhieubaocaoDoanhThu] ([maPhieu], [tongDoanhThu], [ngayLapPhieu])";
+            query += "VALUES (@maPhieu,@tongDoanhThu, @ngayLapPhieu)";
+            using (SqlConnection con = new SqlConnection(ConnectionString))
+            {
+
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cmd.Connection = con;
+                    cmd.CommandType = System.Data.CommandType.Text;
+                    cmd.CommandText = query;
+                    cmd.Parameters.AddWithValue("@maPhieu", DT.madt);
+                    cmd.Parameters.AddWithValue("@tongDoanhThu", DT.tongdt);
+                    cmd.Parameters.AddWithValue("@ngayLapPhieu", DT.ngaylap);
+                    try
+                    {
+                        con.Open();
+                        cmd.ExecuteNonQuery();
+                        con.Close();
+                        con.Dispose();
+                    }
+                    catch (Exception ex)
+                    {
+                        con.Close();
+                        return false;
+                    }
+                }
+            }
+            return true;
+        }
+        public bool Sua(PhieubaocaodtDTO DT)
+        {
+            string query = string.Empty;
+            query += "UPDATE [dbo].[tblPhieubaocaoDoanhThu] SET [tongDoanhThu] = @tongDoanhThu WHERE [maPhieu]=@maPhieu";
+            using (SqlConnection con = new SqlConnection(ConnectionString))
+            {
+
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cmd.Connection = con;
+                    cmd.CommandType = System.Data.CommandType.Text;
+                    cmd.CommandText = query;
+                    cmd.Parameters.AddWithValue("@maPhieu", DT.madt);
+                    cmd.Parameters.AddWithValue("@tongDoanhThu", DT.tongdt);
+                    try
+                    {
+                        con.Open();
+                        cmd.ExecuteNonQuery();
+                        con.Close();
+                        con.Dispose();
+                    }
+                    catch (Exception ex)
+                    {
+                        con.Close();
+                        return false;
+                    }
+                }
+            }
+            return true;
+        }
+        public bool Xoa(PhieubaocaodtDTO DT)
+        {
+            string query = string.Empty;
+            query += "DELETE FROM tblPhieubaocaoDoanhThu WHERE [maPhieu]=@maPhieu";
+
+            using (SqlConnection con = new SqlConnection(ConnectionString))
+            {
+
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cmd.Connection = con;
+                    cmd.CommandType = System.Data.CommandType.Text;
+                    cmd.CommandText = query;
+                    cmd.Parameters.AddWithValue("@maXuatHang", DT.madt);
+                    try
+                    {
+                        con.Open();
+                        cmd.ExecuteNonQuery();
+                        con.Close();
+                        con.Dispose();
+                    }
+                    catch (Exception ex)
+                    {
+                        con.Close();
+                        return false;
+                    }
+                }
+            }
+            return true;
+        }
+        public List<PhieubaocaodtDTO> select()
+        {
+            string query = string.Empty;
+            query += " SELECT [maPhieu], [tongDoanhThu], [ngayLapPhieu]";
+            query += " FROM [tblPhieubaocaoDoanhThu]";
+
+            List<PhieubaocaodtDTO> listdoanhthu = new List<PhieubaocaodtDTO>();
+
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cmd.Connection = con;
+                    cmd.CommandType = System.Data.CommandType.Text;
+                    cmd.CommandText = query;
+
+                    try
+                    {
+                        con.Open();
+                        SqlDataReader reader = null;
+                        reader = cmd.ExecuteReader();
+                        if (reader.HasRows == true)
+                        {
+                            while (reader.Read())
+                            {
+                                PhieubaocaodtDTO DT = new PhieubaocaodtDTO();
+                                DT.madt = reader["maXuatHang"].ToString();
+                                DT.ngaylap = Convert.ToDateTime(reader["ngayLapPhieu"].ToString());
+                                DT.tongdt = int.Parse(reader["tongDoanhThu"].ToString());
+                                listdoanhthu.Add(DT);
+                            }
+                        }
+
+                        con.Close();
+                        con.Dispose();
+                    }
+                    catch (Exception ex)
+                    {
+                        con.Close();
+                        return null;
+                    }
+                }
+            }
+            return listdoanhthu;
+        }
+        public List<PhieubaocaodtDTO> selectByKeyWord(string sKeyword)
+        {
+            string query = string.Empty;
+            query += " SELECT [maPhieu], [tongDoanhThu], [ngayLapPhieu]";
+            query += " FROM [tblPhieubaocaoDoanhThu]";
+            query += " WHERE ([maPhieu] LIKE CONCAT('%',@sKeyword,'%'))";
+            query += " OR ([ngayLapPhieu] LIKE CONCAT('%',@sKeyword,'%'))";
+            query += " OR ([tongDoanhThu] LIKE CONCAT('%',@sKeyword,'%'))";
+
+            List<PhieubaocaodtDTO> listdoanhthu = new List<PhieubaocaodtDTO>();
+
+            using (SqlConnection con = new SqlConnection(ConnectionString))
+            {
+
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cmd.Connection = con;
+                    cmd.CommandType = System.Data.CommandType.Text;
+                    cmd.CommandText = query;
+                    cmd.Parameters.AddWithValue("@sKeyword", sKeyword);
+                    try
+                    {
+                        con.Open();
+                        SqlDataReader reader = null;
+                        reader = cmd.ExecuteReader();
+                        if (reader.HasRows == true)
+                        {
+                            while (reader.Read())
+                            {
+                                PhieubaocaodtDTO DT = new PhieubaocaodtDTO();
+                                DT.madt = reader["maXuatHang"].ToString();
+                                DT.ngaylap = Convert.ToDateTime(reader["ngayLapPhieu"].ToString());
+                                DT.tongdt = int.Parse(reader["tongDoanhThu"].ToString());
+                                listdoanhthu.Add(DT);
+                            }
+                        }
+                        con.Close();
+                        con.Dispose();
+                    }
+                    catch (Exception ex)
+                    {
+                        con.Close();
+                        return null;
+                    }
+                }
+            }
+            return listdoanhthu;
+        }
+    }
+    public class ChitietphieubcdtDAL
+    {
+        private string connectionString;
+        public ChitietphieubcdtDAL()
+        {
+            connectionString = ConfigurationManager.AppSettings["ConnectionString"];
+        }
+        public string ConnectionString { get => connectionString; set => connectionString = value; }
+        public bool Them(ChitietphieubcdtDTO CTDT)
+        {
+            string query = string.Empty;
+            query += "INSERT INTO [dbo].[tblChitietPhieubaocaoDT] ([maPhieu], [maDaiLy], [soPhieuXuat], [tongDoanhThu], [Tyle])";
+            query += "VALUES (@maPhieu,@maDaiLy,@soPhieuXuat, @tongDoanhThu, @Tyle)";
+            using (SqlConnection con = new SqlConnection(ConnectionString))
+            {
+
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cmd.Connection = con;
+                    cmd.CommandType = System.Data.CommandType.Text;
+                    cmd.CommandText = query;
+                    cmd.Parameters.AddWithValue("@maPhieu", CTDT.madt);
+                    cmd.Parameters.AddWithValue("@maDaiLy", CTDT.madl);
+                    cmd.Parameters.AddWithValue("@soPhieuXuat", CTDT.sophieuxuat);
+                    cmd.Parameters.AddWithValue("@tongDoanhThu", CTDT.tongdt);
+                    cmd.Parameters.AddWithValue("@Tyle", CTDT.tyle);
+                    try
+                    {
+                        con.Open();
+                        cmd.ExecuteNonQuery();
+                        con.Close();
+                        con.Dispose();
+                    }
+                    catch (Exception ex)
+                    {
+                        con.Close();
+                        return false;
+                    }
+                }
+            }
+            return true;
+        }       
+        public bool XoatheophieuBCDT(string madt)
+        {
+            string query = string.Empty;
+            query += "DELETE FROM tblChitietPhieubaocaoDT WHERE [maPhieu]=@maPhieu ";
+
+            using (SqlConnection con = new SqlConnection(ConnectionString))
+            {
+
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cmd.Connection = con;
+                    cmd.CommandType = System.Data.CommandType.Text;
+                    cmd.CommandText = query;
+                    cmd.Parameters.AddWithValue("@maPhieu", madt);
+                    try
+                    {
+                        con.Open();
+                        cmd.ExecuteNonQuery();
+                        con.Close();
+                        con.Dispose();
+                    }
+                    catch (Exception ex)
+                    {
+                        con.Close();
+                        return false;
+                    }
+                }
+            }
+            return true;
+        }
+        public List<ChitietphieubcdtDTO> select(string madt)
+        {
+            string query = string.Empty;
+            query += " SELECT [maDaiLy], [soPhieuXuat], [tongDoanhThu], [Tyle] ";
+            query += " FROM [tblChitietPhieubaocaoDT]";
+            query += " WHERE [maPhieu]=@maPhieu";
+            List<ChitietphieubcdtDTO> listCTbcdt = new List<ChitietphieubcdtDTO>();
+
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cmd.Connection = con;
+                    cmd.CommandType = System.Data.CommandType.Text;
+                    cmd.CommandText = query;
+                    cmd.Parameters.AddWithValue("@maPhieu", madt);
+                    try
+                    {
+                        con.Open();
+                        SqlDataReader reader = null;
+                        reader = cmd.ExecuteReader();
+                        if (reader.HasRows == true)
+                        {
+                            while (reader.Read())
+                            {
+                                ChitietphieubcdtDTO CTDT = new ChitietphieubcdtDTO();
+                                CTDT.madl = reader["maDaiLy"].ToString();
+                                CTDT.sophieuxuat = int.Parse(reader["soPhieuXuat"].ToString());
+                                CTDT.tongdt = int.Parse(reader["tongDoanhThu"].ToString());
+                                CTDT.tyle = float.Parse(reader["Tyle"].ToString());
+                                listCTbcdt.Add(CTDT);
+                            }
+                        }
+
+                        con.Close();
+                        con.Dispose();
+                    }
+                    catch (Exception ex)
+                    {
+                        con.Close();
+                        return null;
+                    }
+                }
+            }
+            return listCTbcdt;
+        }
+        public List<ChitietphieubcdtDTO> selectByKeyWord(string sKeyword, string madt)
+        {
+            string query = string.Empty;
+            query += " SELECT [maDaiLy], [soPhieuXuat], [tongDoanhThu], [Tyle] ";
+            query += " FROM [tblChitietPhieubaocaoDT]";
+            query += " WHERE [maPhieu]=@maPhieu";
+            query += " AND (([maDaiLy] LIKE CONCAT('%',@sKeyword,'%'))";
+            query += " OR ([soPhieuXuat] LIKE CONCAT('%',@sKeyword,'%'))";
+            query += " OR ([tongDoanhThu] LIKE CONCAT('%',@sKeyword,'%')))";
+            query += " OR ([Tyle] LIKE CONCAT('%',@sKeyword,'%')))";
+
+            List<ChitietphieubcdtDTO> listCTbcdt = new List<ChitietphieubcdtDTO>();
+
+            using (SqlConnection con = new SqlConnection(ConnectionString))
+            {
+
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cmd.Connection = con;
+                    cmd.CommandType = System.Data.CommandType.Text;
+                    cmd.CommandText = query;
+                    cmd.Parameters.AddWithValue("@maPhieu", madt);
+                    cmd.Parameters.AddWithValue("@sKeyword", sKeyword);
+                    try
+                    {
+                        con.Open();
+                        SqlDataReader reader = null;
+                        reader = cmd.ExecuteReader();
+                        if (reader.HasRows == true)
+                        {
+                            while (reader.Read())
+                            {
+                                ChitietphieubcdtDTO CTDT = new ChitietphieubcdtDTO();
+                                CTDT.madl = reader["maDaiLy"].ToString();
+                                CTDT.sophieuxuat = int.Parse(reader["soPhieuXuat"].ToString());
+                                CTDT.tongdt = int.Parse(reader["tongDoanhThu"].ToString());
+                                CTDT.tyle = float.Parse(reader["Tyle"].ToString());
+                                listCTbcdt.Add(CTDT);
+                            }
+                        }
+                        con.Close();
+                        con.Dispose();
+                    }
+                    catch (Exception ex)
+                    {
+                        con.Close();
+                        return null;
+                    }
+                }
+            }
+            return listCTbcdt;
+        }
+    }
 }

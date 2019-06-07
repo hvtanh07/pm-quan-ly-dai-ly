@@ -16,12 +16,14 @@ namespace QLDL
     {
         private CHoSoDaiLyBUS hsBUS;
         private CHoSoDaiLyDTO dlDTO = null;
+        private CLoaiDaiLyBUS ldlBUS;
         public SuaDaiLy()
         {
             InitializeComponent();
         }
         private void CapNhatSuaDaiLy_Load(object sender, EventArgs e)
         {
+            ldlBUS = new CLoaiDaiLyBUS();
             if (this.dlDTO != null)
             {
                 madl.Text = dlDTO.madl.ToString();
@@ -33,6 +35,13 @@ namespace QLDL
                 notxt.Text = dlDTO.nohientai.ToString();
                 ldl.Text = dlDTO.loaidaily.ToString();
             }
+            Taodatasource();
+        }
+        private void Taodatasource()
+        {
+            List<string> maldl = new List<string>();
+            maldl = ldlBUS.Layloaidl();
+            ldl.DataSource = maldl;
         }
         public SuaDaiLy(CHoSoDaiLyDTO dl)
         {
@@ -55,7 +64,6 @@ namespace QLDL
             hs.dienthoai = dttxt.Text;
             hs.nohientai = int.Parse(notxt.Text);
             hs.loaidaily = ldl.Text;
-
             //2. Kiểm tra data hợp lệ or not
             //kiểm tra trong quận đã đạt tối đa số đại lý chưa
             
@@ -65,24 +73,10 @@ namespace QLDL
                 MessageBox.Show("Cập nhật hồ sơ thất bại. Vui lòng kiểm tra lại dũ liệu");
             else
             {
-                MessageBox.Show("Cập nhật hồ sơ thành công");
-                clear();
+                MessageBox.Show("Cập nhật hồ sơ thành công");                
                 this.Close();
             }
-        }        
-        
-        private void clear()
-        {
-            madl.Text = "";
-            quantxt.Text = "";
-            tentxt.Text = "";
-            dc.Text = "";
-            mail.Text = "";
-            dttxt.Text = "";
-            notxt.Text = "";
-            ldl.Text = "";
-        }
-
+        }                
         //RÀNG BUỘC CỦA DỮ LIỆU NHẬP VÀO
         private void numOnly(object sender, KeyPressEventArgs e)//chỉ cho nhập số
         {
@@ -113,7 +107,7 @@ namespace QLDL
                 dc.Focus();
                 return false;
             }//dia chi
-            if (string.IsNullOrWhiteSpace(quantxt.Text))//quan
+            if (string.IsNullOrWhiteSpace(quantxt.Text))
             {
                 MessageBox.Show(quantxt, "Bạn chưa nhập địa chỉ quận.");
                 quantxt.Focus();
@@ -143,18 +137,7 @@ namespace QLDL
                     mail.Text = "";
                     mail.Focus();
                     return false;
-                }
-
-
-                //string match = @"\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*";
-                //Regex reg = new Regex(match);
-                //if (!reg.IsMatch(mail.Text))
-                //{
-                //    MessageBox.Show(mail, "Email Không hợp lệ");
-                //    mail.Text = "";
-                //    mail.Focus();
-                //    return false;
-                //}
+                }               
             }//email valid or not
 
             return true;//all true then gud to go

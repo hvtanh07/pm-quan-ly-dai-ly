@@ -57,7 +57,7 @@
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1086, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1012, 28);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -129,6 +129,7 @@
             this.báoCáoDoanhSốToolStripMenuItem.Name = "báoCáoDoanhSốToolStripMenuItem";
             this.báoCáoDoanhSốToolStripMenuItem.Size = new System.Drawing.Size(244, 26);
             this.báoCáoDoanhSốToolStripMenuItem.Text = "Báo cáo doanh số";
+            this.báoCáoDoanhSốToolStripMenuItem.Click += new System.EventHandler(this.BáoCáoDoanhSốToolStripMenuItem_Click);
             // 
             // báoCáoCôngNợĐạiLýToolStripMenuItem
             // 
@@ -148,14 +149,14 @@
             // thayĐổiSốLượngCácĐạiLýToolStripMenuItem
             // 
             this.thayĐổiSốLượngCácĐạiLýToolStripMenuItem.Name = "thayĐổiSốLượngCácĐạiLýToolStripMenuItem";
-            this.thayĐổiSốLượngCácĐạiLýToolStripMenuItem.Size = new System.Drawing.Size(237, 26);
-            this.thayĐổiSốLượngCácĐạiLýToolStripMenuItem.Text = "Quản lý các loại đại lý";
+            this.thayĐổiSốLượngCácĐạiLýToolStripMenuItem.Size = new System.Drawing.Size(301, 26);
+            this.thayĐổiSốLượngCácĐạiLýToolStripMenuItem.Text = "Quản lý các loại đại lý và đơn vị";
             this.thayĐổiSốLượngCácĐạiLýToolStripMenuItem.Click += new System.EventHandler(this.ThayĐổiSốLượngCácĐạiLýToolStripMenuItem_Click);
             // 
             // thayĐổiSốĐạiLýTốiĐaTrongQuậnToolStripMenuItem
             // 
             this.thayĐổiSốĐạiLýTốiĐaTrongQuậnToolStripMenuItem.Name = "thayĐổiSốĐạiLýTốiĐaTrongQuậnToolStripMenuItem";
-            this.thayĐổiSốĐạiLýTốiĐaTrongQuậnToolStripMenuItem.Size = new System.Drawing.Size(237, 26);
+            this.thayĐổiSốĐạiLýTốiĐaTrongQuậnToolStripMenuItem.Size = new System.Drawing.Size(301, 26);
             this.thayĐổiSốĐạiLýTốiĐaTrongQuậnToolStripMenuItem.Text = "Thay đổi quy định";
             this.thayĐổiSốĐạiLýTốiĐaTrongQuậnToolStripMenuItem.Click += new System.EventHandler(this.ThayĐổiSốĐạiLýTốiĐaTrongQuậnToolStripMenuItem_Click);
             // 
@@ -169,12 +170,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1086, 660);
+            this.ClientSize = new System.Drawing.Size(1012, 620);
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Mainfrm";
-            this.Text = "Form1";
+            this.Text = "Quản lý đại lý";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

@@ -28,13 +28,18 @@ CREATE TABLE [dbo].[tblLoaiDaiLy]
 	[loaiDaiLy]	int NOT NULL,	
 	[maxno] int NOT NULL
 )
+CREATE TABLE [dbo].[tblDonvi]
+(
+	[donViTinh]  nvarchar(20) NOT NULL primary key,	
+)	
 CREATE TABLE [dbo].[tblMatHang]
 (	
 	[maMatHang] nvarchar(10) NOT NULL PRIMARY KEY,
 	[tenmathang] nvarchar(50) NOT NULL,		
 	[hanSuDung] datetime2(7) NOT NULL,
 	[gia]		int NOT NULL,
-	[donViTinh] nvarchar(50)	
+	[donViTinh] nvarchar(20),
+	FOREIGN KEY (donViTinh) REFERENCES tblDonvi(donViTinh),
 )
 CREATE TABLE [dbo].[tblHoSoDaiLy]
 (	
@@ -51,7 +56,7 @@ CREATE TABLE [dbo].[tblHoSoDaiLy]
 )
 CREATE TABLE [dbo].[tblPhieuThuTien]
 (
-	[maPhieu]	int	NOT NULL PRIMARY KEY,
+	[maPhieu]	nvarchar(10)	NOT NULL PRIMARY KEY,
 	[maDaiLy]	nvarchar(10) NOT NULL,	
 	[ngayThuTien] datetime2(7) NOT NULL,
 	[soTienThu] int NOT NULL
@@ -89,9 +94,19 @@ CREATE TABLE [dbo].[tblPhieubaocaoCongNo]
 )
 CREATE TABLE [dbo].[tblPhieubaocaoDoanhThu]
 (
-	[maPhieu] int NOT NULL PRIMARY KEY,		
+	[maPhieu] nvarchar(10) NOT NULL PRIMARY KEY,	
 	[tongDoanhThu]	int NOT NULL,	
-	[thang] int NOT NULL	
+	[ngayLapPhieu]	 datetime2(7) NOT NULL,	
+)
+CREATE TABLE [dbo].[tblChitietPhieubaocaoDT]
+(
+	[maPhieu] nvarchar(10) NOT NULL,	
+	[maDaiLy]	nvarchar(10) NOT NULL,
+	[soPhieuXuat] int NOT NULL,			
+	[tongDoanhThu]	int NOT NULL,
+	[Tyle] float NOT NULL		
+	FOREIGN KEY (maPhieu) REFERENCES tblPhieubaocaoDoanhThu(maPhieu),
+	FOREIGN KEY (maDaiLy) REFERENCES tblHoSoDaiLy(maDaiLy),	
 )
 CREATE TABLE [dbo].[tblQuiDinh]
 (
@@ -111,6 +126,7 @@ CREATE TABLE [dbo].[tblQuiDinh]
 --drop table tblNoDaiLy
 --drop table tblPhieubaocaoCongNo
 --drop table tblPhieubaocaoDoanhThu
+--drop table tblChitietPhieubaocaoDT
 --drop table tblQuiDinh
 
 
@@ -120,6 +136,13 @@ INSERT INTO tblLoaiDaiLy (maLoaiDaiLy, loaiDaiLy, maxno)
 VALUES ('loai1', 1, 20000);
 INSERT INTO tblLoaiDaiLy (maLoaiDaiLy, loaiDaiLy, maxno)
 VALUES ('loai2', 2, 50);
+
+INSERT INTO tblDonvi(donViTinh)
+VALUES ('dv1');
+INSERT INTO tblDonvi(donViTinh)
+VALUES ('dv2');
+INSERT INTO tblDonvi(donViTinh)
+VALUES ('dv3');
 
 INSERT INTO tblQuiDinh (getkey, maxloaidl, soluongmathang, soluongdvt, maxdl)
 VALUES (1, 2, 5, 3, 4);
@@ -155,7 +178,12 @@ VALUES ('xh3', 'dl3', '10/9/2019', 300);
 INSERT INTO [tblPhieuXuatHang] ([maXuatHang], [maDaiLy], [ngayLapPhieu])
 VALUES ('xh4', 'dl3', '11/9/2019');
 
-
+INSERT INTO [tblPhieuThuTien] ([maPhieu], [maDaiLy], [ngayThuTien], [soTienThu])
+VALUES ('ptt1', 'dl4', '6/7/2019', 200);
 ----TESTING----
+SELECT COUNT(*) as [sodl]
+FROM tblHoSoDaiLy
+WHERE quan = N'Quận 3'
+
 
 

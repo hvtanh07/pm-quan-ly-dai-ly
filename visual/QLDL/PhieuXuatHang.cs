@@ -137,9 +137,9 @@ namespace QLDL
             danhsachmh.DataSource = listctpx;
 
             DataGridViewTextBoxColumn clMa = new DataGridViewTextBoxColumn();
-            clMa.Name = "maMatHang";
+            clMa.Name = "mamh";
             clMa.HeaderText = "Mã mặt hàng";
-            clMa.DataPropertyName = "maMatHang";
+            clMa.DataPropertyName = "mamh";
             danhsachmh.Columns.Add(clMa);
 
             DataGridViewTextBoxColumn clTen = new DataGridViewTextBoxColumn();

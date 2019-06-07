@@ -94,5 +94,51 @@ namespace QLDL_DTO
         public int soluong { get => Soluong; set => Soluong = value; }
         public int tongtien { get => Tongtien; set => Tongtien = value; }
     }
+    public class PhieuThuTienDTO
+    {
+        private string maThutien;
+        private string maDL;
+        private string tenDaiLy;
+        private string dienThoai;
+        private string diaChi;
+        private string Email;
+        private DateTime ngayThu;
+        private int soTienThu;
+
+        public string mathutien { get => maThutien; set => maThutien = value; }
+        public string madl { get => maDL; set => maDL = value; }
+        public string tendaily { get => tenDaiLy; set => tenDaiLy = value; }
+        public string dienthoai { get => dienThoai; set => dienThoai = value; }
+        public string diachi { get => diaChi; set => diaChi = value; }
+        public string email { get => Email; set => Email = value; }
+        public DateTime ngaythu { get => ngayThu; set => ngayThu = value; }
+        public int sotienthu { get => soTienThu; set => soTienThu = value; }
+    }
+    public class PhieubaocaodtDTO
+    {
+        private string MaDT;        
+        private DateTime Ngaylap;
+        private int TongDT;
+
+        public string madt { get => MaDT; set => MaDT = value; }
+        public DateTime ngaylap { get => Ngaylap; set => Ngaylap = value; }
+        public int tongdt { get => TongDT; set => TongDT = value; }
+    }
+    public class ChitietphieubcdtDTO
+    {
+        private string MaDT;
+        private string MaDL;
+        private int soPX;
+        private float Tyle;
+        private int TongDT;
+
+        public string madt { get => MaDT; set => MaDT = value; }
+        public string madl { get => MaDL; set => MaDL = value; }
+        public int sophieuxuat { get => soPX; set => soPX = value; }
+        public float tyle { get => Tyle; set => Tyle = value; }
+        public int tongdt { get => TongDT; set => TongDT = value; }
+    }
 
 }
+
+

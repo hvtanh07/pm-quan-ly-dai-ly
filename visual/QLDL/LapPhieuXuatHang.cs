@@ -162,8 +162,12 @@ namespace QLDL
                 maPhieu.Text = "";
                 madltxt.Text = "";
             }
-            PhieuXuatHang frm = new PhieuXuatHang(xh);
-            frm.ShowDialog();
+            if (xh != null)
+            {
+                PhieuXuatHang frm = new PhieuXuatHang(xh);
+                frm.ShowDialog();
+            }
+            loadData_Vao_GridView();
         }
         //search
         private void Button1_Click(object sender, EventArgs e)
@@ -224,8 +228,6 @@ namespace QLDL
         {
             // ' Get the current cell location.
             int currentRowIndex = dsphieuxh.CurrentCellAddress.Y;// 'current row selected
-
-
             //'Verify that indexing OK
             if (-1 < currentRowIndex && currentRowIndex < dsphieuxh.RowCount)
             {

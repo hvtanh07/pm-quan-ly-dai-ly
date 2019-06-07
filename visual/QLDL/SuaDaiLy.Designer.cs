@@ -42,10 +42,10 @@
             this.label10 = new System.Windows.Forms.Label();
             this.notxt = new System.Windows.Forms.TextBox();
             this.notxtw = new System.Windows.Forms.Label();
-            this.ldl = new System.Windows.Forms.TextBox();
             this.quantxt = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.madl = new System.Windows.Forms.TextBox();
+            this.ldl = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -183,16 +183,6 @@
             this.notxtw.TabIndex = 25;
             this.notxtw.Text = "Nợ hiện tại";
             // 
-            // ldl
-            // 
-            this.ldl.Location = new System.Drawing.Point(331, 191);
-            this.ldl.Margin = new System.Windows.Forms.Padding(4);
-            this.ldl.MaxLength = 11;
-            this.ldl.Name = "ldl";
-            this.ldl.Size = new System.Drawing.Size(127, 22);
-            this.ldl.TabIndex = 7;
-            this.ldl.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numOnly);
-            // 
             // quantxt
             // 
             this.quantxt.FormattingEnabled = true;
@@ -240,11 +230,20 @@
             this.madl.Size = new System.Drawing.Size(133, 22);
             this.madl.TabIndex = 27;
             // 
+            // ldl
+            // 
+            this.ldl.FormattingEnabled = true;
+            this.ldl.Location = new System.Drawing.Point(331, 191);
+            this.ldl.Name = "ldl";
+            this.ldl.Size = new System.Drawing.Size(127, 24);
+            this.ldl.TabIndex = 28;
+            // 
             // SuaDaiLy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(480, 311);
+            this.Controls.Add(this.ldl);
             this.Controls.Add(this.madl);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.quantxt);
@@ -255,7 +254,6 @@
             this.Controls.Add(this.mail);
             this.Controls.Add(this.notxt);
             this.Controls.Add(this.dttxt);
-            this.Controls.Add(this.ldl);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.dc);
             this.Controls.Add(this.tentxt);
@@ -286,9 +284,9 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label notxtw;
         private System.Windows.Forms.TextBox notxt;
-        private System.Windows.Forms.TextBox ldl;
         private System.Windows.Forms.ComboBox quantxt;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox madl;
+        private System.Windows.Forms.ComboBox ldl;
     }
 }

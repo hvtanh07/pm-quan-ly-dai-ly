@@ -40,10 +40,10 @@
             this.label9 = new System.Windows.Forms.Label();
             this.tentxt = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.ldl = new System.Windows.Forms.TextBox();
             this.quantxt = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.madl = new System.Windows.Forms.TextBox();
+            this.ldl = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -155,15 +155,6 @@
             this.label10.TabIndex = 21;
             this.label10.Text = "Loại đại lý";
             // 
-            // ldl
-            // 
-            this.ldl.Location = new System.Drawing.Point(364, 187);
-            this.ldl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.ldl.MaxLength = 11;
-            this.ldl.Name = "ldl";
-            this.ldl.Size = new System.Drawing.Size(159, 22);
-            this.ldl.TabIndex = 7;
-            // 
             // quantxt
             // 
             this.quantxt.FormattingEnabled = true;
@@ -211,15 +202,23 @@
             this.madl.Size = new System.Drawing.Size(159, 22);
             this.madl.TabIndex = 1;
             // 
+            // ldl
+            // 
+            this.ldl.FormattingEnabled = true;
+            this.ldl.Location = new System.Drawing.Point(364, 187);
+            this.ldl.Name = "ldl";
+            this.ldl.Size = new System.Drawing.Size(121, 24);
+            this.ldl.TabIndex = 23;
+            // 
             // TiepNhanDaiLyfrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(554, 363);
+            this.Controls.Add(this.ldl);
             this.Controls.Add(this.madl);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.quantxt);
-            this.Controls.Add(this.ldl);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.tentxt);
             this.Controls.Add(this.label9);
@@ -255,9 +254,9 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox tentxt;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox ldl;
         private System.Windows.Forms.ComboBox quantxt;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox madl;
+        private System.Windows.Forms.ComboBox ldl;
     }
 }
