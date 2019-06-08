@@ -54,17 +54,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChitietPhieubaocaodoanhso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChitietPhieubaocaodoanhso.Designer.cs">
+      <DependentUpon>ChitietPhieubaocaodoanhso.cs</DependentUpon>
+    </Compile>
     <Compile Include="LapPhieuXuatHang.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="LapPhieuXuatHang.Designer.cs">
       <DependentUpon>LapPhieuXuatHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="PhieuBaocaoDT.cs">
+    <Compile Include="PhieuBaocaoDS.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PhieuBaocaoDT.Designer.cs">
-      <DependentUpon>PhieuBaocaoDT.cs</DependentUpon>
+    <Compile Include="PhieuBaocaoDS.Designer.cs">
+      <DependentUpon>PhieuBaocaoDS.cs</DependentUpon>
     </Compile>
     <Compile Include="PhieuThuTien.cs">
       <SubType>Form</SubType>
@@ -122,11 +128,14 @@
     <Compile Include="TiepNhanDaiLyfrm.Designer.cs">
       <DependentUpon>TiepNhanDaiLyfrm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ChitietPhieubaocaodoanhso.resx">
+      <DependentUpon>ChitietPhieubaocaodoanhso.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LapPhieuXuatHang.resx">
       <DependentUpon>LapPhieuXuatHang.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PhieuBaocaoDT.resx">
-      <DependentUpon>PhieuBaocaoDT.cs</DependentUpon>
+    <EmbeddedResource Include="PhieuBaocaoDS.resx">
+      <DependentUpon>PhieuBaocaoDS.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PhieuThuTien.resx">
       <DependentUpon>PhieuThuTien.cs</DependentUpon>

@@ -215,7 +215,6 @@ namespace QLDL
                             else
                             {
                                 MessageBox.Show("Xóa phiếu thành công");
-                                this.loadData_Vao_GridView();
                             }
                         }                       
                     }

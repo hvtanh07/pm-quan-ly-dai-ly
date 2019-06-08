@@ -75,7 +75,7 @@ namespace QLDL
 
         private void BáoCáoDoanhSốToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            PhieuBaocaoDT frm = new PhieuBaocaoDT();
+            PhieuBaocaoDS frm = new PhieuBaocaoDS();
             frm.MdiParent = this;
             frm.Show();
         }

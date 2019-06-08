@@ -339,5 +339,9 @@ namespace QLDL_BUS
         {
             return pbcdtDAL.selectByKeyWord(sKeyword, mabcdt);
         }
+        public List<ChitietphieubcdtDTO> laydoanhthu(string thang)
+        {
+            return pbcdtDAL.laydoanhthu(thang);
+        }
     }
 }

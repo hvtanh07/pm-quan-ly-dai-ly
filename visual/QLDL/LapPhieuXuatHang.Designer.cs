@@ -145,14 +145,14 @@
             // xóaBảnGhiToolStripMenuItem
             // 
             this.xóaBảnGhiToolStripMenuItem.Name = "xóaBảnGhiToolStripMenuItem";
-            this.xóaBảnGhiToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.xóaBảnGhiToolStripMenuItem.Size = new System.Drawing.Size(158, 24);
             this.xóaBảnGhiToolStripMenuItem.Text = "Xóa bản ghi";
             this.xóaBảnGhiToolStripMenuItem.Click += new System.EventHandler(this.XóaBảnGhiToolStripMenuItem_Click);
             // 
             // sửaBảnGhiToolStripMenuItem
             // 
             this.sửaBảnGhiToolStripMenuItem.Name = "sửaBảnGhiToolStripMenuItem";
-            this.sửaBảnGhiToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.sửaBảnGhiToolStripMenuItem.Size = new System.Drawing.Size(158, 24);
             this.sửaBảnGhiToolStripMenuItem.Text = "Sửa bản ghi";
             this.sửaBảnGhiToolStripMenuItem.Click += new System.EventHandler(this.SửaBảnGhiToolStripMenuItem_Click);
             // 
@@ -187,6 +187,7 @@
             // 
             this.thang.Location = new System.Drawing.Point(184, 168);
             this.thang.Name = "thang";
+            this.thang.ReadOnly = true;
             this.thang.Size = new System.Drawing.Size(90, 22);
             this.thang.TabIndex = 23;
             // 

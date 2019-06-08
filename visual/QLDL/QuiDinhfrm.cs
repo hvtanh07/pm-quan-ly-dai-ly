@@ -80,6 +80,8 @@ namespace QLDL
         {
             maxloaidl.Text = (int.Parse(maxloaidl.Text) + 1).ToString();
             capnhat();
+            QuanLyLoaiDailyDonvi frm = new QuanLyLoaiDailyDonvi();
+            frm.ShowDialog();
         }
         private void Button9_Click(object sender, EventArgs e)//tru max loai dai ly
         {
@@ -96,7 +98,9 @@ namespace QLDL
         private void Button4_Click(object sender, EventArgs e)//them max don vi
         {
             soluongdvt.Text = (int.Parse(soluongdvt.Text) + 1).ToString();
-            capnhat();            
+            capnhat();
+            QuanLyLoaiDailyDonvi frm = new QuanLyLoaiDailyDonvi();
+            frm.ShowDialog();
         }
         private void Button7_Click(object sender, EventArgs e)//tru max loai dai ly
         {
@@ -114,7 +118,9 @@ namespace QLDL
         private void Button3_Click(object sender, EventArgs e)//them max mat hang
         {
             soluongmh.Text = (int.Parse(soluongmh.Text) + 1).ToString();
-            capnhat();            
+            capnhat();
+            QuanlyMatHangfrm frm = new QuanlyMatHangfrm();
+            frm.Show();
         }    
         private void Button8_Click(object sender, EventArgs e)//tru max mat hang
         {

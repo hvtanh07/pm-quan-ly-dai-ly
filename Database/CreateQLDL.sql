@@ -176,14 +176,18 @@ VALUES ('xh2', 'dl4', '6/7/2019', 20);
 INSERT INTO [tblPhieuXuatHang] ([maXuatHang], [maDaiLy], [ngayLapPhieu], [tongtien])
 VALUES ('xh3', 'dl3', '10/9/2019', 300);
 INSERT INTO [tblPhieuXuatHang] ([maXuatHang], [maDaiLy], [ngayLapPhieu])
-VALUES ('xh4', 'dl3', '11/9/2019');
+VALUES ('xh4', 'dl3', '11/9/2019', 0);
 
 INSERT INTO [tblPhieuThuTien] ([maPhieu], [maDaiLy], [ngayThuTien], [soTienThu])
 VALUES ('ptt1', 'dl4', '6/7/2019', 200);
 ----TESTING----
-SELECT COUNT(*) as [sodl]
-FROM tblHoSoDaiLy
-WHERE quan = N'Quận 3'
+SELECT [maDaiLy], [soPhieuXuat], [tongDoanhThu], [Tyle]
+FROM [tblChitietPhieubaocaoDT]
+WHERE [maPhieu]=@maPhieu
+AND (([maDaiLy] LIKE CONCAT('%',@sKeyword,'%'))
+OR ([soPhieuXuat] LIKE CONCAT('%',@sKeyword,'%'))
+OR ([tongDoanhThu] LIKE CONCAT('%',@sKeyword,'%')))
+OR ([Tyle] LIKE CONCAT('%',@sKeyword,'%'))
 
 
 

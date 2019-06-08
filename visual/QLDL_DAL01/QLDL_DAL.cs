@@ -2007,7 +2007,7 @@ namespace QLDL_DAL
                     cmd.Connection = con;
                     cmd.CommandType = System.Data.CommandType.Text;
                     cmd.CommandText = query;
-                    cmd.Parameters.AddWithValue("@maXuatHang", DT.madt);
+                    cmd.Parameters.AddWithValue("@maPhieu", DT.madt);
                     try
                     {
                         con.Open();
@@ -2041,8 +2041,8 @@ namespace QLDL_DAL
                     cmd.CommandType = System.Data.CommandType.Text;
                     cmd.CommandText = query;
 
-                    try
-                    {
+                    //try
+                    //{
                         con.Open();
                         SqlDataReader reader = null;
                         reader = cmd.ExecuteReader();
@@ -2051,7 +2051,7 @@ namespace QLDL_DAL
                             while (reader.Read())
                             {
                                 PhieubaocaodtDTO DT = new PhieubaocaodtDTO();
-                                DT.madt = reader["maXuatHang"].ToString();
+                                DT.madt = reader["maPhieu"].ToString();
                                 DT.ngaylap = Convert.ToDateTime(reader["ngayLapPhieu"].ToString());
                                 DT.tongdt = int.Parse(reader["tongDoanhThu"].ToString());
                                 listdoanhthu.Add(DT);
@@ -2060,12 +2060,12 @@ namespace QLDL_DAL
 
                         con.Close();
                         con.Dispose();
-                    }
-                    catch (Exception ex)
-                    {
-                        con.Close();
-                        return null;
-                    }
+                    //}
+                    //catch (Exception ex)
+                    //{
+                    //    con.Close();
+                    //    return null;
+                    //}
                 }
             }
             return listdoanhthu;
@@ -2100,7 +2100,7 @@ namespace QLDL_DAL
                             while (reader.Read())
                             {
                                 PhieubaocaodtDTO DT = new PhieubaocaodtDTO();
-                                DT.madt = reader["maXuatHang"].ToString();
+                                DT.madt = reader["maPhieu"].ToString();
                                 DT.ngaylap = Convert.ToDateTime(reader["ngayLapPhieu"].ToString());
                                 DT.tongdt = int.Parse(reader["tongDoanhThu"].ToString());
                                 listdoanhthu.Add(DT);
@@ -2208,8 +2208,8 @@ namespace QLDL_DAL
                     cmd.CommandType = System.Data.CommandType.Text;
                     cmd.CommandText = query;
                     cmd.Parameters.AddWithValue("@maPhieu", madt);
-                    try
-                    {
+                    //try
+                    //{
                         con.Open();
                         SqlDataReader reader = null;
                         reader = cmd.ExecuteReader();
@@ -2228,12 +2228,12 @@ namespace QLDL_DAL
 
                         con.Close();
                         con.Dispose();
-                    }
-                    catch (Exception ex)
-                    {
-                        con.Close();
-                        return null;
-                    }
+                    //}
+                    //catch (Exception ex)
+                    //{
+                    //    con.Close();
+                    //    return null;
+                    //}
                 }
             }
             return listCTbcdt;
@@ -2247,7 +2247,7 @@ namespace QLDL_DAL
             query += " AND (([maDaiLy] LIKE CONCAT('%',@sKeyword,'%'))";
             query += " OR ([soPhieuXuat] LIKE CONCAT('%',@sKeyword,'%'))";
             query += " OR ([tongDoanhThu] LIKE CONCAT('%',@sKeyword,'%')))";
-            query += " OR ([Tyle] LIKE CONCAT('%',@sKeyword,'%')))";
+            query += " OR ([Tyle] LIKE CONCAT('%',@sKeyword,'%'))";
 
             List<ChitietphieubcdtDTO> listCTbcdt = new List<ChitietphieubcdtDTO>();
 
@@ -2261,8 +2261,8 @@ namespace QLDL_DAL
                     cmd.CommandText = query;
                     cmd.Parameters.AddWithValue("@maPhieu", madt);
                     cmd.Parameters.AddWithValue("@sKeyword", sKeyword);
-                    try
-                    {
+                    //try
+                    //{
                         con.Open();
                         SqlDataReader reader = null;
                         reader = cmd.ExecuteReader();
@@ -2275,6 +2275,52 @@ namespace QLDL_DAL
                                 CTDT.sophieuxuat = int.Parse(reader["soPhieuXuat"].ToString());
                                 CTDT.tongdt = int.Parse(reader["tongDoanhThu"].ToString());
                                 CTDT.tyle = float.Parse(reader["Tyle"].ToString());
+                                listCTbcdt.Add(CTDT);
+                            }
+                        }
+                        con.Close();
+                        con.Dispose();
+                    //}
+                    //catch (Exception ex)
+                    //{
+                    //    con.Close();
+                    //    return null;
+                    //}
+                }
+            }
+            return listCTbcdt;
+        }
+        public List<ChitietphieubcdtDTO> laydoanhthu(string thang)
+        {
+            string query = string.Empty;
+            query += " SELECT  hsdl.maDaiLy, SUM(pxh.tongtien) as [doanhthu], COUNT (pxh.maXuatHang) as [sophieuxuat] ";
+            query += " FROM tblHoSoDaiLy hsdl, tblPhieuXuatHang pxh";
+            query += " WHERE hsdl.maDaiLy = pxh.maDaiLy AND MONTH(pxh.ngayLapPhieu)=@thang";
+            query += " GROUP BY hsdl.maDaiLy";
+            List<ChitietphieubcdtDTO> listCTbcdt = new List<ChitietphieubcdtDTO>();
+
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cmd.Connection = con;
+                    cmd.CommandType = System.Data.CommandType.Text;
+                    cmd.CommandText = query;
+                    cmd.Parameters.AddWithValue("@thang", thang);
+                    try
+                    {
+                        con.Open();
+                        SqlDataReader reader = null;
+                        reader = cmd.ExecuteReader();
+                        if (reader.HasRows == true)
+                        {
+                            while (reader.Read())
+                            {
+                                ChitietphieubcdtDTO CTDT = new ChitietphieubcdtDTO();
+                                CTDT.madl = reader["maDaiLy"].ToString();                                
+                                CTDT.tongdt = int.Parse(reader["doanhthu"].ToString());
+                                CTDT.sophieuxuat = int.Parse(reader["sophieuxuat"].ToString());
                                 listCTbcdt.Add(CTDT);
                             }
                         }
