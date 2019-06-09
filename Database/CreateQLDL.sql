@@ -79,18 +79,26 @@ CREATE TABLE [dbo].[tblChitietPhieuXuatHang]
 	FOREIGN KEY ([maXuatHang]) REFERENCES [tblPhieuXuatHang]([maXuatHang]),
 	FOREIGN KEY ([maMatHang]) REFERENCES [tblMatHang]([maMatHang]),
 )
-CREATE TABLE [dbo].[tblNoDaiLy]
+CREATE TABLE [dbo].[tblNoThangtruoc]
 (		
 	[maDaiLy]	nvarchar(10) NOT NULL PRIMARY KEY,
-	[noDau] 	int NOT NULL,
-	[noCuoi]	int NOT NULL,
-	[phatSinh]	int NOT NULL,
+	[nothangT] 	int NOT NULL,	
 	FOREIGN KEY (maDaiLy) REFERENCES tblHoSoDaiLy(maDaiLy),
 )
 CREATE TABLE [dbo].[tblPhieubaocaoCongNo]
 (
-	[maPhieu] int NOT NULL PRIMARY KEY,			
-	[thang] int NOT NULL	
+	[maPhieu] nvarchar(10) NOT NULL PRIMARY KEY,		
+	[ngayLapPhieu]	 datetime2(7) NOT NULL,	
+)
+CREATE TABLE [dbo].[tblCTPhieubaocaoCongNo]
+(		
+	[maPhieu] nvarchar(10) NOT NULL,
+	[maDaiLy]	nvarchar(10) NOT NULL PRIMARY KEY,
+	[noDau] 	int NOT NULL,
+	[noCuoi]	int NOT NULL,
+	[phatSinh]	int NOT NULL,
+	FOREIGN KEY (maPhieu) REFERENCES tblPhieubaocaoCongNo(maPhieu),
+	FOREIGN KEY (maDaiLy) REFERENCES tblHoSoDaiLy(maDaiLy),
 )
 CREATE TABLE [dbo].[tblPhieubaocaoDoanhThu]
 (
@@ -125,6 +133,7 @@ CREATE TABLE [dbo].[tblQuiDinh]
 --drop table tblChitietPhieuXuatHang
 --drop table tblNoDaiLy
 --drop table tblPhieubaocaoCongNo
+--drop table tblCTPhieubaocaoCongNo
 --drop table tblPhieubaocaoDoanhThu
 --drop table tblChitietPhieubaocaoDT
 --drop table tblQuiDinh
@@ -180,14 +189,19 @@ VALUES ('xh4', 'dl3', '11/9/2019', 0);
 
 INSERT INTO [tblPhieuThuTien] ([maPhieu], [maDaiLy], [ngayThuTien], [soTienThu])
 VALUES ('ptt1', 'dl4', '6/7/2019', 200);
+
+INSERT INTO [tblNoThangtruoc] (maDaiLy, nothangT)
+VALUES ('dl2', 10);
+INSERT INTO [tblNoThangtruoc] (maDaiLy, nothangT)
+VALUES ('dl1', 100);
+INSERT INTO [tblNoThangtruoc] (maDaiLy, nothangT)
+VALUES ('dl3', 70);
+INSERT INTO [tblNoThangtruoc] (maDaiLy, nothangT)
+VALUES ('dl4', 200);
+INSERT INTO [tblNoThangtruoc] (maDaiLy, nothangT)
+VALUES ('dl5', 50);
 ----TESTING----
-SELECT [maDaiLy], [soPhieuXuat], [tongDoanhThu], [Tyle]
-FROM [tblChitietPhieubaocaoDT]
-WHERE [maPhieu]=@maPhieu
-AND (([maDaiLy] LIKE CONCAT('%',@sKeyword,'%'))
-OR ([soPhieuXuat] LIKE CONCAT('%',@sKeyword,'%'))
-OR ([tongDoanhThu] LIKE CONCAT('%',@sKeyword,'%')))
-OR ([Tyle] LIKE CONCAT('%',@sKeyword,'%'))
+
 
 
 

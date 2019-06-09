@@ -161,7 +161,7 @@ namespace QLDL_BUS
         {
             bool re = dvDAL.Them(dv);
             return re;
-        }       
+        }
         public bool Xoa(DanhsachDonviDTO dv)
         {
             bool re = dvDAL.Xoa(dv);
@@ -313,6 +313,10 @@ namespace QLDL_BUS
         {
             return pbcdtDAL.selectByKeyWord(sKeyword);
         }
+        public bool Check(int thang)
+        {
+            return pbcdtDAL.Check(thang);
+        }
     }
     public class ChitietphieubcdtBUS
     {
@@ -325,7 +329,7 @@ namespace QLDL_BUS
         {
             bool re = pbcdtDAL.Them(CTXH);
             return re;
-        }        
+        }
         public bool Xoatheophieuxuat(string mabcdt)
         {
             bool re = pbcdtDAL.XoatheophieuBCDT(mabcdt);
@@ -342,6 +346,98 @@ namespace QLDL_BUS
         public List<ChitietphieubcdtDTO> laydoanhthu(string thang)
         {
             return pbcdtDAL.laydoanhthu(thang);
+        }
+    }
+    public class PhieubaocaonoBUS
+    {
+        private PhieubaocaonoDAL pbcnoDAL;
+        public PhieubaocaonoBUS()
+        {
+            pbcnoDAL = new PhieubaocaonoDAL();
+        }
+        public bool Them(PhieubaocaonoDTO DT)
+        {
+            bool re = pbcnoDAL.Them(DT);
+            return re;
+        }
+        //public bool Sua(PhieubaocaonoDTO DT)
+        //{
+        //    bool re = pbcdtDAL.Sua(DT);
+        //    return re;
+        //}
+        public bool Xoa(PhieubaocaonoDTO DT)
+        {
+            bool re = pbcnoDAL.Xoa(DT);
+            return re;
+        }
+        public List<PhieubaocaonoDTO> select()
+        {
+            return pbcnoDAL.select();
+        }
+        public List<PhieubaocaonoDTO> selectByKeyWord(string sKeyword)
+        {
+            return pbcnoDAL.selectByKeyWord(sKeyword);
+        }
+        public bool Check(int thang)
+        {
+            return pbcnoDAL.Check(thang);
+        }
+    }
+    public class ChitietphieubcnoBUS
+    {
+        private ChitietphieubcnoDAL pbcnoDAL;
+        public ChitietphieubcnoBUS()
+        {
+            pbcnoDAL = new ChitietphieubcnoDAL();
+        }
+        public bool Them(ChitietphieubcnoDTO CTNO)
+        {
+            bool re = pbcnoDAL.Them(CTNO);
+            return re;
+        }
+        public bool Xoatheophieuno(string mabcdt)
+        {
+            bool re = pbcnoDAL.XoatheophieuBCNO(mabcdt);
+            return re;
+        }
+        public List<ChitietphieubcnoDTO> select(string mabcno)
+        {
+            return pbcnoDAL.select(mabcno);
+        }
+        public List<ChitietphieubcnoDTO> selectByKeyWord(string sKeyword, string mabcno)
+        {
+            return pbcnoDAL.selectByKeyWord(sKeyword, mabcno);
+        }
+        public List<ChitietphieubcnoDTO> layno()
+        {
+            return pbcnoDAL.layno();
+        }
+    }
+    public class NoThangtruocBUS
+    {
+        private NoThangtruocDAL noDAL;
+        public NoThangtruocBUS()
+        {
+            noDAL = new NoThangtruocDAL();
+        }
+        public int Laytientheoma(string ma)
+        {
+            return noDAL.Laytientheoma(ma);
+        }
+        public bool Them(NoThangtruocDTO no)
+        {
+            bool re = noDAL.Them(no);
+            return re;
+        }
+        public bool Sua(NoThangtruocDTO no)
+        {
+            bool re = noDAL.Sua(no);
+            return re;
+        }
+        public bool Xoa(NoThangtruocDTO no)
+        {
+            bool re = noDAL.Xoa(no);
+            return re;
         }
     }
 }

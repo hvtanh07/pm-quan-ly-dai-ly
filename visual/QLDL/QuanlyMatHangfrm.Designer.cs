@@ -50,6 +50,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.mamh = new System.Windows.Forms.TextBox();
             this.dvt = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dsmathang)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -172,6 +173,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.button4);
             this.groupBox1.Controls.Add(this.txtKeyword);
             this.groupBox1.Controls.Add(this.dsmathang);
@@ -194,9 +196,9 @@
             // 
             // txtKeyword
             // 
-            this.txtKeyword.Location = new System.Drawing.Point(133, 27);
+            this.txtKeyword.Location = new System.Drawing.Point(188, 27);
             this.txtKeyword.Name = "txtKeyword";
-            this.txtKeyword.Size = new System.Drawing.Size(324, 22);
+            this.txtKeyword.Size = new System.Drawing.Size(269, 22);
             this.txtKeyword.TabIndex = 6;
             // 
             // button2
@@ -242,6 +244,15 @@
             this.dvt.Name = "dvt";
             this.dvt.Size = new System.Drawing.Size(121, 24);
             this.dvt.TabIndex = 22;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(18, 30);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(164, 17);
+            this.label4.TabIndex = 22;
+            this.label4.Text = "Nhập thông tin mặt hàng";
             // 
             // QuanlyMatHangfrm
             // 
@@ -298,5 +309,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox mamh;
         private System.Windows.Forms.ComboBox dvt;
+        private System.Windows.Forms.Label label4;
     }
 }

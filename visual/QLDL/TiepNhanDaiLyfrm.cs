@@ -16,6 +16,7 @@ namespace QLDL
         private CHoSoDaiLyBUS hsBUS;
         private CQuyDinhBUS qdBUS;
         private CLoaiDaiLyBUS ldlBUS;
+        private NoThangtruocBUS nttBUS;
         public TiepNhanDaiLyfrm()
         {
             InitializeComponent();
@@ -24,6 +25,7 @@ namespace QLDL
         {
             qdBUS = new CQuyDinhBUS();
             hsBUS = new CHoSoDaiLyBUS();
+            nttBUS = new NoThangtruocBUS();
             ldlBUS = new CLoaiDaiLyBUS();
             Taodatasource();
         }
@@ -49,7 +51,9 @@ namespace QLDL
             hs.ngaytiepnhan = DateTime.Today;
             hs.nohientai = 0;
             hs.loaidaily = ldl.Text;
-
+            NoThangtruocDTO ntt = new NoThangtruocDTO();
+            ntt.madl = madl.Text;
+            ntt.nothangtruoc = 0;
             //2. Kiểm tra data hợp lệ or not
             QuiDinhDTO qd = qdBUS.Laydulieu();
             int sodl = hsBUS.Laysodaily(quantxt.Text);
@@ -59,8 +63,9 @@ namespace QLDL
                 return;
             }
             //3. Thêm vào DB
-            bool kq = hsBUS.Them(hs);
-            if (kq == false)
+            bool kq2 = hsBUS.Them(hs);
+            bool kq1 = nttBUS.Them(ntt);           
+            if (kq1 == false || kq2 == false)
                 MessageBox.Show("Thêm hồ sơ thất bại. Vui lòng kiểm tra lại dũ liệu");
             else
             {

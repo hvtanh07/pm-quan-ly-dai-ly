@@ -74,7 +74,10 @@ namespace QLDL
         {
             // ' Get the current cell location.
             int currentRowIndex = Dsphieuthu.CurrentCellAddress.Y;// 'current row selected
-
+            if (!testtext())
+            {
+                return;
+            }
             //'Verify that indexing OK
             if (-1 < currentRowIndex && currentRowIndex < Dsphieuthu.RowCount)
             {
@@ -82,7 +85,7 @@ namespace QLDL
                 pt.mathutien = maptt.Text;
                 pt.madl = madltxt.Text;
                 pt.ngaythu = Ngaythu.Value;
-                pt.sotienthu = int.Parse(tienthu.Text);
+                pt.sotienthu = int.Parse(tienthu.Text);               
                 bool kq = pttBUS.Sua(pt);
                 if (kq == false)
                     MessageBox.Show("Sửa thông tin phiếu thu thất bại. Vui lòng kiểm tra lại dữ liệu");
@@ -151,6 +154,12 @@ namespace QLDL
         }
         bool testtext()//kiểm tra ô dữ liệu trống
         {
+            if (string.IsNullOrWhiteSpace(maptt.Text))
+            {
+                MessageBox.Show(maptt, "Bạn chưa nhập số mã phiếu thu.");
+                maptt.Focus();
+                return false;
+            }
             if (string.IsNullOrWhiteSpace(tienthu.Text))
             {
                 MessageBox.Show(tienthu, "Bạn chưa nhập số tiền thu.");

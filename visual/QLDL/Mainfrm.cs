@@ -79,5 +79,19 @@ namespace QLDL
             frm.MdiParent = this;
             frm.Show();
         }
+
+        private void BáoCáoCôngNợĐạiLýToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PhieuBaoCaoCongNo frm = new PhieuBaoCaoCongNo();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void QuảnLýNợThángTrướcToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            NoThangTruoc frm = new NoThangTruoc();
+            frm.MdiParent = this;
+            frm.Show();
+        }
     }
 }

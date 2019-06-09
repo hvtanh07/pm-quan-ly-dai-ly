@@ -127,14 +127,17 @@ namespace QLDL
         //SUA
         private void Button3_Click(object sender, EventArgs e)
         {
+            if (!testtext())
+            {
+                return;
+            }
             DanhsachmathangDTO mh = new DanhsachmathangDTO();
             mh.mamh = mamh.Text;
             mh.tenmh = tmh.Text;
             mh.hansudung = hsd.Value;
             mh.gia = int.Parse(gia.Text);
             mh.donvitinh = dvt.Text;
-            //2. Kiểm tra data hợp lệ or not
-            
+            //2. Kiểm tra data hợp lệ or not            
             //3. Thêm vào DB
             bool kq = mhbus.Sua(mh);
             if (kq == false)
@@ -147,8 +150,10 @@ namespace QLDL
         {
             // ' Get the current cell location.
             int currentRowIndex = dsmathang.CurrentCellAddress.Y;// 'current row selected
-
-
+            if (!testtext())
+            {
+                return;
+            }
             //'Verify that indexing OK
             if (-1 < currentRowIndex && currentRowIndex < dsmathang.RowCount)
             {

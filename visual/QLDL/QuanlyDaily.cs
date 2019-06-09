@@ -15,6 +15,7 @@ namespace QLDL
     public partial class QuanlyDaily : Form
     {
         private CHoSoDaiLyBUS hsBUS;
+        private NoThangtruocBUS nttBUS;
         public QuanlyDaily()
         {
             InitializeComponent();
@@ -23,6 +24,7 @@ namespace QLDL
         private void QuanlyDaily_Load(object sender, EventArgs e)
         {
             hsBUS = new CHoSoDaiLyBUS();
+            nttBUS = new NoThangtruocBUS();
             this.loadData_Vao_GridView();           
         }
         
@@ -37,9 +39,7 @@ namespace QLDL
         private void SửaĐạiLýToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // ' Get the current cell location.
-            int currentRowIndex = dgvBangDanhSach.CurrentCellAddress.Y;// 'current row selected
-
-
+            int currentRowIndex = dgvBangDanhSach.CurrentCellAddress.Y;// 'current row selected            
             //'Verify that indexing OK
             if (-1 < currentRowIndex && currentRowIndex < dgvBangDanhSach.RowCount)
             {
@@ -61,16 +61,17 @@ namespace QLDL
             {
                 // ' Get the current cell location.
                 int currentRowIndex = dgvBangDanhSach.CurrentCellAddress.Y;// 'current row selected
-
-
+                NoThangtruocDTO ntt = new NoThangtruocDTO();
+                ntt.madl = dgvBangDanhSach.CurrentRow.Cells[0].Value.ToString();
+                bool kq1 = nttBUS.Xoa(ntt);
                 //'Verify that indexing OK
                 if (-1 < currentRowIndex && currentRowIndex < dgvBangDanhSach.RowCount)
                 {
                     CHoSoDaiLyDTO dl = (CHoSoDaiLyDTO)dgvBangDanhSach.Rows[currentRowIndex].DataBoundItem;
                     if (dl != null)
                     {
-                        bool kq = hsBUS.Xoa(dl);
-                        if (kq == false)
+                        bool kq2 = hsBUS.Xoa(dl);
+                        if (kq2 == false || kq1 == false)
                             MessageBox.Show("Xóa đại lý thất bại. Vui lòng kiểm tra lại dũ liệu");
                         else
                         {

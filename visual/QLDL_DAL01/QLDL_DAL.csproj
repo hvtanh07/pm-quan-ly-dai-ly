@@ -47,7 +47,7 @@
     <Reference Include="System.Data.DataSetExtensions" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="QLDL_DAL.cs" />
+    <Compile Include="CHoSoDaiLyDAL.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\HoSoDaiLyDTO\QLDL_DTO.csproj">

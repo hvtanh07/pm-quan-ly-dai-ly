@@ -138,7 +138,36 @@ namespace QLDL_DTO
         public float tyle { get => Tyle; set => Tyle = value; }
         public int tongdt { get => TongDT; set => TongDT = value; }
     }
+    public class PhieubaocaonoDTO
+    {
+        private string MaNO;
+        private DateTime Ngaylap;       
 
+        public string mano { get => MaNO; set => MaNO = value; }
+        public DateTime ngaylap { get => Ngaylap; set => Ngaylap = value; }       
+    }
+    public class ChitietphieubcnoDTO
+    {
+        private string MaNO;
+        private string MaDL;
+        private int noDau;
+        private int noCuoi;
+        private int phatSinh;
+
+        public string mano { get => MaNO; set => MaNO = value; }
+        public string madl { get => MaDL; set => MaDL = value; }
+        public int nodau { get => noDau; set => noDau = value; }
+        public int nocuoi { get => noCuoi; set => noCuoi = value; }
+        public int phatsinh { get => phatSinh; set => phatSinh = value; }
+    }
+    public class NoThangtruocDTO
+    {
+        private string MaDL;
+        private int noThangTruoc;
+
+        public string madl { get => MaDL; set => MaDL = value; }
+        public int nothangtruoc { get => noThangTruoc; set => noThangTruoc = value; }
+    }
 }
 
 

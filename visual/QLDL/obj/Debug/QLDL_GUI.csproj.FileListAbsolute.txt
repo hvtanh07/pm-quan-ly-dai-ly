@@ -330,3 +330,6 @@ D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\obj\Debug\QLDL.LapPhieuXuatHang
 D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\obj\Debug\QLDL.QuanLyLoaiDailyDonvi.resources
 D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\obj\Debug\QLDL.PhieuBaocaoDS.resources
 D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\obj\Debug\QLDL.ChitietPhieubaocaodoanhso.resources
+D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\obj\Debug\QLDL.PhieuBaoCaoCongNo.resources
+D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\obj\Debug\QLDL.CTPhieuBaoCaoCongNo.resources
+D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\obj\Debug\QLDL.NoThangTruoc.resources

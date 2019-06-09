@@ -45,6 +45,7 @@
             this.txtKeyword = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.thang = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dsphieuxh)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -68,9 +69,10 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(430, 114);
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Location = new System.Drawing.Point(433, 92);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(102, 32);
+            this.button4.Size = new System.Drawing.Size(116, 81);
             this.button4.TabIndex = 16;
             this.button4.Text = "Lập phiếu";
             this.button4.UseVisualStyleBackColor = true;
@@ -168,18 +170,18 @@
             // 
             // txtKeyword
             // 
-            this.txtKeyword.Location = new System.Drawing.Point(95, 247);
+            this.txtKeyword.Location = new System.Drawing.Point(217, 252);
             this.txtKeyword.Name = "txtKeyword";
-            this.txtKeyword.Size = new System.Drawing.Size(283, 22);
+            this.txtKeyword.Size = new System.Drawing.Size(210, 22);
             this.txtKeyword.TabIndex = 20;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(404, 242);
+            this.button1.Location = new System.Drawing.Point(433, 247);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(102, 32);
             this.button1.TabIndex = 21;
-            this.button1.Text = "Search";
+            this.button1.Text = "Tìm kiếm";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
@@ -191,11 +193,21 @@
             this.thang.Size = new System.Drawing.Size(90, 22);
             this.thang.TabIndex = 23;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(71, 255);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(140, 17);
+            this.label6.TabIndex = 24;
+            this.label6.Text = "Nhập thông tin phiếu";
+            // 
             // LapPhieuXuatHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(654, 547);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.thang);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtKeyword);
@@ -237,5 +249,6 @@
         private System.Windows.Forms.ToolStripMenuItem xóaBảnGhiToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sửaBảnGhiToolStripMenuItem;
         private System.Windows.Forms.TextBox thang;
+        private System.Windows.Forms.Label label6;
     }
 }

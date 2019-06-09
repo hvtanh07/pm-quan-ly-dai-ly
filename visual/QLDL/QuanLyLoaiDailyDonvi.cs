@@ -166,6 +166,10 @@ namespace QLDL
         //sua
         private void Button3_Click(object sender, EventArgs e)
         {
+            if (!testtext1())
+            {
+                return;
+            }
             LoaiDaiLyDTO ldl = new LoaiDaiLyDTO();
             ldl.maLDL = maldl.Text;
             ldl.loaidaily = int.Parse(ldltxt.Text);

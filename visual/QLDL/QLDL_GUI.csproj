@@ -60,11 +60,29 @@
     <Compile Include="ChitietPhieubaocaodoanhso.Designer.cs">
       <DependentUpon>ChitietPhieubaocaodoanhso.cs</DependentUpon>
     </Compile>
+    <Compile Include="CTPhieuBaoCaoCongNo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CTPhieuBaoCaoCongNo.Designer.cs">
+      <DependentUpon>CTPhieuBaoCaoCongNo.cs</DependentUpon>
+    </Compile>
     <Compile Include="LapPhieuXuatHang.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="LapPhieuXuatHang.Designer.cs">
       <DependentUpon>LapPhieuXuatHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NoThangTruoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NoThangTruoc.Designer.cs">
+      <DependentUpon>NoThangTruoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhieuBaoCaoCongNo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PhieuBaoCaoCongNo.Designer.cs">
+      <DependentUpon>PhieuBaoCaoCongNo.cs</DependentUpon>
     </Compile>
     <Compile Include="PhieuBaocaoDS.cs">
       <SubType>Form</SubType>
@@ -131,8 +149,17 @@
     <EmbeddedResource Include="ChitietPhieubaocaodoanhso.resx">
       <DependentUpon>ChitietPhieubaocaodoanhso.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CTPhieuBaoCaoCongNo.resx">
+      <DependentUpon>CTPhieuBaoCaoCongNo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LapPhieuXuatHang.resx">
       <DependentUpon>LapPhieuXuatHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NoThangTruoc.resx">
+      <DependentUpon>NoThangTruoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhieuBaoCaoCongNo.resx">
+      <DependentUpon>PhieuBaoCaoCongNo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PhieuBaocaoDS.resx">
       <DependentUpon>PhieuBaocaoDS.cs</DependentUpon>
