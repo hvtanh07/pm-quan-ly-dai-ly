@@ -39,7 +39,7 @@ namespace QLDL
             PhieubaocaonoDTO no = new PhieubaocaonoDTO();
             no.mano = Matxt.Text;
             no.ngaylap = DateTime.Today;
-            if (bcnoBUS.Check(DateTime.Today.Month))
+            if (bcnoBUS.Check(DateTime.Today.Month, DateTime.Today.Year))
             {
                 MessageBox.Show("Thêm hồ sơ thất bại. Tháng này đã có phiếu báo cáo công nợ");
                 return;
@@ -148,7 +148,7 @@ namespace QLDL
 
         private void XóaBảnGhiToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            DialogResult dlr = MessageBox.Show("Bạn có chắc muốn xóa phiếu công nợ này không ?", "Xóa thông tin", MessageBoxButtons.YesNo);
+            DialogResult dlr = MessageBox.Show("Bạn có chắc muốn xóa phiếu công nợ này không ?, Thông tin nợ tháng trước sẽ không thay đổi", "Xóa thông tin", MessageBoxButtons.YesNo);
             if (dlr == DialogResult.Yes)
             {
                 // ' Get the current cell location.

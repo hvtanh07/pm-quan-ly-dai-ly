@@ -17,6 +17,7 @@ namespace QLDL
         private CQuyDinhBUS qdBUS;
         private CMatHangBUS mhbus;
         private DanhsachDonviBUS dvBUS;
+        private ChitietphieuxuatBUS ctpxBUS;
         public QuanlyMatHangfrm()
         {
             InitializeComponent();
@@ -24,6 +25,7 @@ namespace QLDL
         
         private void ThemXoaSuaMatHangfrm_Load(object sender, EventArgs e)
         {
+            ctpxBUS = new ChitietphieuxuatBUS();
             dvBUS = new DanhsachDonviBUS();
             qdBUS = new CQuyDinhBUS();
             mhbus = new CMatHangBUS();
@@ -83,10 +85,10 @@ namespace QLDL
                 DanhsachmathangDTO mh = new DanhsachmathangDTO();
                 mh.mamh = mamh.Text;
                 //2. Kiểm tra data hợp lệ or not
-
                 //3. Thêm vào DB
-                bool kq = mhbus.Xoa(mh);
-                if (kq == false)
+                bool kq1 = ctpxBUS.XoatheoMH(mh.mamh);
+                bool kq2 = mhbus.Xoa(mh);
+                if (kq2 == false || kq1 == false)
                     MessageBox.Show("Xóa mặt hàng thất bại. Vui lòng kiểm tra lại dũ liệu");
                 else
                 {
@@ -110,8 +112,9 @@ namespace QLDL
                         DanhsachmathangDTO dl = (DanhsachmathangDTO)dsmathang.Rows[currentRowIndex].DataBoundItem;
                         if (dl != null)
                         {
-                            bool kq = mhbus.Xoa(dl);
-                            if (kq == false)
+                            bool kq1 = ctpxBUS.XoatheoMH(dl.mamh);
+                            bool kq2 = mhbus.Xoa(dl);
+                            if (kq1 == false || kq2 == false)
                                 MessageBox.Show("Xóa mặt hàng thất bại. Vui lòng kiểm tra lại dũ liệu");
                             else
                             {

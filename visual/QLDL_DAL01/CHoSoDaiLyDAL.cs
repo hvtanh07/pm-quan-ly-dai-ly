@@ -1343,7 +1343,76 @@ namespace QLDL_DAL
             }
             return true;
         }
+        public List<string> layMAtheoDL(string madl)
+        {
+            List<string> dsmapx = new List<string>();
+            string query = string.Empty;
+            query += " SELECT maXuatHang";
+            query += " FROM tblPhieuXuatHang";
+            query += " WHERE maDaiLy = @madl";
+            using (SqlConnection con = new SqlConnection(ConnectionString))
+            {
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cmd.Connection = con;
+                    cmd.CommandType = System.Data.CommandType.Text;
+                    cmd.CommandText = query;
+                    cmd.Parameters.AddWithValue("@madl", madl);
+                    try
+                    {
+                        con.Open();
+                        SqlDataReader reader = null;
+                        reader = cmd.ExecuteReader();
+                        if (reader.HasRows == true)
+                        {
+                            while (reader.Read())
+                            {
+                                string mapx = reader["maXuatHang"].ToString();
+                                dsmapx.Add(mapx);
+                            }
+                        }
+                        con.Close();
+                        con.Dispose();
+                    }
+                    catch (Exception ex)
+                    {
+                        con.Close();
+                        return null;
+                    }
+                }
+            }
+            return dsmapx;
+        }
+        public bool XoatheoDL(string madl)
+        {
+            string query = string.Empty;
+            query += "DELETE FROM tblPhieuXuatHang WHERE [maDaiLy]=@maDaiLy ";
 
+            using (SqlConnection con = new SqlConnection(ConnectionString))
+            {
+
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cmd.Connection = con;
+                    cmd.CommandType = System.Data.CommandType.Text;
+                    cmd.CommandText = query;
+                    cmd.Parameters.AddWithValue("@maDaiLy", madl);
+                    try
+                    {
+                        con.Open();
+                        cmd.ExecuteNonQuery();
+                        con.Close();
+                        con.Dispose();
+                    }
+                    catch (Exception ex)
+                    {
+                        con.Close();
+                        return false;
+                    }
+                }
+            }
+            return true;
+        }
         public bool Xoa(PhieuxuathangDTO XH)
         {            
             string query = string.Empty;
@@ -1579,6 +1648,36 @@ namespace QLDL_DAL
             }
             return true;
         }
+        public bool XoatheoMH(string mamh)
+        {
+            string query = string.Empty;
+            query += "DELETE FROM tblChitietPhieuXuatHang WHERE [maMatHang]=@maMatHang ";
+
+            using (SqlConnection con = new SqlConnection(ConnectionString))
+            {
+
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cmd.Connection = con;
+                    cmd.CommandType = System.Data.CommandType.Text;
+                    cmd.CommandText = query;
+                    cmd.Parameters.AddWithValue("@maMatHang", mamh);
+                    try
+                    {
+                        con.Open();
+                        cmd.ExecuteNonQuery();
+                        con.Close();
+                        con.Dispose();
+                    }
+                    catch (Exception ex)
+                    {
+                        con.Close();
+                        return false;
+                    }
+                }
+            }
+            return true;
+        }
         public bool Xoatheophieuxuat(string maxh)
         {
             string query = string.Empty;
@@ -1608,7 +1707,7 @@ namespace QLDL_DAL
                 }
             }
             return true;
-        }
+        }        
         public List<ChitietphieuxuatDTO> select(string maxh)
         {
             string query = string.Empty;
@@ -1812,7 +1911,36 @@ namespace QLDL_DAL
             }
             return true;
         }
+        public bool XoatheoDL(string madl)
+        {
+            string query = string.Empty;
+            query += "DELETE FROM tblPhieuThuTien WHERE [maDaiLy]=@maDaiLy ";
 
+            using (SqlConnection con = new SqlConnection(ConnectionString))
+            {
+
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cmd.Connection = con;
+                    cmd.CommandType = System.Data.CommandType.Text;
+                    cmd.CommandText = query;
+                    cmd.Parameters.AddWithValue("@maDaiLy", madl);
+                    try
+                    {
+                        con.Open();
+                        cmd.ExecuteNonQuery();
+                        con.Close();
+                        con.Dispose();
+                    }
+                    catch (Exception ex)
+                    {
+                        con.Close();
+                        return false;
+                    }
+                }
+            }
+            return true;
+        }
         public List<PhieuThuTienDTO> select()
         {
             string query = string.Empty;
@@ -2117,13 +2245,13 @@ namespace QLDL_DAL
             }
             return listdoanhthu;
         }
-        public bool Check(int thang)
+        public bool Check(int thang, int year)
         {
             string test = null;
             string query = string.Empty;
             query += " SELECT maPhieu";
             query += " FROM tblPhieubaocaoDoanhThu dt";
-            query += " WHERE MONTH(dt.ngayLapPhieu)= @month";
+            query += " WHERE MONTH(dt.ngayLapPhieu)= @month AND YEAR(dt.ngayLapPhieu) = @year";
             using (SqlConnection con = new SqlConnection(connectionString))
             {
 
@@ -2133,6 +2261,7 @@ namespace QLDL_DAL
                     cmd.CommandType = System.Data.CommandType.Text;
                     cmd.CommandText = query;
                     cmd.Parameters.AddWithValue("@month", thang);
+                    cmd.Parameters.AddWithValue("@year", year);
                     try
                     {
                         con.Open();
@@ -2203,7 +2332,37 @@ namespace QLDL_DAL
                 }
             }
             return true;
-        }       
+        }
+        public bool XoatheoDL(string madl)
+        {
+            string query = string.Empty;
+            query += "DELETE FROM tblChitietPhieubaocaoDT WHERE [maDaiLy]=@maDaiLy ";
+
+            using (SqlConnection con = new SqlConnection(ConnectionString))
+            {
+
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cmd.Connection = con;
+                    cmd.CommandType = System.Data.CommandType.Text;
+                    cmd.CommandText = query;
+                    cmd.Parameters.AddWithValue("@maDaiLy", madl);
+                    try
+                    {
+                        con.Open();
+                        cmd.ExecuteNonQuery();
+                        con.Close();
+                        con.Dispose();
+                    }
+                    catch (Exception ex)
+                    {
+                        con.Close();
+                        return false;
+                    }
+                }
+            }
+            return true;
+        }
         public bool XoatheophieuBCDT(string madt)
         {
             string query = string.Empty;
@@ -2333,12 +2492,12 @@ namespace QLDL_DAL
             }
             return listCTbcdt;
         }
-        public List<ChitietphieubcdtDTO> laydoanhthu(string thang)
+        public List<ChitietphieubcdtDTO> laydoanhthu(int thang,int year)
         {
             string query = string.Empty;
             query += " SELECT  hsdl.maDaiLy, SUM(pxh.tongtien) as [doanhthu], COUNT (pxh.maXuatHang) as [sophieuxuat] ";
             query += " FROM tblHoSoDaiLy hsdl, tblPhieuXuatHang pxh";
-            query += " WHERE hsdl.maDaiLy = pxh.maDaiLy AND MONTH(pxh.ngayLapPhieu)=@thang";
+            query += " WHERE hsdl.maDaiLy = pxh.maDaiLy AND MONTH(pxh.ngayLapPhieu)=@thang AND YEAR (pxh.ngayLapPhieu) = @year";
             query += " GROUP BY hsdl.maDaiLy";
             List<ChitietphieubcdtDTO> listCTbcdt = new List<ChitietphieubcdtDTO>();
 
@@ -2351,6 +2510,7 @@ namespace QLDL_DAL
                     cmd.CommandType = System.Data.CommandType.Text;
                     cmd.CommandText = query;
                     cmd.Parameters.AddWithValue("@thang", thang);
+                    cmd.Parameters.AddWithValue("@year", year);
                     try
                     {
                         con.Open();
@@ -2542,13 +2702,13 @@ namespace QLDL_DAL
             }
             return listno;
         }
-        public bool Check(int thang)
+        public bool Check(int thang,int year)
         {
             string test = null;
             string query = string.Empty;
             query += " SELECT maPhieu";
             query += " FROM tblPhieubaocaoCongNo no";
-            query += " WHERE MONTH(no.ngayLapPhieu)= @month";           
+            query += " WHERE MONTH(no.ngayLapPhieu)= @month AND YEAR (no.ngayLapPhieu) = @year";           
 
             using (SqlConnection con = new SqlConnection(connectionString))
             {
@@ -2559,6 +2719,7 @@ namespace QLDL_DAL
                     cmd.CommandType = System.Data.CommandType.Text;
                     cmd.CommandText = query;
                     cmd.Parameters.AddWithValue("@month", thang);
+                    cmd.Parameters.AddWithValue("@year", year);
                     try
                     {
                         con.Open();
@@ -2614,6 +2775,36 @@ namespace QLDL_DAL
                     cmd.Parameters.AddWithValue("@noDau", CTNO.nodau);
                     cmd.Parameters.AddWithValue("@noCuoi", CTNO.nocuoi);
                     cmd.Parameters.AddWithValue("@phatSinh", CTNO.phatsinh);
+                    try
+                    {
+                        con.Open();
+                        cmd.ExecuteNonQuery();
+                        con.Close();
+                        con.Dispose();
+                    }
+                    catch (Exception ex)
+                    {
+                        con.Close();
+                        return false;
+                    }
+                }
+            }
+            return true;
+        }
+        public bool XoatheoDL(string madl)
+        {
+            string query = string.Empty;
+            query += "DELETE FROM tblCTPhieubaocaoCongNo WHERE [maDaiLy]=@maDaiLy ";
+
+            using (SqlConnection con = new SqlConnection(ConnectionString))
+            {
+
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cmd.Connection = con;
+                    cmd.CommandType = System.Data.CommandType.Text;
+                    cmd.CommandText = query;
+                    cmd.Parameters.AddWithValue("@maDaiLy", madl);
                     try
                     {
                         con.Open();
@@ -2849,6 +3040,36 @@ namespace QLDL_DAL
                 }
             }
             return tien;
+        }
+        public bool XoatheoDL(string madl)
+        {
+            string query = string.Empty;
+            query += "DELETE FROM tblNoThangtruoc WHERE [maDaiLy]=@maDaiLy ";
+
+            using (SqlConnection con = new SqlConnection(ConnectionString))
+            {
+
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cmd.Connection = con;
+                    cmd.CommandType = System.Data.CommandType.Text;
+                    cmd.CommandText = query;
+                    cmd.Parameters.AddWithValue("@maDaiLy", madl);
+                    try
+                    {
+                        con.Open();
+                        cmd.ExecuteNonQuery();
+                        con.Close();
+                        con.Dispose();
+                    }
+                    catch (Exception ex)
+                    {
+                        con.Close();
+                        return false;
+                    }
+                }
+            }
+            return true;
         }
         public bool Them(NoThangtruocDTO NTT)
         {

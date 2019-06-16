@@ -54,7 +54,7 @@ namespace QLDL
             dt.madt = Matxt.Text;
             dt.ngaylap = DateTime.Today;
             dt.tongdt = 0;
-            if (bcdtBUS.Check(DateTime.Today.Month))
+            if (bcdtBUS.Check(DateTime.Today.Month, DateTime.Today.Year))
             {
                 MessageBox.Show("Thêm hồ sơ thất bại. Tháng này đã có phiếu báo cáo doanh thu");
                 return;

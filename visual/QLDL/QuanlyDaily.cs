@@ -16,6 +16,11 @@ namespace QLDL
     {
         private CHoSoDaiLyBUS hsBUS;
         private NoThangtruocBUS nttBUS;
+        private PhieuThuTienBUS pttBUS;
+        private ChitietphieubcdtBUS ctbcdtBUS;
+        private ChitietphieubcnoBUS ctbcnoBUS;
+        private ChitietphieuxuatBUS ctpxBUS;
+        private PhieuxuathangBUS pxhBUS;
         public QuanlyDaily()
         {
             InitializeComponent();
@@ -25,6 +30,11 @@ namespace QLDL
         {
             hsBUS = new CHoSoDaiLyBUS();
             nttBUS = new NoThangtruocBUS();
+            pttBUS = new PhieuThuTienBUS();
+            ctbcdtBUS = new ChitietphieubcdtBUS();
+            ctbcnoBUS = new ChitietphieubcnoBUS();
+            ctpxBUS = new ChitietphieuxuatBUS();
+            pxhBUS = new PhieuxuathangBUS();
             this.loadData_Vao_GridView();           
         }
         
@@ -61,17 +71,29 @@ namespace QLDL
             {
                 // ' Get the current cell location.
                 int currentRowIndex = dgvBangDanhSach.CurrentCellAddress.Y;// 'current row selected
-                NoThangtruocDTO ntt = new NoThangtruocDTO();
-                ntt.madl = dgvBangDanhSach.CurrentRow.Cells[0].Value.ToString();
-                bool kq1 = nttBUS.Xoa(ntt);
+                string madl= dgvBangDanhSach.CurrentRow.Cells[0].Value.ToString();
+                List<string> dsmapx = pxhBUS.layMAtheoDL(madl);
+                foreach (string mapx in dsmapx)
+                {
+                    if (!ctpxBUS.Xoatheophieuxuat(mapx))
+                    {
+                        MessageBox.Show("Xóa đại lý thất bại. Có lỗi xóa chi tiết phiếu xuất");
+                        return;
+                    }
+                }
+                bool kq5 = pxhBUS.XoatheoDL(madl);
+                bool kq2 = pttBUS.XoatheoDL(madl);
+                bool kq3 = ctbcdtBUS.XoatheoDL(madl);
+                bool kq4 = ctbcnoBUS.XoatheoDL(madl);
+                bool kq1 = nttBUS.XoatheoDL(madl);
                 //'Verify that indexing OK
                 if (-1 < currentRowIndex && currentRowIndex < dgvBangDanhSach.RowCount)
                 {
                     CHoSoDaiLyDTO dl = (CHoSoDaiLyDTO)dgvBangDanhSach.Rows[currentRowIndex].DataBoundItem;
                     if (dl != null)
-                    {
-                        bool kq2 = hsBUS.Xoa(dl);
-                        if (kq2 == false || kq1 == false)
+                    {                     
+                        bool kq6 = hsBUS.Xoa(dl);
+                        if (kq1 == false || kq2 == false || kq3 == false || kq4 == false || kq5 == false || kq6 == false)
                             MessageBox.Show("Xóa đại lý thất bại. Vui lòng kiểm tra lại dũ liệu");
                         else
                         {

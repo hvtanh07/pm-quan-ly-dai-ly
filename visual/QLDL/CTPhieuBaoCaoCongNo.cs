@@ -225,6 +225,8 @@ namespace QLDL
                 List<ChitietphieubcnoDTO> listctpx = ctbcnoBUS.selectByKeyWord(sKeyword, Matxt.Text);
                 this.loadData_Vao_GridView(listctpx);
             }
-        }        
+        }
+
+      
     }
 }

@@ -196,6 +196,10 @@ namespace QLDL_BUS
             bool re = pxhDAL.Them(XH);
             return re;
         }
+        public bool XoatheoDL(string madl)
+        {
+            return pxhDAL.XoatheoDL(madl);
+        }
         public bool Sua(PhieuxuathangDTO XH)
         {
             bool re = pxhDAL.Sua(XH);
@@ -205,6 +209,10 @@ namespace QLDL_BUS
         {
             bool re = pxhDAL.Xoa(XH);
             return re;
+        }
+        public List<string> layMAtheoDL(string madl)
+        {
+            return pxhDAL.layMAtheoDL(madl);
         }
         public List<PhieuxuathangDTO> select()
         {
@@ -236,6 +244,10 @@ namespace QLDL_BUS
         {
             bool re = pxhDAL.Xoa(CTXH);
             return re;
+        }
+        public bool XoatheoMH(string mamh)
+        {
+            return pxhDAL.XoatheoMH(mamh);
         }
         public bool Xoatheophieuxuat(string maxh)
         {
@@ -273,6 +285,10 @@ namespace QLDL_BUS
         {
             bool re = pttDAL.Xoa(ptt);
             return re;
+        }
+        public bool XoatheoDL(string madl)
+        {
+            return pttDAL.XoatheoDL(madl);
         }
         public List<PhieuThuTienDTO> select()
         {
@@ -313,9 +329,9 @@ namespace QLDL_BUS
         {
             return pbcdtDAL.selectByKeyWord(sKeyword);
         }
-        public bool Check(int thang)
+        public bool Check(int thang,int year)
         {
-            return pbcdtDAL.Check(thang);
+            return pbcdtDAL.Check(thang,year);
         }
     }
     public class ChitietphieubcdtBUS
@@ -330,6 +346,10 @@ namespace QLDL_BUS
             bool re = pbcdtDAL.Them(CTXH);
             return re;
         }
+        public bool XoatheoDL(string madl)
+        {
+            return pbcdtDAL.XoatheoDL(madl);
+        }
         public bool Xoatheophieuxuat(string mabcdt)
         {
             bool re = pbcdtDAL.XoatheophieuBCDT(mabcdt);
@@ -343,9 +363,9 @@ namespace QLDL_BUS
         {
             return pbcdtDAL.selectByKeyWord(sKeyword, mabcdt);
         }
-        public List<ChitietphieubcdtDTO> laydoanhthu(string thang)
+        public List<ChitietphieubcdtDTO> laydoanhthu(int thang, int year)
         {
-            return pbcdtDAL.laydoanhthu(thang);
+            return pbcdtDAL.laydoanhthu(thang, year);
         }
     }
     public class PhieubaocaonoBUS
@@ -359,12 +379,7 @@ namespace QLDL_BUS
         {
             bool re = pbcnoDAL.Them(DT);
             return re;
-        }
-        //public bool Sua(PhieubaocaonoDTO DT)
-        //{
-        //    bool re = pbcdtDAL.Sua(DT);
-        //    return re;
-        //}
+        }        
         public bool Xoa(PhieubaocaonoDTO DT)
         {
             bool re = pbcnoDAL.Xoa(DT);
@@ -378,9 +393,9 @@ namespace QLDL_BUS
         {
             return pbcnoDAL.selectByKeyWord(sKeyword);
         }
-        public bool Check(int thang)
+        public bool Check(int thang,int year)
         {
-            return pbcnoDAL.Check(thang);
+            return pbcnoDAL.Check(thang,year);
         }
     }
     public class ChitietphieubcnoBUS
@@ -399,6 +414,10 @@ namespace QLDL_BUS
         {
             bool re = pbcnoDAL.XoatheophieuBCNO(mabcdt);
             return re;
+        }
+        public bool XoatheoDL(string madl)
+        {
+            return pbcnoDAL.XoatheoDL(madl);
         }
         public List<ChitietphieubcnoDTO> select(string mabcno)
         {
@@ -433,6 +452,10 @@ namespace QLDL_BUS
         {
             bool re = noDAL.Sua(no);
             return re;
+        }
+        public bool XoatheoDL(string madl)
+        {
+            return noDAL.XoatheoDL(madl);
         }
         public bool Xoa(NoThangtruocDTO no)
         {

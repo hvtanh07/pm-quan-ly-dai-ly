@@ -54,7 +54,7 @@ namespace QLDL
         }
         private void loadData_Vao_GridView()
         {
-            List<ChitietphieubcdtDTO> listctpx = ctbcdtBUS.laydoanhthu(thang.Text);
+            List<ChitietphieubcdtDTO> listctpx = ctbcdtBUS.laydoanhthu(bcdtDTO.ngaylap.Month, bcdtDTO.ngaylap.Year);
 
             if (listctpx == null)
             {
