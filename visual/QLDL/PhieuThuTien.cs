@@ -14,6 +14,7 @@ namespace QLDL
 {
     public partial class PhieuThuTien : Form
     {
+        int tienthucu = 0;
         private CHoSoDaiLyBUS hsBUS;
         private PhieuThuTienBUS pttBUS;
         public PhieuThuTien()
@@ -53,11 +54,14 @@ namespace QLDL
                 MessageBox.Show("Thêm hồ sơ thất bại. Số tiền thu không được vượt quá số tiền đang nợ");
                 return;
             }
+            int noht = hsBUS.Laytienno(ptt.madl) - ptt.sotienthu;
+            
             //3. Thêm vào DB
-            else
+
             {
-                bool kq = pttBUS.Them(ptt);
-                if (kq == false)
+                bool kq1 = hsBUS.Suano(ptt.madl, noht);
+                bool kq2 = pttBUS.Them(ptt);
+                if (kq1 == false && kq2 == false)
                     MessageBox.Show("Thêm hồ sơ thất bại. Vui lòng kiểm tra lại dũ liệu");
                 else
                 {
@@ -81,13 +85,24 @@ namespace QLDL
             //'Verify that indexing OK
             if (-1 < currentRowIndex && currentRowIndex < Dsphieuthu.RowCount)
             {
-                PhieuThuTienDTO pt = new PhieuThuTienDTO();
-                pt.mathutien = maptt.Text;
-                pt.madl = madltxt.Text;
-                pt.ngaythu = Ngaythu.Value;
-                pt.sotienthu = int.Parse(tienthu.Text);               
-                bool kq = pttBUS.Sua(pt);
-                if (kq == false)
+                PhieuThuTienDTO ptt = new PhieuThuTienDTO();
+                ptt.mathutien = maptt.Text;
+                ptt.madl = madltxt.Text;
+                ptt.ngaythu = Ngaythu.Value;
+                ptt.sotienthu = int.Parse(tienthu.Text);
+                //check data hợp lệ
+                int thuphatsinh = ptt.sotienthu - tienthucu;
+                int nochuathutien = hsBUS.Laytienno(ptt.madl) + tienthucu;
+                if (ptt.sotienthu > nochuathutien)
+                {
+                    MessageBox.Show("Thêm hồ sơ thất bại. Số tiền thu không được vượt quá số tiền đang nợ");
+                    return;
+                }
+                int noht = hsBUS.Laytienno(ptt.madl) - thuphatsinh;
+                //load vào database
+                bool kq1 = hsBUS.Suano(ptt.madl, noht);
+                bool kq2 = pttBUS.Sua(ptt);
+                if (kq1 == false && kq2 == false)
                     MessageBox.Show("Sửa thông tin phiếu thu thất bại. Vui lòng kiểm tra lại dữ liệu");
                 else
                     MessageBox.Show("Sửa thông tin phiếu thu thành công");
@@ -311,6 +326,7 @@ namespace QLDL
             madltxt.Text = Dsphieuthu.CurrentRow.Cells[1].Value.ToString();
             Ngaythu.Value = Convert.ToDateTime(Dsphieuthu.CurrentRow.Cells[5].Value.ToString());
             tienthu.Text = Dsphieuthu.CurrentRow.Cells[6].Value.ToString();
+            tienthucu = int.Parse(tienthu.Text);
         }
         
     }

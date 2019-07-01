@@ -157,15 +157,15 @@ INSERT INTO tblQuiDinh (getkey, maxloaidl, soluongmathang, soluongdvt, maxdl)
 VALUES (1, 2, 5, 3, 4);
 
 INSERT INTO tblMatHang (maMatHang, tenmathang, hanSuDung, gia, donViTinh) 
-VALUES ('mh1', N'Sữa', '9/10/2020', 3000, 'dv1');
+VALUES ('mh1', N'Sữa', '9/10/2020', 3, 'dv1');
 INSERT INTO tblMatHang (maMatHang, tenmathang, hanSuDung, gia, donViTinh)
-VALUES ('mh2', N'Đường', '7/9/2020', 4000, 'dv2');
+VALUES ('mh2', N'Đường', '7/9/2020', 4, 'dv2');
 INSERT INTO tblMatHang (maMatHang, tenmathang, hanSuDung, gia, donViTinh)
-VALUES ('mh3', N'Muối', '17/6/2020', 5000, 'dv1');
+VALUES ('mh3', N'Muối', '17/6/2020', 5, 'dv1');
 INSERT INTO tblMatHang (maMatHang, tenmathang, hanSuDung, gia, donViTinh)
-VALUES ('mh4', 'Snack', '6/12/2020', 6000, 'dv3');
+VALUES ('mh4', 'Snack', '6/12/2020', 6, 'dv3');
 INSERT INTO tblMatHang (maMatHang, tenmathang, hanSuDung, gia, donViTinh)
-VALUES ('mh5', 'Kem', '20/8/2020', 7000, 'dv3');
+VALUES ('mh5', 'Kem', '20/8/2020', 7, 'dv3');
 
 INSERT INTO tblHoSoDaiLy (maDaiLy, tenDaiLy, diachi, email, maloaiDaiLy, ngayTiepNhan, quan, dienthoai, nohientai)
 VALUES ('dl1', N'Đại lý 1', 'dc1', 'dl1@gmail.com', 'loai1', '2/6/2019', N'Quận 7', 3243443, 0);
@@ -201,7 +201,6 @@ VALUES ('dl4', 200);
 INSERT INTO [tblNoThangtruoc] (maDaiLy, nothangT)
 VALUES ('dl5', 50);
 ----TESTING----
-SELECT maXuatHang
-FROM tblPhieuXuatHang
-WHERE maDaiLy = 'dl5'
+SELECT COUNT(*) as [soldl]
+FROM tblLoaiDaiLy
 

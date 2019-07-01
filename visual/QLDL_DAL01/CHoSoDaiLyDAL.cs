@@ -96,6 +96,37 @@ namespace QLDL_DAL
             }
             return true;
         }
+        public bool Suano(string madl, int nomoi)
+        {
+            string query = string.Empty;
+            query += " UPDATE tblHoSoDaiLy SET [nohientai] = @nohientai WHERE [maDaiLy] = @maDaiLy";
+
+            using (SqlConnection con = new SqlConnection(ConnectionString))
+            {
+
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cmd.Connection = con;
+                    cmd.CommandType = System.Data.CommandType.Text;
+                    cmd.CommandText = query;
+                    cmd.Parameters.AddWithValue("@maDaiLy", madl);
+                    cmd.Parameters.AddWithValue("@nohientai", nomoi);
+                    try
+                    {
+                        con.Open();
+                        cmd.ExecuteNonQuery();
+                        con.Close();
+                        con.Dispose();
+                    }
+                    catch (Exception ex)
+                    {
+                        con.Close();
+                        return false;
+                    }
+                }
+            }
+            return true;
+        }
         public bool Xoa(CHoSoDaiLyDTO HoSo)
         {
             string query = string.Empty;
@@ -275,6 +306,86 @@ namespace QLDL_DAL
                 }
             }
             return dsmadl;
+        }
+        public int Layno(string madl)
+        {
+            int no = 0;
+            string query = string.Empty;
+            query += " SELECT [nohientai]";
+            query += " FROM [tblHoSoDaiLy]";
+            query += " WHERE [maDaiLy] = @maDaiLy";
+            using (SqlConnection con = new SqlConnection(ConnectionString))
+            {
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cmd.Connection = con;
+                    cmd.CommandType = System.Data.CommandType.Text;
+                    cmd.CommandText = query;
+                    cmd.Parameters.AddWithValue("@maDaiLy", madl);
+                    try
+                    {
+                        con.Open();
+                        SqlDataReader reader = null;
+                        reader = cmd.ExecuteReader();
+                        if (reader.HasRows == true)
+                        {
+                            while (reader.Read())
+                            {
+                                string nodl = reader["nohientai"].ToString();
+                                no = int.Parse(nodl);
+                            }
+                        }
+                        con.Close();
+                        con.Dispose();
+                    }
+                    catch (Exception ex)
+                    {
+                        con.Close();
+                        return 0;
+                    }
+                }
+            }
+            return no;
+        }
+        public string Layloaidl(string madl)
+        {
+            string ldl = "";
+            string query = string.Empty;
+            query += " SELECT [maloaiDaiLy]";
+            query += " FROM [tblHoSoDaiLy]";
+            query += " WHERE [maDaiLy] = @maDaiLy";
+            using (SqlConnection con = new SqlConnection(ConnectionString))
+            {
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cmd.Connection = con;
+                    cmd.CommandType = System.Data.CommandType.Text;
+                    cmd.CommandText = query;
+                    cmd.Parameters.AddWithValue("@maDaiLy", madl);
+                    try
+                    {
+                        con.Open();
+                        SqlDataReader reader = null;
+                        reader = cmd.ExecuteReader();
+                        if (reader.HasRows == true)
+                        {
+                            while (reader.Read())
+                            {
+                                ldl = reader["maloaiDaiLy"].ToString();
+                            }
+                        }
+
+                        con.Close();
+                        con.Dispose();
+                    }
+                    catch (Exception ex)
+                    {
+                        con.Close();
+                        return null;
+                    }
+                }
+            }
+            return ldl;
         }
         public int Laytienno(string madl)
         {
@@ -1001,7 +1112,7 @@ namespace QLDL_DAL
             int soldl = 0;
             string query = string.Empty;
             query += " SELECT COUNT(*) as [soldl]";
-            query += " FROM tblHoSoDaiLy";
+            query += " FROM tblLoaiDaiLy ";
             using (SqlConnection con = new SqlConnection(ConnectionString))
             {
                 using (SqlCommand cmd = new SqlCommand())
@@ -1031,6 +1142,44 @@ namespace QLDL_DAL
                 }
             }
             return soldl;
+        }
+        public int Laysotiennomax(string maldl)
+        {
+            int sono = 0;
+            string query = string.Empty;
+            query += " SELECT [maxno]";
+            query += " FROM tblLoaiDaiLy";
+            query += " WHERE[maLoaiDaiLy] = @maLoaiDaiLy";
+            using (SqlConnection con = new SqlConnection(ConnectionString))
+            {
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cmd.Connection = con;
+                    cmd.CommandType = System.Data.CommandType.Text;
+                    cmd.CommandText = query;
+                    cmd.Parameters.AddWithValue("@maLoaiDaiLy", maldl);
+                    try
+                    {
+                        con.Open();
+                        SqlDataReader reader = null;
+                        reader = cmd.ExecuteReader();
+                        if (reader.HasRows == true)
+                        {
+                            reader.Read();
+                            sono = int.Parse(reader["maxno"].ToString());
+                        }
+
+                        con.Close();
+                        con.Dispose();
+                    }
+                    catch (Exception ex)
+                    {
+                        con.Close();
+                        return 0;
+                    }
+                }
+            }
+            return sono;
         }
     }
     public class DanhsachDonviDAL

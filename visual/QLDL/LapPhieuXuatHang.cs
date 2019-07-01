@@ -164,7 +164,7 @@ namespace QLDL
             }
             if (xh != null)
             {
-                PhieuXuatHang frm = new PhieuXuatHang(xh);
+                PhieuXuatHang frm = new PhieuXuatHang(xh, false);
                 frm.ShowDialog();
             }
             loadData_Vao_GridView();
@@ -233,7 +233,7 @@ namespace QLDL
                 PhieuxuathangDTO xh = (PhieuxuathangDTO)dsphieuxh.Rows[currentRowIndex].DataBoundItem;
                 if (xh != null)
                 {
-                    PhieuXuatHang frm = new PhieuXuatHang(xh);
+                    PhieuXuatHang frm = new PhieuXuatHang(xh, true);
                     frm.ShowDialog();
                 }
             }

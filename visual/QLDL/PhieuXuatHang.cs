@@ -14,21 +14,30 @@ namespace QLDL
 {
     public partial class PhieuXuatHang : Form
     {
+        bool suaornot;
         int tongtien = 0;
+        int tongtiencu = 0;
         private CMatHangBUS mhBUS;
         private PhieuxuathangBUS pxhBUS;
+        private CHoSoDaiLyBUS hsBUS;
+        private CLoaiDaiLyBUS ldlBUS;
+        private CHoSoDaiLyBUS dlBUS;
         private ChitietphieuxuatBUS ctpxBUS;
         private PhieuxuathangDTO pxhDTO;
         public PhieuXuatHang()
         {
             InitializeComponent();
         }            
-        public PhieuXuatHang(PhieuxuathangDTO xh)
+        public PhieuXuatHang(PhieuxuathangDTO xh, bool sua)
         {
+            ldlBUS = new CLoaiDaiLyBUS();
+            hsBUS = new CHoSoDaiLyBUS();
+            dlBUS = new CHoSoDaiLyBUS(); 
             pxhBUS = new PhieuxuathangBUS();
             ctpxBUS = new ChitietphieuxuatBUS();            
             mhBUS = new CMatHangBUS();
             pxhDTO = xh;
+            suaornot = sua;
             InitializeComponent();
         }
         private void PhieuXuatHang_Load(object sender, EventArgs e)
@@ -42,6 +51,7 @@ namespace QLDL
             }
             loadData_Vao_GridView();
             capnhattien();
+            tongtiencu = tongtien;
         }
         private void autosize()
         {
@@ -196,8 +206,8 @@ namespace QLDL
             ctpx.soluong = int.Parse(soluong.Text);
             ctpx.tongtien = int.Parse(soluong.Text) * mhBUS.Laygiatienmh(mamhtxt.Text);
             //2. Kiểm tra data hợp lệ or not
-
-            //3. Thêm vào DB
+                      
+            //3. Thêm vào DB           
             bool kq = ctpxBUS.Sua(ctpx);
             if (kq == false)
                 MessageBox.Show("Sửa mặt hàng thất bại. Vui lòng kiểm tra lại dũ liệu");
@@ -266,10 +276,29 @@ namespace QLDL
             px.maxh = maPhieu.Text;
             px.tongtien = tongtien;
             //2. Kiểm tra data hợp lệ or not
-
+            int noht = dlBUS.Layno(madltxt.Text);
+            int nomax = ldlBUS.Laysotiennomax(hsBUS.Layloaidl(madltxt.Text));
+            int nomoi = noht;
+            if (!suaornot)
+            {
+                nomoi += tongtien;             
+            }
+            else
+            {
+                //lay tong tien moi - tong tien cu = tien phat sinh sau khi sua 
+                nomoi = noht + (tongtien - tongtiencu);              
+            }
+            if (nomoi > nomax)
+            {
+                MessageBox.Show("Đại lý đã vượt quá số tiền nợ tối đa cho phép, vui lòng thử lại");
+                return;
+            }
+            //thay no hien tại
             //3. Thêm vào DB
-            bool kq = pxhBUS.Sua(px);
-            if (kq == false)
+            //bool kq1 = dlBUS.Suano(madltxt.Text, nomoi);
+            bool kq1 = dlBUS.Suano(madltxt.Text, nomoi);
+            bool kq2 = pxhBUS.Sua(px);
+            if (kq2 == false && kq1 == false)
                 MessageBox.Show("Lưu thông tin phiếu thất bại. Vui lòng kiểm tra lại dũ liệu");
             else
             {

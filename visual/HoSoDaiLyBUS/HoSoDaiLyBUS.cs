@@ -25,6 +25,10 @@ namespace QLDL_BUS
             bool re = hsDAL.Sua(hs);
             return re;
         }
+        public bool Suano(string madl, int nomoi)
+        {
+            return hsDAL.Suano(madl, nomoi);
+        }
         public bool Xoa(CHoSoDaiLyDTO hs)
         {
             bool re = hsDAL.Xoa(hs);
@@ -41,6 +45,14 @@ namespace QLDL_BUS
         public List<string> Laymadl()
         {
             return hsDAL.Laymadl();
+        }
+        public int Layno(string madl)
+        {
+            return hsDAL.Layno(madl);
+        }
+        public string Layloaidl(string madl)
+        {
+            return hsDAL.Layloaidl(madl); 
         }
         public int Laytienno(string madl)
         {
@@ -148,6 +160,10 @@ namespace QLDL_BUS
         public int Laysoloaidl()
         {
             return ldlDAL.Laysoloaidl();
+        }
+        public int Laysotiennomax(string maldl)
+        {
+            return ldlDAL.Laysotiennomax(maldl);
         }
     }
     public class DanhsachDonviBUS

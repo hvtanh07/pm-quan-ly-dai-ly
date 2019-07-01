@@ -65,8 +65,14 @@ namespace QLDL
             hs.nohientai = int.Parse(notxt.Text);
             hs.loaidaily = ldl.Text;
             //2. Kiểm tra data hợp lệ or not
-            //kiểm tra trong quận đã đạt tối đa số đại lý chưa
+            int nomax = ldlBUS.Laysotiennomax(hsBUS.Layloaidl(hs.madl));
+            //kiểm tra no vuot tối đa chưa
             
+            if (hs.nohientai > nomax)
+            {
+                MessageBox.Show("Đại lý đã vượt quá số tiền nợ tối đa cho phép, vui lòng thử lại");
+                return;
+            }
             //3. Thêm vào DB
             bool kq = hsBUS.Sua(hs);
             if (kq == false)
