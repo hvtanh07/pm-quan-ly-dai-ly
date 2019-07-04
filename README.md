@@ -21,6 +21,7 @@ Give examples
 * Create receipts
 * Create monthly report
 * Make changes in rules of branch management (max number of braches, items, unit)
+* ...in development
 
 ## Status quo
 
@@ -45,11 +46,11 @@ Give examples
 
 ## Running the tests
 
-Explain how to run the automated tests for this system, result, image of result
+The project included with a sql(createQLDL.sql) file located in \pm-quan-ly-dai-ly\Database. We've already included some Store branches, Items as well as Delivery notes for testing purpose.If you need to edit it do it before running the createDBQLDL.cmd
 
 ## Deployment
 
-Add additional notes about how to deploy this on a live system
+This software is in it's very early build and only using as a school report. If you want a further development please feel free to contact us. See the [Authors](#Authors) section for contact info
 
 ## Built With
 
@@ -62,12 +63,12 @@ Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c6
 
 ## Versioning
 
-* 2.0:....
-* 1.0:...
+* 2.0:New UI built with WPF and minor bug fixed
+* 1.0:Early build with all the funtion listed in [Function](#Function)
 
 ## Authors
 
-* Hứa Văn Tuấn Anh
+* Hứa Văn Tuấn Anh - 17520232@gm.uit.edu.vn
 
 * Phạm Quang Thịnh
 
