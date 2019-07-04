@@ -1,0 +1,46 @@
+﻿<UserControl x:Class="QLDL.BaoCaoDoanhSo"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:QLDL"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800"
+             Width="930" Height="470" Loaded="UserControl_Loaded">
+    <Grid Background="WhiteSmoke">
+        <Separator Margin="0,0,0,469"></Separator>
+        <TextBlock Foreground="Black" FontSize="30" VerticalAlignment="Top" HorizontalAlignment="Center" Height="49" Margin="347,1,347,0">Báo cáo doanh số</TextBlock>
+        <Separator Margin="0,0,0,375"></Separator>
+        <Grid Margin="0,50,0,0">
+            <TextBlock Foreground="Black" FontSize="20" Margin="229,47,-229,-47">Mã phiếu:</TextBlock>
+            <TextBox x:Name="Matxt" TextAlignment="Right" Foreground="Black" FontSize="20" Margin="333,43,475,346"></TextBox>
+            <Button x:Name="LapPhieuButton" FontSize="30" Margin="496,30,248,326" Height="Auto" Click="LapPhieuButton_Click">Lập phiếu</Button>
+            <GroupBox Header="Danh sách phiếu báo cáo doanh số" Margin="0,126,0,0"></GroupBox>
+            <Grid Margin="0,161,0,0">
+                <TextBlock  Foreground="Black" FontSize="16" VerticalAlignment="Top" Margin="42,18,-42,0" >Nhập thông tin phiếu báo cáo:</TextBlock>
+                <TextBox x:Name="txtKeyword"  Foreground="Black" FontSize="16" VerticalAlignment="Top" Margin="268,14,270,0" KeyDown="TxtKeyword_KeyDown" Height="29"/>
+                <Button x:Name="button1" HorizontalAlignment="Right"  HorizontalContentAlignment="Center" VerticalContentAlignment="Top" Width="65" Height="Auto" FontSize="16" BorderBrush="{x:Null}" BorderThickness="0" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Margin="0,0,205,211" Click="Search_Click" RenderTransformOrigin="0.5,0.5">
+                    <materialDesign:PackIcon Kind="AccountSearch" Height="25" Width="30"  >
+                    </materialDesign:PackIcon>
+                </Button>
+                <ListView x:Name="dsphieu"  Foreground="Black" Background="Black"  Margin="0,48,0,0" Width="930" HorizontalAlignment="Right" FontWeight="Normal" FontSize="12" SelectionChanged="dsphieu_CellClick">
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn Header="Mã phiếu báo cáo doanh số" Width="200" DisplayMemberBinding="{Binding madt}">
+                            </GridViewColumn>
+                            <GridViewColumn Header="Ngày lập phiếu" Width="150" DisplayMemberBinding="{Binding ngaylap}" />
+                            <GridViewColumn Header="Tổng doanh số" Width="150" DisplayMemberBinding="{Binding tongdt}"/>
+                        </GridView>
+                    </ListView.View>
+                    <ListView.ContextMenu>
+                        <ContextMenu>
+                            <MenuItem Header="Xem thông tin phiếu" Click="XemThôngTin_Click"  />
+                            <MenuItem Header="Xóa phiếu" Click="XóaPhiếu_Click"  />
+                        </ContextMenu>
+                    </ListView.ContextMenu>
+                </ListView>
+            </Grid>
+        </Grid>
+    </Grid>
+</UserControl>

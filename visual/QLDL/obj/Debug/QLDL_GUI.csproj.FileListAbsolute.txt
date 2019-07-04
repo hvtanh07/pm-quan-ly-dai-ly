@@ -1,223 +1,240 @@
-D:\VisualSudio\QLDL\obj\Debug\QLDL.Mainfrm.resources
-D:\VisualSudio\QLDL\obj\Debug\QLDL.Properties.Resources.resources
-D:\VisualSudio\QLDL\obj\Debug\QLDL.TiepNhanDaiLyfrm.resources
-D:\VisualSudio\QLDL\obj\Debug\QLDL_GUI.csproj.GenerateResource.cache
-D:\VisualSudio\QLDL\obj\Debug\QLDL_GUI.csproj.CoreCompileInputs.cache
-D:\VisualSudio\QLDL\bin\Debug\QLDL.exe.config
-D:\VisualSudio\QLDL\bin\Debug\QLDL.exe
-D:\VisualSudio\QLDL\bin\Debug\QLDL.pdb
-D:\VisualSudio\QLDL\bin\Debug\HoSoDaiLyBUS.dll
-D:\VisualSudio\QLDL\bin\Debug\HoSoDaiLyDTO.dll
-D:\VisualSudio\QLDL\bin\Debug\QLDL_DAL01.dll
-D:\VisualSudio\QLDL\bin\Debug\HoSoDaiLyBUS.pdb
-D:\VisualSudio\QLDL\bin\Debug\HoSoDaiLyBUS.dll.config
-D:\VisualSudio\QLDL\bin\Debug\HoSoDaiLyDTO.pdb
-D:\VisualSudio\QLDL\bin\Debug\HoSoDaiLyDTO.dll.config
-D:\VisualSudio\QLDL\bin\Debug\QLDL_DAL01.pdb
-D:\VisualSudio\QLDL\bin\Debug\QLDL_DAL01.dll.config
-D:\VisualSudio\QLDL\obj\Debug\QLDL_GUI.csprojAssemblyReference.cache
-D:\VisualSudio\QLDL\obj\Debug\QLDL_GUI.csproj.CopyComplete
-D:\VisualSudio\QLDL\obj\Debug\QLDL.exe
-D:\VisualSudio\QLDL\obj\Debug\QLDL.pdb
-D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\QLDL.exe.config
-D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\QLDL.exe
-D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\QLDL.pdb
-D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\HoSoDaiLyBUS.dll
-D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\HoSoDaiLyDTO.dll
-D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\QLDL_DAL01.dll
-D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\HoSoDaiLyBUS.pdb
-D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\HoSoDaiLyBUS.dll.config
-D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\HoSoDaiLyDTO.pdb
-D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\HoSoDaiLyDTO.dll.config
-D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\QLDL_DAL01.pdb
-D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\QLDL_DAL01.dll.config
-D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL\obj\Debug\QLDL_GUI.csprojAssemblyReference.cache
-D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL\obj\Debug\QLDL.Mainfrm.resources
-D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL\obj\Debug\QLDL.Properties.Resources.resources
-D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL\obj\Debug\QLDL.TiepNhanDaiLyfrm.resources
-D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL\obj\Debug\QLDL_GUI.csproj.GenerateResource.cache
-D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL\obj\Debug\QLDL_GUI.csproj.CoreCompileInputs.cache
-D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL\obj\Debug\QLDL_GUI.csproj.CopyComplete
-D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL\obj\Debug\QLDL.exe
-D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL\obj\Debug\QLDL.pdb
-D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\DevExpress.Data.v18.1.dll
-D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\DevExpress.Printing.v18.1.Core.dll
-D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\DevExpress.Utils.v18.1.dll
-D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\DevExpress.XtraEditors.v18.1.dll
-D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\DevExpress.XtraGauges.v18.1.Core.dll
-D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\DevExpress.XtraGauges.v18.1.Win.dll
-D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\DevExpress.XtraPrinting.v18.1.dll
-D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\DevExpress.Pdf.v18.1.Core.dll
-D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\DevExpress.Sparkline.v18.1.Core.dll
-D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\DevExpress.XtraBars.v18.1.dll
-D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\DevExpress.RichEdit.v18.1.Core.dll
-D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\DevExpress.XtraTreeList.v18.1.dll
-D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\DevExpress.XtraLayout.v18.1.dll
-D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\DevExpress.Office.v18.1.Core.dll
-D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\DevExpress.Images.v18.1.dll
-D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\DevExpress.Data.v18.1.xml
-D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\DevExpress.Printing.v18.1.Core.xml
-D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\DevExpress.Utils.v18.1.xml
-D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\DevExpress.XtraEditors.v18.1.xml
-D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\DevExpress.XtraGauges.v18.1.Core.xml
-D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\DevExpress.XtraGauges.v18.1.Win.xml
-D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\DevExpress.XtraPrinting.v18.1.xml
-D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\DevExpress.Pdf.v18.1.Core.xml
-D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\DevExpress.Sparkline.v18.1.Core.xml
-D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\DevExpress.XtraBars.v18.1.xml
-D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\DevExpress.RichEdit.v18.1.Core.xml
-D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\DevExpress.XtraTreeList.v18.1.xml
-D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\DevExpress.XtraLayout.v18.1.xml
-D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\DevExpress.Office.v18.1.Core.xml
-D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\de\DevExpress.Data.v18.1.resources.dll
-D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\es\DevExpress.Data.v18.1.resources.dll
-D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\ja\DevExpress.Data.v18.1.resources.dll
-D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\ru\DevExpress.Data.v18.1.resources.dll
-D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\de\DevExpress.Printing.v18.1.Core.resources.dll
-D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\es\DevExpress.Printing.v18.1.Core.resources.dll
-D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\ja\DevExpress.Printing.v18.1.Core.resources.dll
-D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\ru\DevExpress.Printing.v18.1.Core.resources.dll
-D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\de\DevExpress.Utils.v18.1.resources.dll
-D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\es\DevExpress.Utils.v18.1.resources.dll
-D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\ja\DevExpress.Utils.v18.1.resources.dll
-D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\ru\DevExpress.Utils.v18.1.resources.dll
-D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\de\DevExpress.XtraEditors.v18.1.resources.dll
-D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\es\DevExpress.XtraEditors.v18.1.resources.dll
-D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\ja\DevExpress.XtraEditors.v18.1.resources.dll
-D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\ru\DevExpress.XtraEditors.v18.1.resources.dll
-D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\de\DevExpress.XtraGauges.v18.1.Core.resources.dll
-D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\es\DevExpress.XtraGauges.v18.1.Core.resources.dll
-D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\ja\DevExpress.XtraGauges.v18.1.Core.resources.dll
-D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\ru\DevExpress.XtraGauges.v18.1.Core.resources.dll
-D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\de\DevExpress.XtraPrinting.v18.1.resources.dll
-D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\es\DevExpress.XtraPrinting.v18.1.resources.dll
-D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\ja\DevExpress.XtraPrinting.v18.1.resources.dll
-D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\ru\DevExpress.XtraPrinting.v18.1.resources.dll
-D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\de\DevExpress.Pdf.v18.1.Core.resources.dll
-D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\es\DevExpress.Pdf.v18.1.Core.resources.dll
-D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\ja\DevExpress.Pdf.v18.1.Core.resources.dll
-D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\ru\DevExpress.Pdf.v18.1.Core.resources.dll
-D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\de\DevExpress.Sparkline.v18.1.Core.resources.dll
-D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\es\DevExpress.Sparkline.v18.1.Core.resources.dll
-D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\ja\DevExpress.Sparkline.v18.1.Core.resources.dll
-D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\ru\DevExpress.Sparkline.v18.1.Core.resources.dll
-D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\de\DevExpress.XtraBars.v18.1.resources.dll
-D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\es\DevExpress.XtraBars.v18.1.resources.dll
-D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\ja\DevExpress.XtraBars.v18.1.resources.dll
-D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\ru\DevExpress.XtraBars.v18.1.resources.dll
-D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\de\DevExpress.RichEdit.v18.1.Core.resources.dll
-D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\es\DevExpress.RichEdit.v18.1.Core.resources.dll
-D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\ja\DevExpress.RichEdit.v18.1.Core.resources.dll
-D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\ru\DevExpress.RichEdit.v18.1.Core.resources.dll
-D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\de\DevExpress.XtraTreeList.v18.1.resources.dll
-D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\es\DevExpress.XtraTreeList.v18.1.resources.dll
-D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\ja\DevExpress.XtraTreeList.v18.1.resources.dll
-D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\ru\DevExpress.XtraTreeList.v18.1.resources.dll
-D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\de\DevExpress.XtraLayout.v18.1.resources.dll
-D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\es\DevExpress.XtraLayout.v18.1.resources.dll
-D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\ja\DevExpress.XtraLayout.v18.1.resources.dll
-D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\ru\DevExpress.XtraLayout.v18.1.resources.dll
-D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\de\DevExpress.Office.v18.1.Core.resources.dll
-D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\es\DevExpress.Office.v18.1.Core.resources.dll
-D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\ja\DevExpress.Office.v18.1.Core.resources.dll
-D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\ru\DevExpress.Office.v18.1.Core.resources.dll
-D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL\obj\Debug\QLDL.CapNhatDaiLyfrm.resources
-D:\UIT\GitGud\pm-quan-ly-dai-ly\visual\QLDL\obj\Debug\QLDL.exe.licenses
-D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\QLDL.exe.config
-D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\QLDL.exe
-D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\QLDL.pdb
-D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\HoSoDaiLyBUS.dll
-D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\HoSoDaiLyDTO.dll
-D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\QLDL_DAL01.dll
-D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\DevExpress.Pdf.v18.1.Core.dll
-D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\DevExpress.Sparkline.v18.1.Core.dll
-D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\DevExpress.XtraBars.v18.1.dll
-D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\DevExpress.RichEdit.v18.1.Core.dll
-D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\DevExpress.XtraTreeList.v18.1.dll
-D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\DevExpress.XtraLayout.v18.1.dll
-D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\DevExpress.Office.v18.1.Core.dll
-D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\DevExpress.Images.v18.1.dll
-D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\HoSoDaiLyBUS.pdb
-D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\HoSoDaiLyBUS.dll.config
-D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\HoSoDaiLyDTO.pdb
-D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\HoSoDaiLyDTO.dll.config
-D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\DevExpress.Data.v18.1.xml
-D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\DevExpress.Printing.v18.1.Core.xml
-D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\DevExpress.Utils.v18.1.xml
-D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\DevExpress.XtraEditors.v18.1.xml
-D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\DevExpress.XtraGauges.v18.1.Core.xml
-D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\DevExpress.XtraGauges.v18.1.Win.xml
-D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\DevExpress.XtraPrinting.v18.1.xml
-D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\QLDL_DAL01.pdb
-D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\QLDL_DAL01.dll.config
-D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\DevExpress.Pdf.v18.1.Core.xml
-D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\DevExpress.Sparkline.v18.1.Core.xml
-D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\DevExpress.XtraBars.v18.1.xml
-D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\DevExpress.RichEdit.v18.1.Core.xml
-D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\DevExpress.XtraTreeList.v18.1.xml
-D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\DevExpress.XtraLayout.v18.1.xml
-D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\DevExpress.Office.v18.1.Core.xml
-D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\de\DevExpress.Data.v18.1.resources.dll
-D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\es\DevExpress.Data.v18.1.resources.dll
-D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\ja\DevExpress.Data.v18.1.resources.dll
-D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\ru\DevExpress.Data.v18.1.resources.dll
-D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\de\DevExpress.Printing.v18.1.Core.resources.dll
-D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\es\DevExpress.Printing.v18.1.Core.resources.dll
-D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\ja\DevExpress.Printing.v18.1.Core.resources.dll
-D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\ru\DevExpress.Printing.v18.1.Core.resources.dll
-D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\de\DevExpress.Utils.v18.1.resources.dll
-D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\es\DevExpress.Utils.v18.1.resources.dll
-D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\ja\DevExpress.Utils.v18.1.resources.dll
-D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\ru\DevExpress.Utils.v18.1.resources.dll
-D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\de\DevExpress.XtraEditors.v18.1.resources.dll
-D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\es\DevExpress.XtraEditors.v18.1.resources.dll
-D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\ja\DevExpress.XtraEditors.v18.1.resources.dll
-D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\ru\DevExpress.XtraEditors.v18.1.resources.dll
-D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\de\DevExpress.XtraGauges.v18.1.Core.resources.dll
-D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\es\DevExpress.XtraGauges.v18.1.Core.resources.dll
-D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\ja\DevExpress.XtraGauges.v18.1.Core.resources.dll
-D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\ru\DevExpress.XtraGauges.v18.1.Core.resources.dll
-D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\de\DevExpress.XtraPrinting.v18.1.resources.dll
-D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\es\DevExpress.XtraPrinting.v18.1.resources.dll
-D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\ja\DevExpress.XtraPrinting.v18.1.resources.dll
-D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\ru\DevExpress.XtraPrinting.v18.1.resources.dll
-D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\de\DevExpress.Pdf.v18.1.Core.resources.dll
-D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\es\DevExpress.Pdf.v18.1.Core.resources.dll
-D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\ja\DevExpress.Pdf.v18.1.Core.resources.dll
-D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\ru\DevExpress.Pdf.v18.1.Core.resources.dll
-D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\de\DevExpress.Sparkline.v18.1.Core.resources.dll
-D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\es\DevExpress.Sparkline.v18.1.Core.resources.dll
-D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\ja\DevExpress.Sparkline.v18.1.Core.resources.dll
-D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\ru\DevExpress.Sparkline.v18.1.Core.resources.dll
-D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\de\DevExpress.XtraBars.v18.1.resources.dll
-D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\es\DevExpress.XtraBars.v18.1.resources.dll
-D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\ja\DevExpress.XtraBars.v18.1.resources.dll
-D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\ru\DevExpress.XtraBars.v18.1.resources.dll
-D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\de\DevExpress.RichEdit.v18.1.Core.resources.dll
-D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\es\DevExpress.RichEdit.v18.1.Core.resources.dll
-D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\ja\DevExpress.RichEdit.v18.1.Core.resources.dll
-D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\ru\DevExpress.RichEdit.v18.1.Core.resources.dll
-D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\de\DevExpress.XtraTreeList.v18.1.resources.dll
-D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\es\DevExpress.XtraTreeList.v18.1.resources.dll
-D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\ja\DevExpress.XtraTreeList.v18.1.resources.dll
-D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\ru\DevExpress.XtraTreeList.v18.1.resources.dll
-D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\de\DevExpress.XtraLayout.v18.1.resources.dll
-D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\es\DevExpress.XtraLayout.v18.1.resources.dll
-D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\ja\DevExpress.XtraLayout.v18.1.resources.dll
-D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\ru\DevExpress.XtraLayout.v18.1.resources.dll
-D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\de\DevExpress.Office.v18.1.Core.resources.dll
-D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\es\DevExpress.Office.v18.1.Core.resources.dll
-D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\ja\DevExpress.Office.v18.1.Core.resources.dll
-D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\bin\Debug\ru\DevExpress.Office.v18.1.Core.resources.dll
-D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\obj\Debug\QLDL_GUI.csprojAssemblyReference.cache
-D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\obj\Debug\QLDL.Mainfrm.resources
-D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\obj\Debug\QLDL.Properties.Resources.resources
-D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\obj\Debug\QLDL.TiepNhanDaiLyfrm.resources
-D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\obj\Debug\QLDL_GUI.csproj.GenerateResource.cache
-D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\obj\Debug\QLDL.exe.licenses
-D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\obj\Debug\QLDL_GUI.csproj.CoreCompileInputs.cache
-D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\obj\Debug\QLDL_GUI.csproj.CopyComplete
-D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\obj\Debug\QLDL.exe
-D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\obj\Debug\QLDL.pdb
-D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\obj\Debug\QLDL.CapNhatSuaDaiLy.resources
-D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\obj\Debug\QLDL.ThemXoaSuaMatHangfrm.resources
+C:\Users\Admin\Desktop\QLDL\QLDL\bin\Debug\QLDL.exe.config
+C:\Users\Admin\Desktop\QLDL\QLDL\bin\Debug\QLDL.exe
+C:\Users\Admin\Desktop\QLDL\QLDL\bin\Debug\QLDL.pdb
+C:\Users\Admin\Desktop\QLDL\QLDL\bin\Debug\MaterialDesignColors.dll
+C:\Users\Admin\Desktop\QLDL\QLDL\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\Admin\Desktop\QLDL\QLDL\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\Admin\Desktop\QLDL\QLDL\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\Admin\Desktop\QLDL\QLDL\obj\Debug\QLDL_GUI.csprojAssemblyReference.cache
+C:\Users\Admin\Desktop\QLDL\QLDL\obj\Debug\LapBaoCaoThang.g.cs
+C:\Users\Admin\Desktop\QLDL\QLDL\obj\Debug\MainWindow.g.cs
+C:\Users\Admin\Desktop\QLDL\QLDL\obj\Debug\QuanLyDaiLy.g.cs
+C:\Users\Admin\Desktop\QLDL\QLDL\obj\Debug\QuanLyMatHang.g.cs
+C:\Users\Admin\Desktop\QLDL\QLDL\obj\Debug\ThayDoiQuyDinh.g.cs
+C:\Users\Admin\Desktop\QLDL\QLDL\obj\Debug\App.g.cs
+C:\Users\Admin\Desktop\QLDL\QLDL\obj\Debug\QLDL_MarkupCompile.cache
+C:\Users\Admin\Desktop\QLDL\QLDL\obj\Debug\QLDL_MarkupCompile.lref
+C:\Users\Admin\Desktop\QLDL\QLDL\obj\Debug\App.baml
+C:\Users\Admin\Desktop\QLDL\QLDL\obj\Debug\LapBaoCaoThang.baml
+C:\Users\Admin\Desktop\QLDL\QLDL\obj\Debug\MainWindow.baml
+C:\Users\Admin\Desktop\QLDL\QLDL\obj\Debug\QuanLyDaiLy.baml
+C:\Users\Admin\Desktop\QLDL\QLDL\obj\Debug\QuanLyMatHang.baml
+C:\Users\Admin\Desktop\QLDL\QLDL\obj\Debug\ThayDoiQuyDinh.baml
+C:\Users\Admin\Desktop\QLDL\QLDL\obj\Debug\QLDL.g.resources
+C:\Users\Admin\Desktop\QLDL\QLDL\obj\Debug\QLDL.Properties.Resources.resources
+C:\Users\Admin\Desktop\QLDL\QLDL\obj\Debug\QLDL_GUI.csproj.GenerateResource.cache
+C:\Users\Admin\Desktop\QLDL\QLDL\obj\Debug\QLDL_GUI.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\QLDL\QLDL\obj\Debug\QLDL_GUI.csproj.CopyComplete
+C:\Users\Admin\Desktop\QLDL\QLDL\obj\Debug\QLDL.exe
+C:\Users\Admin\Desktop\QLDL\QLDL\obj\Debug\QLDL.pdb
+C:\Users\Admin\Desktop\QLDL\QLDL\bin\Debug\HoSoDaiLyBUS.dll
+C:\Users\Admin\Desktop\QLDL\QLDL\bin\Debug\HoSoDaiLyDTO.dll
+C:\Users\Admin\Desktop\QLDL\QLDL\bin\Debug\QLDL_DAL01.dll
+C:\Users\Admin\Desktop\QLDL\QLDL\bin\Debug\HoSoDaiLyBUS.pdb
+C:\Users\Admin\Desktop\QLDL\QLDL\bin\Debug\HoSoDaiLyBUS.dll.config
+C:\Users\Admin\Desktop\QLDL\QLDL\bin\Debug\HoSoDaiLyDTO.pdb
+C:\Users\Admin\Desktop\QLDL\QLDL\bin\Debug\HoSoDaiLyDTO.dll.config
+C:\Users\Admin\Desktop\QLDL\QLDL\bin\Debug\QLDL_DAL01.pdb
+C:\Users\Admin\Desktop\QLDL\QLDL\bin\Debug\QLDL_DAL01.dll.config
+C:\Users\Admin\Desktop\QLDL\QLDL\obj\Debug\QuanLyDaiLyForm.g.cs
+C:\Users\Admin\Desktop\QLDL\QLDL\obj\Debug\QuanLyDaiLyForm.baml
+C:\Users\Admin\Desktop\QLDL\QLDL\obj\Debug\TiepNhanDaiLyForm.g.cs
+C:\Users\Admin\Desktop\QLDL\QLDL\obj\Debug\TiepNhanDaiLyForm.baml
+C:\Users\Admin\Desktop\QLDL\QLDL\obj\Debug\SuaDaiLyForm.g.cs
+C:\Users\Admin\Desktop\QLDL\QLDL\obj\Debug\SuaDaiLyForm.baml
+C:\Users\Admin\Desktop\QLDL\QLDL\obj\Debug\LapPhieuThuTienForm.g.cs
+C:\Users\Admin\Desktop\QLDL\QLDL\obj\Debug\LapPhieuThuTienForm.baml
+C:\Users\Admin\Desktop\QLDL\QLDL\obj\Debug\NoThangTruocForm.g.cs
+C:\Users\Admin\Desktop\QLDL\QLDL\obj\Debug\NoThangTruocForm.baml
+E:\installer\QLDL - Copy\QLDL\bin\Debug\QLDL.exe.config
+E:\installer\QLDL - Copy\QLDL\bin\Debug\QLDL.exe
+E:\installer\QLDL - Copy\QLDL\bin\Debug\QLDL.pdb
+E:\installer\QLDL - Copy\QLDL\bin\Debug\HoSoDaiLyBUS.dll
+E:\installer\QLDL - Copy\QLDL\bin\Debug\HoSoDaiLyDTO.dll
+E:\installer\QLDL - Copy\QLDL\bin\Debug\MaterialDesignColors.dll
+E:\installer\QLDL - Copy\QLDL\bin\Debug\MaterialDesignThemes.Wpf.dll
+E:\installer\QLDL - Copy\QLDL\bin\Debug\QLDL_DAL01.dll
+E:\installer\QLDL - Copy\QLDL\bin\Debug\HoSoDaiLyBUS.pdb
+E:\installer\QLDL - Copy\QLDL\bin\Debug\HoSoDaiLyBUS.dll.config
+E:\installer\QLDL - Copy\QLDL\bin\Debug\HoSoDaiLyDTO.pdb
+E:\installer\QLDL - Copy\QLDL\bin\Debug\HoSoDaiLyDTO.dll.config
+E:\installer\QLDL - Copy\QLDL\bin\Debug\QLDL_DAL01.pdb
+E:\installer\QLDL - Copy\QLDL\bin\Debug\QLDL_DAL01.dll.config
+E:\installer\QLDL - Copy\QLDL\bin\Debug\MaterialDesignThemes.Wpf.pdb
+E:\installer\QLDL - Copy\QLDL\bin\Debug\MaterialDesignThemes.Wpf.xml
+E:\installer\QLDL - Copy\QLDL\obj\Debug\QLDL_GUI.csprojAssemblyReference.cache
+E:\installer\QLDL - Copy\QLDL\obj\Debug\LapBaoCaoThang.g.cs
+E:\installer\QLDL - Copy\QLDL\obj\Debug\LapPhieuThuTienForm.g.cs
+E:\installer\QLDL - Copy\QLDL\obj\Debug\MainWindow.g.cs
+E:\installer\QLDL - Copy\QLDL\obj\Debug\NoThangTruocForm.g.cs
+E:\installer\QLDL - Copy\QLDL\obj\Debug\QuanLyDaiLy.g.cs
+E:\installer\QLDL - Copy\QLDL\obj\Debug\QuanLyDaiLyForm.g.cs
+E:\installer\QLDL - Copy\QLDL\obj\Debug\QuanLyMatHang.g.cs
+E:\installer\QLDL - Copy\QLDL\obj\Debug\SuaDaiLyForm.g.cs
+E:\installer\QLDL - Copy\QLDL\obj\Debug\ThayDoiQuyDinh.g.cs
+E:\installer\QLDL - Copy\QLDL\obj\Debug\TiepNhanDaiLyForm.g.cs
+E:\installer\QLDL - Copy\QLDL\obj\Debug\App.g.cs
+E:\installer\QLDL - Copy\QLDL\obj\Debug\QLDL_MarkupCompile.cache
+E:\installer\QLDL - Copy\QLDL\obj\Debug\QLDL_MarkupCompile.lref
+E:\installer\QLDL - Copy\QLDL\obj\Debug\App.baml
+E:\installer\QLDL - Copy\QLDL\obj\Debug\LapBaoCaoThang.baml
+E:\installer\QLDL - Copy\QLDL\obj\Debug\LapPhieuThuTienForm.baml
+E:\installer\QLDL - Copy\QLDL\obj\Debug\MainWindow.baml
+E:\installer\QLDL - Copy\QLDL\obj\Debug\NoThangTruocForm.baml
+E:\installer\QLDL - Copy\QLDL\obj\Debug\QuanLyDaiLy.baml
+E:\installer\QLDL - Copy\QLDL\obj\Debug\QuanLyDaiLyForm.baml
+E:\installer\QLDL - Copy\QLDL\obj\Debug\QuanLyMatHang.baml
+E:\installer\QLDL - Copy\QLDL\obj\Debug\SuaDaiLyForm.baml
+E:\installer\QLDL - Copy\QLDL\obj\Debug\ThayDoiQuyDinh.baml
+E:\installer\QLDL - Copy\QLDL\obj\Debug\TiepNhanDaiLyForm.baml
+E:\installer\QLDL - Copy\QLDL\obj\Debug\QLDL.g.resources
+E:\installer\QLDL - Copy\QLDL\obj\Debug\QLDL.Properties.Resources.resources
+E:\installer\QLDL - Copy\QLDL\obj\Debug\QLDL_GUI.csproj.GenerateResource.cache
+E:\installer\QLDL - Copy\QLDL\obj\Debug\QLDL_GUI.csproj.CoreCompileInputs.cache
+E:\installer\QLDL - Copy\QLDL\obj\Debug\QLDL_GUI.csproj.CopyComplete
+E:\installer\QLDL - Copy\QLDL\obj\Debug\QLDL.exe
+E:\installer\QLDL - Copy\QLDL\obj\Debug\QLDL.pdb
+E:\installer\QLDL - Copy\QLDL\obj\Debug\LapPhieuXuatHangForm.g.cs
+E:\installer\QLDL - Copy\QLDL\obj\Debug\LapPhieuXuatHangForm.baml
+C:\Users\Admin\Desktop\QLDL - Copy\QLDL\bin\Debug\QLDL.exe.config
+C:\Users\Admin\Desktop\QLDL - Copy\QLDL\bin\Debug\QLDL.exe
+C:\Users\Admin\Desktop\QLDL - Copy\QLDL\bin\Debug\QLDL.pdb
+C:\Users\Admin\Desktop\QLDL - Copy\QLDL\bin\Debug\HoSoDaiLyBUS.dll
+C:\Users\Admin\Desktop\QLDL - Copy\QLDL\bin\Debug\HoSoDaiLyDTO.dll
+C:\Users\Admin\Desktop\QLDL - Copy\QLDL\bin\Debug\MaterialDesignColors.dll
+C:\Users\Admin\Desktop\QLDL - Copy\QLDL\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\Admin\Desktop\QLDL - Copy\QLDL\bin\Debug\QLDL_DAL01.dll
+C:\Users\Admin\Desktop\QLDL - Copy\QLDL\bin\Debug\HoSoDaiLyBUS.pdb
+C:\Users\Admin\Desktop\QLDL - Copy\QLDL\bin\Debug\HoSoDaiLyBUS.dll.config
+C:\Users\Admin\Desktop\QLDL - Copy\QLDL\bin\Debug\HoSoDaiLyDTO.pdb
+C:\Users\Admin\Desktop\QLDL - Copy\QLDL\bin\Debug\HoSoDaiLyDTO.dll.config
+C:\Users\Admin\Desktop\QLDL - Copy\QLDL\bin\Debug\QLDL_DAL01.pdb
+C:\Users\Admin\Desktop\QLDL - Copy\QLDL\bin\Debug\QLDL_DAL01.dll.config
+C:\Users\Admin\Desktop\QLDL - Copy\QLDL\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\Admin\Desktop\QLDL - Copy\QLDL\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\Admin\Desktop\QLDL - Copy\QLDL\obj\Debug\QLDL_GUI.csprojAssemblyReference.cache
+C:\Users\Admin\Desktop\QLDL - Copy\QLDL\obj\Debug\LapBaoCaoThang.g.cs
+C:\Users\Admin\Desktop\QLDL - Copy\QLDL\obj\Debug\LapPhieuThuTienForm.g.cs
+C:\Users\Admin\Desktop\QLDL - Copy\QLDL\obj\Debug\LapPhieuXuatHangForm.g.cs
+C:\Users\Admin\Desktop\QLDL - Copy\QLDL\obj\Debug\MainWindow.g.cs
+C:\Users\Admin\Desktop\QLDL - Copy\QLDL\obj\Debug\NoThangTruocForm.g.cs
+C:\Users\Admin\Desktop\QLDL - Copy\QLDL\obj\Debug\QuanLyDaiLy.g.cs
+C:\Users\Admin\Desktop\QLDL - Copy\QLDL\obj\Debug\QuanLyDaiLyForm.g.cs
+C:\Users\Admin\Desktop\QLDL - Copy\QLDL\obj\Debug\QuanLyMatHang.g.cs
+C:\Users\Admin\Desktop\QLDL - Copy\QLDL\obj\Debug\SuaDaiLyForm.g.cs
+C:\Users\Admin\Desktop\QLDL - Copy\QLDL\obj\Debug\ThayDoiQuyDinh.g.cs
+C:\Users\Admin\Desktop\QLDL - Copy\QLDL\obj\Debug\TiepNhanDaiLyForm.g.cs
+C:\Users\Admin\Desktop\QLDL - Copy\QLDL\obj\Debug\App.g.cs
+C:\Users\Admin\Desktop\QLDL - Copy\QLDL\obj\Debug\QLDL_MarkupCompile.cache
+C:\Users\Admin\Desktop\QLDL - Copy\QLDL\obj\Debug\QLDL_MarkupCompile.lref
+C:\Users\Admin\Desktop\QLDL - Copy\QLDL\obj\Debug\App.baml
+C:\Users\Admin\Desktop\QLDL - Copy\QLDL\obj\Debug\LapBaoCaoThang.baml
+C:\Users\Admin\Desktop\QLDL - Copy\QLDL\obj\Debug\LapPhieuThuTienForm.baml
+C:\Users\Admin\Desktop\QLDL - Copy\QLDL\obj\Debug\LapPhieuXuatHangForm.baml
+C:\Users\Admin\Desktop\QLDL - Copy\QLDL\obj\Debug\MainWindow.baml
+C:\Users\Admin\Desktop\QLDL - Copy\QLDL\obj\Debug\NoThangTruocForm.baml
+C:\Users\Admin\Desktop\QLDL - Copy\QLDL\obj\Debug\QuanLyDaiLy.baml
+C:\Users\Admin\Desktop\QLDL - Copy\QLDL\obj\Debug\QuanLyDaiLyForm.baml
+C:\Users\Admin\Desktop\QLDL - Copy\QLDL\obj\Debug\QuanLyMatHang.baml
+C:\Users\Admin\Desktop\QLDL - Copy\QLDL\obj\Debug\SuaDaiLyForm.baml
+C:\Users\Admin\Desktop\QLDL - Copy\QLDL\obj\Debug\ThayDoiQuyDinh.baml
+C:\Users\Admin\Desktop\QLDL - Copy\QLDL\obj\Debug\TiepNhanDaiLyForm.baml
+C:\Users\Admin\Desktop\QLDL - Copy\QLDL\obj\Debug\QLDL.g.resources
+C:\Users\Admin\Desktop\QLDL - Copy\QLDL\obj\Debug\QLDL.Properties.Resources.resources
+C:\Users\Admin\Desktop\QLDL - Copy\QLDL\obj\Debug\QLDL_GUI.csproj.GenerateResource.cache
+C:\Users\Admin\Desktop\QLDL - Copy\QLDL\obj\Debug\QLDL_GUI.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\QLDL - Copy\QLDL\obj\Debug\QLDL_GUI.csproj.CopyComplete
+C:\Users\Admin\Desktop\QLDL - Copy\QLDL\obj\Debug\QLDL.exe
+C:\Users\Admin\Desktop\QLDL - Copy\QLDL\obj\Debug\QLDL.pdb
+C:\Users\Admin\Desktop\QLDL - Copy\QLDL\obj\Debug\PhieuXuatHang.g.cs
+C:\Users\Admin\Desktop\QLDL - Copy\QLDL\obj\Debug\PhieuXuatHang.baml
+C:\Users\Admin\Desktop\QLDL - Copy\QLDL\obj\Debug\BaoCaoCongNoDaiLy.g.cs
+C:\Users\Admin\Desktop\QLDL - Copy\QLDL\obj\Debug\BaoCaoCongNoDaiLy.baml
+C:\Users\Admin\Desktop\QLDL - Copy\QLDL\obj\Debug\BaoCaoDoanhSo.g.cs
+C:\Users\Admin\Desktop\QLDL - Copy\QLDL\obj\Debug\BaoCaoDoanhSo.baml
+C:\Users\Admin\Desktop\QLDL - Copy\QLDL\obj\Debug\ChiTietBaoCaoDoanhSo.g.cs
+C:\Users\Admin\Desktop\QLDL - Copy\QLDL\obj\Debug\ChiTietBaoCaoDoanhSo.baml
+C:\Users\Admin\Desktop\QLDL - Copy\QLDL\obj\Debug\ChiTietBaoCaoCongNo.g.cs
+C:\Users\Admin\Desktop\QLDL - Copy\QLDL\obj\Debug\ChiTietBaoCaoCongNo.baml
+C:\Users\Admin\Desktop\QLDL - Copy\QLDL\obj\Debug\QuanLyDaiLyVaDonVi.g.cs
+C:\Users\Admin\Desktop\QLDL - Copy\QLDL\obj\Debug\ThayDoiQuyDinhForm.g.cs
+C:\Users\Admin\Desktop\QLDL - Copy\QLDL\obj\Debug\QuanLyDaiLyVaDonVi.baml
+C:\Users\Admin\Desktop\QLDL - Copy\QLDL\obj\Debug\ThayDoiQuyDinhForm.baml
+E:\installer\QLDL - Copy\QLDL\obj\Debug\BaoCaoCongNoDaiLy.g.cs
+E:\installer\QLDL - Copy\QLDL\obj\Debug\BaoCaoDoanhSo.g.cs
+E:\installer\QLDL - Copy\QLDL\obj\Debug\ChiTietBaoCaoCongNo.g.cs
+E:\installer\QLDL - Copy\QLDL\obj\Debug\ChiTietBaoCaoDoanhSo.g.cs
+E:\installer\QLDL - Copy\QLDL\obj\Debug\PhieuXuatHang.g.cs
+E:\installer\QLDL - Copy\QLDL\obj\Debug\QuanLyDaiLyVaDonVi.g.cs
+E:\installer\QLDL - Copy\QLDL\obj\Debug\ThayDoiQuyDinhForm.g.cs
+E:\installer\QLDL - Copy\QLDL\obj\Debug\BaoCaoCongNoDaiLy.baml
+E:\installer\QLDL - Copy\QLDL\obj\Debug\BaoCaoDoanhSo.baml
+E:\installer\QLDL - Copy\QLDL\obj\Debug\ChiTietBaoCaoCongNo.baml
+E:\installer\QLDL - Copy\QLDL\obj\Debug\ChiTietBaoCaoDoanhSo.baml
+E:\installer\QLDL - Copy\QLDL\obj\Debug\PhieuXuatHang.baml
+E:\installer\QLDL - Copy\QLDL\obj\Debug\QuanLyDaiLyVaDonVi.baml
+E:\installer\QLDL - Copy\QLDL\obj\Debug\ThayDoiQuyDinhForm.baml
+E:\installer\QLDL\QLDL\bin\Debug\QLDL.exe.config
+E:\installer\QLDL\QLDL\bin\Debug\QLDL.exe
+E:\installer\QLDL\QLDL\bin\Debug\QLDL.pdb
+E:\installer\QLDL\QLDL\bin\Debug\HoSoDaiLyBUS.dll
+E:\installer\QLDL\QLDL\bin\Debug\HoSoDaiLyDTO.dll
+E:\installer\QLDL\QLDL\bin\Debug\MaterialDesignColors.dll
+E:\installer\QLDL\QLDL\bin\Debug\MaterialDesignThemes.Wpf.dll
+E:\installer\QLDL\QLDL\bin\Debug\QLDL_DAL01.dll
+E:\installer\QLDL\QLDL\bin\Debug\HoSoDaiLyBUS.pdb
+E:\installer\QLDL\QLDL\bin\Debug\HoSoDaiLyBUS.dll.config
+E:\installer\QLDL\QLDL\bin\Debug\HoSoDaiLyDTO.pdb
+E:\installer\QLDL\QLDL\bin\Debug\HoSoDaiLyDTO.dll.config
+E:\installer\QLDL\QLDL\bin\Debug\QLDL_DAL01.pdb
+E:\installer\QLDL\QLDL\bin\Debug\QLDL_DAL01.dll.config
+E:\installer\QLDL\QLDL\bin\Debug\MaterialDesignThemes.Wpf.pdb
+E:\installer\QLDL\QLDL\bin\Debug\MaterialDesignThemes.Wpf.xml
+E:\installer\QLDL\QLDL\obj\Debug\QLDL_GUI.csprojAssemblyReference.cache
+E:\installer\QLDL\QLDL\obj\Debug\BaoCaoCongNoDaiLy.g.cs
+E:\installer\QLDL\QLDL\obj\Debug\BaoCaoDoanhSo.g.cs
+E:\installer\QLDL\QLDL\obj\Debug\ChiTietBaoCaoCongNo.g.cs
+E:\installer\QLDL\QLDL\obj\Debug\ChiTietBaoCaoDoanhSo.g.cs
+E:\installer\QLDL\QLDL\obj\Debug\LapBaoCaoThang.g.cs
+E:\installer\QLDL\QLDL\obj\Debug\LapPhieuThuTienForm.g.cs
+E:\installer\QLDL\QLDL\obj\Debug\LapPhieuXuatHangForm.g.cs
+E:\installer\QLDL\QLDL\obj\Debug\MainWindow.g.cs
+E:\installer\QLDL\QLDL\obj\Debug\NoThangTruocForm.g.cs
+E:\installer\QLDL\QLDL\obj\Debug\PhieuXuatHang.g.cs
+E:\installer\QLDL\QLDL\obj\Debug\QuanLyDaiLy.g.cs
+E:\installer\QLDL\QLDL\obj\Debug\QuanLyDaiLyForm.g.cs
+E:\installer\QLDL\QLDL\obj\Debug\QuanLyDaiLyVaDonVi.g.cs
+E:\installer\QLDL\QLDL\obj\Debug\QuanLyMatHang.g.cs
+E:\installer\QLDL\QLDL\obj\Debug\SuaDaiLyForm.g.cs
+E:\installer\QLDL\QLDL\obj\Debug\ThayDoiQuyDinh.g.cs
+E:\installer\QLDL\QLDL\obj\Debug\ThayDoiQuyDinhForm.g.cs
+E:\installer\QLDL\QLDL\obj\Debug\TiepNhanDaiLyForm.g.cs
+E:\installer\QLDL\QLDL\obj\Debug\App.g.cs
+E:\installer\QLDL\QLDL\obj\Debug\QLDL_MarkupCompile.cache
+E:\installer\QLDL\QLDL\obj\Debug\QLDL_MarkupCompile.lref
+E:\installer\QLDL\QLDL\obj\Debug\App.baml
+E:\installer\QLDL\QLDL\obj\Debug\BaoCaoCongNoDaiLy.baml
+E:\installer\QLDL\QLDL\obj\Debug\BaoCaoDoanhSo.baml
+E:\installer\QLDL\QLDL\obj\Debug\ChiTietBaoCaoCongNo.baml
+E:\installer\QLDL\QLDL\obj\Debug\ChiTietBaoCaoDoanhSo.baml
+E:\installer\QLDL\QLDL\obj\Debug\LapBaoCaoThang.baml
+E:\installer\QLDL\QLDL\obj\Debug\LapPhieuThuTienForm.baml
+E:\installer\QLDL\QLDL\obj\Debug\LapPhieuXuatHangForm.baml
+E:\installer\QLDL\QLDL\obj\Debug\MainWindow.baml
+E:\installer\QLDL\QLDL\obj\Debug\NoThangTruocForm.baml
+E:\installer\QLDL\QLDL\obj\Debug\PhieuXuatHang.baml
+E:\installer\QLDL\QLDL\obj\Debug\QuanLyDaiLy.baml
+E:\installer\QLDL\QLDL\obj\Debug\QuanLyDaiLyForm.baml
+E:\installer\QLDL\QLDL\obj\Debug\QuanLyDaiLyVaDonVi.baml
+E:\installer\QLDL\QLDL\obj\Debug\QuanLyMatHang.baml
+E:\installer\QLDL\QLDL\obj\Debug\SuaDaiLyForm.baml
+E:\installer\QLDL\QLDL\obj\Debug\ThayDoiQuyDinh.baml
+E:\installer\QLDL\QLDL\obj\Debug\ThayDoiQuyDinhForm.baml
+E:\installer\QLDL\QLDL\obj\Debug\TiepNhanDaiLyForm.baml
+E:\installer\QLDL\QLDL\obj\Debug\QLDL.g.resources
+E:\installer\QLDL\QLDL\obj\Debug\QLDL.Properties.Resources.resources
+E:\installer\QLDL\QLDL\obj\Debug\QLDL_GUI.csproj.GenerateResource.cache
+E:\installer\QLDL\QLDL\obj\Debug\QLDL_GUI.csproj.CoreCompileInputs.cache
+E:\installer\QLDL\QLDL\obj\Debug\QLDL_GUI.csproj.CopyComplete
+E:\installer\QLDL\QLDL\obj\Debug\QLDL.exe
+E:\installer\QLDL\QLDL\obj\Debug\QLDL.pdb

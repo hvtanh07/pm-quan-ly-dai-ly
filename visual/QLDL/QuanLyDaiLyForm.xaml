@@ -1,0 +1,53 @@
+﻿<UserControl x:Class="QLDL.QuanLyDaiLyForm"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:QLDL"
+             xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="600" Loaded="QuanlyDailyForm_Load"
+             MaxHeight="450" MinHeight="450"
+             MaxWidth="900" MinWidth="900"
+             >
+    <Grid Background="WhiteSmoke">
+        <Grid Margin="0,0,0,390">
+            <TextBlock  Foreground="Black" FontSize="16" VerticalAlignment="Center" Margin="50 0 0 0">Search:</TextBlock>
+            <TextBox x:Name="txtKeyword" Foreground="Black" FontSize="16" VerticalAlignment="Center" Margin="150,0,200,0" KeyDown="TxtKeyword_KeyDown"/>
+            <Button x:Name="button1" HorizontalAlignment="Right"  HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="65" Height="Auto" FontSize="16" BorderBrush="{x:Null}" BorderThickness="0" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Margin="0,0,135,0" Click="Button1_Click">
+                <materialDesign:PackIcon Kind="AccountSearch" Height="25" Width="30"  >
+                </materialDesign:PackIcon>
+            </Button>
+        </Grid>
+        <ListView x:Name="dgvBangDanhSach"  Foreground="Black" Background="Black"  Margin="0,60,0,0" Width="900" HorizontalAlignment="Right" FontWeight="Normal" FontSize="12">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Mã đại lý" Width="100" DisplayMemberBinding="{Binding madl}">
+                                           </GridViewColumn>
+                    <GridViewColumn Header="Tên đại lý" Width="100" DisplayMemberBinding="{Binding tendaily}" />
+                    <GridViewColumn Header="Địa chỉ" Width="80" DisplayMemberBinding="{Binding diachi}"/>
+                    <GridViewColumn Header="Email" Width="100">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding email}" TextDecorations="Underline" Foreground="Blue" Cursor="Hand" />
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="Loại đại lý" Width="100" DisplayMemberBinding="{Binding loaidaily}"/>
+                    <GridViewColumn Header="Ngày tiếp nhận" Width="130" DisplayMemberBinding="{Binding ngaytiepnhan}"/>
+                    <GridViewColumn Header="Quận" Width="70" DisplayMemberBinding="{Binding quan}"/>
+                    <GridViewColumn Header="Điện Thoại" Width="100" DisplayMemberBinding="{Binding dienthoai}"/>
+                    <GridViewColumn Header="Nợ hiện tại" Width="100" DisplayMemberBinding="{Binding nohientai}"/>
+                </GridView>
+            </ListView.View>
+            <ListView.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="Sửa đại lý" Click="SửaĐạiLý_Click"  />
+                    <MenuItem Header="Xóa đại lý" Click="XóaĐạiLý_Click"  />
+                </ContextMenu>
+                </ListView.ContextMenu>
+        </ListView>
+        
+    </Grid>
+</UserControl>

@@ -1,0 +1,51 @@
+﻿<UserControl x:Class="QLDL.ThayDoiQuyDinhForm"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:QLDL"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800"
+             Width="930" Height="470" Loaded="UserControl_Loaded" >
+    <Grid Background="WhiteSmoke">
+        <Separator Margin="0,0,0,469"></Separator>
+        <TextBlock Foreground="Black" FontSize="30" VerticalAlignment="Top" TextAlignment="Center" HorizontalAlignment="Center" Height="49" Margin="244,1,244,0" Width="442">Quản lý các loại đại lý và đơn vị</TextBlock>
+        <Separator Margin="0,0,0,375"></Separator>
+        <Grid Margin="0,50,0,0">
+            <TextBlock FontSize="20" Foreground="Black" Margin="105,101,-105,-101">Số lượng loại đại lý tối đa</TextBlock>
+            <TextBlock FontSize="20" Foreground="Black" Margin="105,154,-105,-154" Height="418">Số lượng mặt hàng tối đa</TextBlock>
+            <TextBlock FontSize="20" Foreground="Black" Margin="105,205,-105,-205" Height="418">Số lượng đơn vị tính</TextBlock>
+            <TextBlock FontSize="20" Foreground="Black" Margin="105,256,-105,-256" Height="417">Số lượng đại lý tối đa trong 1 quận</TextBlock>
+            <TextBox x:Name="maxloaidl" TextAlignment="Center" FontSize="20" Foreground="Black" Margin="609,97,259,291" PreviewTextInput="PreviewTextInputHandler" DataObject.Pasting="PastingHandler" IsReadOnly="True"></TextBox>
+            <TextBox x:Name="soluongmh" TextAlignment="Center" FontSize="20" Foreground="Black" Margin="609,150,259,238 " PreviewTextInput="PreviewTextInputHandler" DataObject.Pasting="PastingHandler" IsReadOnly="True"/>
+            <TextBox x:Name="soluongdvt" TextAlignment="Center" FontSize="20" Foreground="Black" Margin="609,201,259,187" PreviewTextInput="PreviewTextInputHandler" DataObject.Pasting="PastingHandler" IsReadOnly="True"/>
+            <TextBox x:Name="maxsodl" TextAlignment="Center" FontSize="20" Foreground="Black" Margin="609,252,259,136" PreviewTextInput="PreviewTextInputHandler" DataObject.Pasting="PastingHandler" IsReadOnly="True"/>
+            <Button x:Name="TangLDL" HorizontalContentAlignment="Center" Foreground="WhiteSmoke" VerticalContentAlignment="Center" Height="40" Margin="676,97,214,283" BorderBrush="{x:Null}" Background="{x:Null}" Width="40" Click="TangLDL_Click">
+                <materialDesign:PackIcon Kind="Plus"  Foreground="#FF0088FF" Width="23" HorizontalAlignment="Center" VerticalAlignment="Center" >
+                </materialDesign:PackIcon>
+            </Button>
+            <Button x:Name="TangMH" HorizontalContentAlignment="Center" Foreground="WhiteSmoke" VerticalContentAlignment="Center" Height="35" Margin="676,154,214,226" BorderBrush="{x:Null}" Background="{x:Null}" Width="40" Click="TangMH_Click">
+                <materialDesign:PackIcon Kind="Plus"  Foreground="#FF0088FF" Width="23" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            </Button>
+            <Button x:Name="TangDVT" HorizontalContentAlignment="Center" Foreground="WhiteSmoke" VerticalContentAlignment="Center" Height="35" Margin="676,206,214,179" BorderBrush="{x:Null}" Background="{x:Null}" Width="40" Click="TangDVT_Click">
+                <materialDesign:PackIcon Kind="Plus"  Foreground="#FF0088FF" Width="23" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            </Button>
+            <Button x:Name="TangDL" HorizontalContentAlignment="Center" Foreground="WhiteSmoke" VerticalContentAlignment="Center" Height="35" Margin="676,256,214,129"  BorderBrush="{x:Null}" Background="{x:Null}" Width="40" Click="TangDL_Click">
+                <materialDesign:PackIcon Kind="Plus"  Foreground="#FF0088FF" Width="23" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            </Button>
+            <Button x:Name="GiamLDL" HorizontalContentAlignment="Center" Foreground="WhiteSmoke" VerticalContentAlignment="Center" Height="40" Margin="556,97,334,283"  BorderBrush="{x:Null}" Background="{x:Null}" Width="40" Click="GiamLDL_Click">
+                <materialDesign:PackIcon Kind="Minus"  Foreground="#FF0088FF" Width="23" HorizontalAlignment="Center" VerticalAlignment="Center"  />
+            </Button>
+            <Button x:Name="GiamMH" HorizontalContentAlignment="Center" Foreground="WhiteSmoke" VerticalContentAlignment="Center" Height="40" Margin="556,156,334,224"  BorderBrush="{x:Null}" Background="{x:Null}" Width="40" Click="GiamMH_Click">
+                <materialDesign:PackIcon Kind="Minus"  Foreground="#FF0088FF" Width="23" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            </Button>
+            <Button x:Name="GiamDVT" HorizontalContentAlignment="Center" Foreground="WhiteSmoke" VerticalContentAlignment="Center" Height="40" Margin="556,206,334,174"  BorderBrush="{x:Null}" Background="{x:Null}" Width="40" Click="GiamDVT_Click">
+                <materialDesign:PackIcon Kind="Minus"  Foreground="#FF0088FF" Width="23" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            </Button>
+            <Button x:Name="GiamDL" HorizontalContentAlignment="Center" Foreground="WhiteSmoke" VerticalContentAlignment="Center" Height="40" Margin="556,256,334,124"  BorderBrush="{x:Null}" Background="{x:Null}" Width="40" Click="GiamDL_Click">
+                <materialDesign:PackIcon Kind="Minus"  Foreground="#FF0088FF" Width="23" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            </Button>
+        </Grid>
+    </Grid>
+</UserControl>

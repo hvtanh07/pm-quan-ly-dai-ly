@@ -1,0 +1,24 @@
+﻿<UserControl x:Class="QLDL.ThayDoiQuyDinh"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:QLDL"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d" 
+             Background="WhiteSmoke"
+             Width="930" Height="540"
+             MaxWidth="930" MinWidth="930"
+             MaxHeight="540" MinHeight="540"
+             VerticalAlignment="Bottom" HorizontalAlignment="Right">
+    <Grid >
+        <Separator Margin="0,0,0,400"/>
+        <Button x:Name="ThayDoiQuyDinhButton"  Content="Thay đổi quy định" VerticalAlignment="Center" FontSize="20" BorderBrush="Transparent" Foreground="Black"  Height="71" Background="WhiteSmoke" Margin="1,0,464,469" Click="ThayDoiQuyDinhButton_Click" />
+        <Button x:Name="QLDLVDVButton"  Content="Quản lý các loại đại lý và đơn vị" VerticalAlignment="Center" FontSize="20" BorderBrush="Transparent" Foreground="Black" Margin="466,0,-1,469" Height="71" Background="WhiteSmoke" Click="QLDLVDVButton_Click" />
+        <Grid x:Name="MainGrid" Width="930" Height="470" VerticalAlignment="Bottom" HorizontalAlignment="Right" >
+            <UserControl x:Name="usc" Width="930" Height="470" />
+        </Grid>
+
+
+    </Grid>
+</UserControl>

@@ -1,0 +1,50 @@
+﻿<Window x:Class="QLDL.ChiTietBaoCaoCongNo"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:QLDL"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Background="WhiteSmoke"
+        ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None"
+        Foreground="Black" Height="600" Width="600" Loaded="Window_Loaded">
+    <Grid>
+        <Button HorizontalAlignment="Right"  HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="76" Height="Auto" FontSize="16" BorderBrush="{x:Null}" Foreground="#FF2196F3" BorderThickness="0" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Click="ExitButton_Click" Margin="0,0,0,529" >
+            <materialDesign:PackIcon Kind="ExitToApp" Height="25" Width="30"  >
+            </materialDesign:PackIcon>
+        </Button>
+        <Separator Margin="0,2,0,462" />
+        <TextBlock TextAlignment="Center" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="55,10,60,0" Foreground="Black" FontSize="30" Width="485" Text="Chi tiết báo cáo công nợ"/>
+        <Grid Margin="0,71,0,349">
+            <TextBlock FontSize="18" Foreground="Black" Margin="-16,53,334,8" TextAlignment="Right">Mã phiếu báo cáo công nợ:</TextBlock>
+            <TextBlock FontSize="18" Foreground="Black" Margin="-16,89,334,-28" TextAlignment="Right" >Tháng:</TextBlock>
+            <TextBlock x:Name="Matxt" FontSize="18" Foreground="Black" Margin="271,53,47,8" TextAlignment="Left"></TextBlock>
+            <TextBlock x:Name="thang" FontSize="18" Foreground="Black" Margin="271,89,47,-28" TextAlignment="Left" ></TextBlock>
+            <Button x:Name="ButtonXacNhan" Height="Auto" FontSize="24" Margin="413,53,47,64" Click="ButtonXacNhan_Click">Xác nhận</Button>
+        </Grid>
+        <Grid Margin="0,256,0,0">
+            <GroupBox Header="Danh sách đại lý"></GroupBox>
+            <Grid Margin="0,37,0,0">
+                <TextBlock  Foreground="Black" FontSize="16" VerticalAlignment="Top" Margin="42,18,-42,0" >Nhập thông tin đại lý:</TextBlock>
+                <TextBox x:Name="txtKeyword"  Foreground="Black" FontSize="16" VerticalAlignment="Top" Margin="205,14,177,0" KeyDown="TxtKeyword_KeyDown" Height="29"/>
+                <Button x:Name="button1" HorizontalAlignment="Right"  HorizontalContentAlignment="Center" VerticalContentAlignment="Top" Width="65" Height="Auto" FontSize="16" BorderBrush="{x:Null}" BorderThickness="0" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Margin="0,0,112,259" Click="Search_Click" RenderTransformOrigin="0.5,0.5">
+                    <materialDesign:PackIcon Kind="AccountSearch" Height="25" Width="30"  >
+                    </materialDesign:PackIcon>
+                </Button>
+                <ListView x:Name="dsDL"  Foreground="Black" Background="Black"  Margin="0,48,0,0" Width="600" HorizontalAlignment="Right" FontWeight="Normal" FontSize="12">
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn Header="Mã đại lý" Width="150" DisplayMemberBinding="{Binding madl}">
+                            </GridViewColumn>
+                            <GridViewColumn Header="Nợ đầu kỳ" Width="150" DisplayMemberBinding="{Binding nodau}" />
+                            <GridViewColumn Header="Nợ cuối kì" Width="150" DisplayMemberBinding="{Binding nocuoi}"/>
+                            <GridViewColumn Header="Phát sinh" Width="150" DisplayMemberBinding="{Binding phatsinh}"/>
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+            </Grid>
+
+        </Grid>
+    </Grid>
+</Window>
