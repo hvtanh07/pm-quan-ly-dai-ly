@@ -4,15 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{08369B5E-9B43-4878-8F7A-1E49991EDE39}</ProjectGuid>
+    <ProjectGuid>{8EC17DF2-B06C-43B3-88B7-838C92B9AB36}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>QLDL</RootNamespace>
     <AssemblyName>QLDL</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-    <Deterministic>true</Deterministic>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -34,186 +34,195 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DevExpress.Data.v18.1, Version=18.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Printing.v18.1.Core, Version=18.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Utils.v18.1, Version=18.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraEditors.v18.1, Version=18.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraGauges.v18.1.Core, Version=18.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraGauges.v18.1.Win, Version=18.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraPrinting.v18.1, Version=18.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="MaterialDesignColors, Version=1.1.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignColors.1.1.2\lib\net45\MaterialDesignColors.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignThemes.Wpf, Version=2.3.1.953, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignThemes.2.3.1.953\lib\net45\MaterialDesignThemes.Wpf.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Deployment" />
-    <Reference Include="System.Drawing" />
     <Reference Include="System.Net.Http" />
-    <Reference Include="System.Windows.Forms" />
-    <Reference Include="System.Xml" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ChitietPhieubaocaodoanhso.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ChitietPhieubaocaodoanhso.Designer.cs">
-      <DependentUpon>ChitietPhieubaocaodoanhso.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CTPhieuBaoCaoCongNo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CTPhieuBaoCaoCongNo.Designer.cs">
-      <DependentUpon>CTPhieuBaoCaoCongNo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="LapPhieuXuatHang.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="LapPhieuXuatHang.Designer.cs">
-      <DependentUpon>LapPhieuXuatHang.cs</DependentUpon>
-    </Compile>
-    <Compile Include="NoThangTruoc.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="NoThangTruoc.Designer.cs">
-      <DependentUpon>NoThangTruoc.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PhieuBaoCaoCongNo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PhieuBaoCaoCongNo.Designer.cs">
-      <DependentUpon>PhieuBaoCaoCongNo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PhieuBaocaoDS.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PhieuBaocaoDS.Designer.cs">
-      <DependentUpon>PhieuBaocaoDS.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PhieuThuTien.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PhieuThuTien.Designer.cs">
-      <DependentUpon>PhieuThuTien.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PhieuXuatHang.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PhieuXuatHang.Designer.cs">
-      <DependentUpon>PhieuXuatHang.cs</DependentUpon>
-    </Compile>
-    <Compile Include="SuaDaiLy.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SuaDaiLy.Designer.cs">
-      <DependentUpon>SuaDaiLy.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Mainfrm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Mainfrm.Designer.cs">
-      <DependentUpon>Mainfrm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="QuanlyDaily.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="QuanlyDaily.Designer.cs">
-      <DependentUpon>QuanlyDaily.cs</DependentUpon>
-    </Compile>
-    <Compile Include="QuanLyLoaiDailyDonvi.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="QuanLyLoaiDailyDonvi.Designer.cs">
-      <DependentUpon>QuanLyLoaiDailyDonvi.cs</DependentUpon>
-    </Compile>
-    <Compile Include="QuanlyMatHangfrm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="QuanlyMatHangfrm.Designer.cs">
-      <DependentUpon>QuanlyMatHangfrm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="QuiDinhfrm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="QuiDinhfrm.Designer.cs">
-      <DependentUpon>QuiDinhfrm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="TiepNhanDaiLyfrm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TiepNhanDaiLyfrm.Designer.cs">
-      <DependentUpon>TiepNhanDaiLyfrm.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="ChitietPhieubaocaodoanhso.resx">
-      <DependentUpon>ChitietPhieubaocaodoanhso.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CTPhieuBaoCaoCongNo.resx">
-      <DependentUpon>CTPhieuBaoCaoCongNo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="LapPhieuXuatHang.resx">
-      <DependentUpon>LapPhieuXuatHang.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="NoThangTruoc.resx">
-      <DependentUpon>NoThangTruoc.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PhieuBaoCaoCongNo.resx">
-      <DependentUpon>PhieuBaoCaoCongNo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PhieuBaocaoDS.resx">
-      <DependentUpon>PhieuBaocaoDS.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PhieuThuTien.resx">
-      <DependentUpon>PhieuThuTien.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PhieuXuatHang.resx">
-      <DependentUpon>PhieuXuatHang.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SuaDaiLy.resx">
-      <DependentUpon>SuaDaiLy.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Mainfrm.resx">
-      <DependentUpon>Mainfrm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Properties\licenses.licx" />
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
-    </EmbeddedResource>
+    </ApplicationDefinition>
+    <Compile Include="BaoCaoCongNoDaiLy.xaml.cs">
+      <DependentUpon>BaoCaoCongNoDaiLy.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BaoCaoDoanhSo.xaml.cs">
+      <DependentUpon>BaoCaoDoanhSo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ChiTietBaoCaoCongNo.xaml.cs">
+      <DependentUpon>ChiTietBaoCaoCongNo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ChiTietBaoCaoDoanhSo.xaml.cs">
+      <DependentUpon>ChiTietBaoCaoDoanhSo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LapBaoCaoThang.xaml.cs">
+      <DependentUpon>LapBaoCaoThang.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LapPhieuThuTienForm.xaml.cs">
+      <DependentUpon>LapPhieuThuTienForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LapPhieuXuatHangForm.xaml.cs">
+      <DependentUpon>LapPhieuXuatHangForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="NoThangTruocForm.xaml.cs">
+      <DependentUpon>NoThangTruocForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PhieuXuatHang.xaml.cs">
+      <DependentUpon>PhieuXuatHang.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyDaiLy.xaml.cs">
+      <DependentUpon>QuanLyDaiLy.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyDaiLyForm.xaml.cs">
+      <DependentUpon>QuanLyDaiLyForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyDaiLyVaDonVi.xaml.cs">
+      <DependentUpon>QuanLyDaiLyVaDonVi.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyMatHang.xaml.cs">
+      <DependentUpon>QuanLyMatHang.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SuaDaiLyForm.xaml.cs">
+      <DependentUpon>SuaDaiLyForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ThayDoiQuyDinh.xaml.cs">
+      <DependentUpon>ThayDoiQuyDinh.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ThayDoiQuyDinhForm.xaml.cs">
+      <DependentUpon>ThayDoiQuyDinhForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TiepNhanDaiLyForm.xaml.cs">
+      <DependentUpon>TiepNhanDaiLyForm.xaml</DependentUpon>
+    </Compile>
+    <Page Include="BaoCaoCongNoDaiLy.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BaoCaoDoanhSo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ChiTietBaoCaoCongNo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ChiTietBaoCaoDoanhSo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LapBaoCaoThang.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LapPhieuThuTienForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LapPhieuXuatHangForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="NoThangTruocForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PhieuXuatHang.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="QuanLyDaiLy.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="QuanLyDaiLyForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="QuanLyDaiLyVaDonVi.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="QuanLyMatHang.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SuaDaiLyForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ThayDoiQuyDinh.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ThayDoiQuyDinhForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TiepNhanDaiLyForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="QuanlyDaily.resx">
-      <DependentUpon>QuanlyDaily.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="QuanLyLoaiDailyDonvi.resx">
-      <DependentUpon>QuanLyLoaiDailyDonvi.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="QuanlyMatHangfrm.resx">
-      <DependentUpon>QuanlyMatHangfrm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="QuiDinhfrm.resx">
-      <DependentUpon>QuiDinhfrm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TiepNhanDaiLyfrm.resx">
-      <DependentUpon>TiepNhanDaiLyfrm.cs</DependentUpon>
-    </EmbeddedResource>
-    <None Include="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-    </None>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\HoSoDaiLyBUS\QLDL_BUS.csproj">
@@ -223,6 +232,10 @@
     <ProjectReference Include="..\HoSoDaiLyDTO\QLDL_DTO.csproj">
       <Project>{98e4dae5-a018-4211-903a-aeb1fdf907f4}</Project>
       <Name>QLDL_DTO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\QLDL_DAL01\QLDL_DAL.csproj">
+      <Project>{4af76884-8292-437e-a990-35c490b11ff5}</Project>
+      <Name>QLDL_DAL</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

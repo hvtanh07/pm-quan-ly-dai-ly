@@ -755,7 +755,7 @@ namespace QLDL_DAL
             int somh = 0;
             string query = string.Empty;
             query += " SELECT COUNT(*) as [somh]";
-            query += " FROM tblHoSoDaiLy";
+            query += " FROM tblMatHang";
             using (SqlConnection con = new SqlConnection(ConnectionString))
             {
                 using (SqlCommand cmd = new SqlCommand())
@@ -915,7 +915,7 @@ namespace QLDL_DAL
         {
             string query = string.Empty;
             query += "INSERT INTO [dbo].[tblLoaiDaiLy] ([maLoaiDaiLy], [loaiDaiLy], [maxno])";
-            query += "VALUES (@loaiDaiLy,@maxno)";
+            query += "VALUES (@maLoaiDaiLy,@loaiDaiLy,@maxno)";
             using (SqlConnection con = new SqlConnection(ConnectionString))
             {
 
@@ -1386,7 +1386,7 @@ namespace QLDL_DAL
             int sodv = 0;
             string query = string.Empty;
             query += " SELECT COUNT(*) as [sodv]";
-            query += " FROM tblHoSoDaiLy";
+            query += " FROM tblDonvi";
             using (SqlConnection con = new SqlConnection(ConnectionString))
             {
                 using (SqlCommand cmd = new SqlCommand())
@@ -1857,6 +1857,54 @@ namespace QLDL_DAL
             }
             return true;
         }        
+        public bool Timmathangtrongphieuxuat(string maxh, string mamh)
+        {
+            string query = string.Empty;
+            query += " SELECT [maMatHang]";
+            query += " FROM [tblChitietPhieuXuatHang]";
+            query += " WHERE [maXuatHang]=@maXuatHang";
+            query += " AND [maMatHang]=@maMatHang";
+            
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cmd.Connection = con;
+                    cmd.CommandType = System.Data.CommandType.Text;
+                    cmd.CommandText = query;
+                    cmd.Parameters.AddWithValue("@maXuatHang", maxh);
+                    cmd.Parameters.AddWithValue("@maMatHang", mamh);
+                    try
+                    {
+                        con.Open();
+                        SqlDataReader reader = null;
+                        reader = cmd.ExecuteReader();
+                        if (reader.HasRows == true)
+                        {
+                            while (reader.Read())
+                            {
+                                ChitietphieuxuatDTO CTXH = new ChitietphieuxuatDTO();
+                                CTXH.mamh = reader["maMatHang"].ToString();
+                                if (CTXH != null)
+                                {
+                                    return true;
+                                }
+                            }
+                        }
+                        con.Close();
+                        con.Dispose();
+                    }
+                    catch (Exception ex)
+                    {
+                        con.Close();
+                        return true;
+                    }
+                }
+            }              
+            return false;
+        }
+   
         public List<ChitietphieuxuatDTO> select(string maxh)
         {
             string query = string.Empty;

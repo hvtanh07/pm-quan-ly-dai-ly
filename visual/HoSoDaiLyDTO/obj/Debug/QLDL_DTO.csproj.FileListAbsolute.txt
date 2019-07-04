@@ -25,3 +25,17 @@ E:\installer\pm-quan-ly-dai-ly-2\visual\HoSoDaiLyDTO\obj\Debug\QLDL_DTO.csprojAs
 E:\installer\pm-quan-ly-dai-ly-2\visual\HoSoDaiLyDTO\obj\Debug\QLDL_DTO.csproj.CoreCompileInputs.cache
 E:\installer\pm-quan-ly-dai-ly-2\visual\HoSoDaiLyDTO\obj\Debug\HoSoDaiLyDTO.dll
 E:\installer\pm-quan-ly-dai-ly-2\visual\HoSoDaiLyDTO\obj\Debug\HoSoDaiLyDTO.pdb
+C:\Users\ADMIN\Desktop\pm-quan-ly-dai-ly-master\visual\HoSoDaiLyDTO\bin\Debug\HoSoDaiLyDTO.dll.config
+C:\Users\ADMIN\Desktop\pm-quan-ly-dai-ly-master\visual\HoSoDaiLyDTO\bin\Debug\HoSoDaiLyDTO.dll
+C:\Users\ADMIN\Desktop\pm-quan-ly-dai-ly-master\visual\HoSoDaiLyDTO\bin\Debug\HoSoDaiLyDTO.pdb
+C:\Users\ADMIN\Desktop\pm-quan-ly-dai-ly-master\visual\HoSoDaiLyDTO\obj\Debug\QLDL_DTO.csprojAssemblyReference.cache
+C:\Users\ADMIN\Desktop\pm-quan-ly-dai-ly-master\visual\HoSoDaiLyDTO\obj\Debug\QLDL_DTO.csproj.CoreCompileInputs.cache
+C:\Users\ADMIN\Desktop\pm-quan-ly-dai-ly-master\visual\HoSoDaiLyDTO\obj\Debug\HoSoDaiLyDTO.dll
+C:\Users\ADMIN\Desktop\pm-quan-ly-dai-ly-master\visual\HoSoDaiLyDTO\obj\Debug\HoSoDaiLyDTO.pdb
+C:\Users\Admin\Desktop\QLDL\HoSoDaiLyDTO\bin\Debug\HoSoDaiLyDTO.dll.config
+C:\Users\Admin\Desktop\QLDL\HoSoDaiLyDTO\bin\Debug\HoSoDaiLyDTO.dll
+C:\Users\Admin\Desktop\QLDL\HoSoDaiLyDTO\bin\Debug\HoSoDaiLyDTO.pdb
+C:\Users\Admin\Desktop\QLDL\HoSoDaiLyDTO\obj\Debug\QLDL_DTO.csprojAssemblyReference.cache
+C:\Users\Admin\Desktop\QLDL\HoSoDaiLyDTO\obj\Debug\QLDL_DTO.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\QLDL\HoSoDaiLyDTO\obj\Debug\HoSoDaiLyDTO.dll
+C:\Users\Admin\Desktop\QLDL\HoSoDaiLyDTO\obj\Debug\HoSoDaiLyDTO.pdb

@@ -270,6 +270,10 @@ namespace QLDL_BUS
             bool re = pxhDAL.Xoatheophieuxuat(maxh);
             return re;
         }
+        public bool Timmathangtrongphieuxuat(string maxh, string mamh)
+        {
+            return pxhDAL.Timmathangtrongphieuxuat(maxh, mamh);
+        }
         public List<ChitietphieuxuatDTO> select(string maxh)
         {
             return pxhDAL.select(maxh);
