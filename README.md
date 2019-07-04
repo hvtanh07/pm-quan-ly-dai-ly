@@ -1,6 +1,6 @@
 # Store branches management software
 
-This software is used to manage multiple store branches in different areas
+This software is used to manage multiple store branches in different areas as well as manage yours items and money flow throughout business 
 
 ## Getting Started
 
@@ -10,11 +10,12 @@ These instructions will get you a copy of the project up and running on your loc
 ### hardware:
 * Intel pentium or above
 * 2gb ddr3 ram or above
-* 4gb storage 
+* 4gb storage (higher if the database require lot of hardrive)
 ### software:
 * Windows10 (recommended)
-* Microsoft SQL Management Studio
-* Microsoft Visual Studio
+* Microsoft SQL Server 2017
+* Microsoft SQL Management Studio (17 or higher)
+* Microsoft Visual Studio (2017 or higher)
 * All Microsoft Visual C++ Redistributable (recommended)
 
 ## Function
@@ -26,13 +27,16 @@ These instructions will get you a copy of the project up and running on your loc
 * Create monthly report
 * Make changes in rules of branch management (max number of braches, items, unit)
 * ...in development
-
+## Screenshot
+* Main windows
+* Adding store
+* Items management
 ## Status quo
 
-## organizational status
+### organizational status
 ![alt text](https://github.com/hvtanh07/pm-quan-ly-dai-ly/blob/master/httc.png)
 
-## Business status
+### Business status
 
 * see the [funtion](#function) section
 
@@ -73,21 +77,20 @@ Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c6
 
 ## Authors
 
-* Hứa Văn Tuấn Anh - 17520232@gm.uit.edu.vn
+* Hứa Văn Tuấn Anh(leader) - 17520232@gm.uit.edu.vn
 
-* Phạm Quang Thịnh
+* Phạm Quang Thịnh - 17521089@gm.uit.edu.vn
 
-* Nguyễn Việt Mỹ
-
+* Nguyễn Việt Mỹ - 17520772@gm.uit.edu.vn
 
 ## License
 
 This project is licensed under the University of Information & Technology
-![alt text](https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Logo_UIT_In.jpg/220px-Logo_UIT_In.jpg)
+* ![alt text](https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Logo_UIT_In.jpg/220px-Logo_UIT_In.jpg)
 
 ## Acknowledgments
 
 * This project was first created for school project, with the co-operate of 3 guys of team FA, working in 3 month
 * Special thanks to our teacher Nguyen Cong Hoan for helping us during the development, And for the team for your hard work
 * Also thank you for those who interesting and contributed to this project 
-*...
+* ...
