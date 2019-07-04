@@ -35,7 +35,13 @@ Give examples
 
 ### Installing
 
-A step by step to install 
+* 1: Clone or download the project to your drive
+* 2: Open Microsoft SQL Management Studio an copy your server's name 
+* 3: Open and edit 'createDBQLDL.cmd' in \pm-quan-ly-dai-ly\Database
+* 4: Replace 'TUAN-ANH' with your server's name 
+* 5: save -> close -> run the cmd file
+* 6: The database should be created in your server
+* 7: Open QLDL.sln in \pm-quan-ly-dai-ly\visual with Microsoft Visual Studio
 
 ## Running the tests
 
