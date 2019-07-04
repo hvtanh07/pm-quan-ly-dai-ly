@@ -7,13 +7,17 @@ This software is used to manage multiple store branches in different areas
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
 ## Prerequisites
+### hardware:
+* Intel pentium or above
+* 2gb ddr3 ram or above
+* 4gb storage 
+### software:
+* Windows10 (recommended)
+* Microsoft SQL Management Studio
+* Microsoft Visual Studio
+* All Microsoft Visual C++ Redistributable (recommended)
 
-Windows10-intel core i3-input(output) hardware
-
-```
-Give examples
-```
-### Function
+## Function
 
 * Adding Store branches 
 * Create delivery notes
@@ -46,7 +50,7 @@ Give examples
 
 ## Running the tests
 
-The project included with a sql(createQLDL.sql) file located in \pm-quan-ly-dai-ly\Database. We've already included some Store branches, Items as well as Delivery notes for testing purpose.If you need to edit it do it before running the createDBQLDL.cmd
+The project included with a sql(createQLDL.sql) file located in \pm-quan-ly-dai-ly\Database. We've already included some Store branches, Items as well as Delivery notes for testing purpose.If you need to edit it, do it before running the 'createDBQLDL.cmd'
 
 ## Deployment
 
@@ -63,8 +67,9 @@ Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c6
 
 ## Versioning
 
-* 2.0:New UI built with WPF and minor bug fixed
-* 1.0:Early build with all the funtion listed in [Function](#Function)
+* 2.0: New UI built with WPF and minor bug fixed
+* 1.1: Bug fixed 
+* 1.0: Early build with all the funtion listed in [Function](#Function)
 
 ## Authors
 
@@ -82,6 +87,7 @@ This project is licensed under the University of Information & Technology
 
 ## Acknowledgments
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+* This project was first created for school project, with the co-operate of 3 guys of team FA, working in 3 month
+* Special thanks to our teacher Nguyen Cong Hoan for helping us during the development, And for the team for your hard work
+* Also thank you for those who interesting and contributed to this project 
+*...
