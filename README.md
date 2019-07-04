@@ -29,8 +29,11 @@ These instructions will get you a copy of the project up and running on your loc
 * ...in development
 ## Screenshot
 * Main windows
+* ![alt text](https://github.com/hvtanh07/pm-quan-ly-dai-ly/blob/master/main.jpg)
 * Adding store
+* ![alt text](https://github.com/hvtanh07/pm-quan-ly-dai-ly/blob/master/addstore.jpg)
 * Items management
+* ![alt text](https://github.com/hvtanh07/pm-quan-ly-dai-ly/blob/master/itemmanage.jpg)
 ## Status quo
 
 ### organizational status
