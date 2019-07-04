@@ -201,6 +201,4 @@ VALUES ('dl4', 200);
 INSERT INTO [tblNoThangtruoc] (maDaiLy, nothangT)
 VALUES ('dl5', 50);
 ----TESTING----
-SELECT COUNT(*) as [soldl]
-FROM tblLoaiDaiLy
 

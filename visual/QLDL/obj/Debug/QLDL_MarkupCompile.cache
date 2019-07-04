@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-E:\installer\QLDL\QLDL\obj\Debug\
+D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\obj\Debug\
 QLDL
 none
 false
 DEBUG;TRACE
-E:\installer\QLDL\QLDL\App.xaml
+D:\Githubclonepath\pm-quan-ly-dai-ly\visual\QLDL\App.xaml
 181578517137
 
 22307709746
-21-2121946706
+21-2065223477
 BaoCaoCongNoDaiLy.xaml;BaoCaoDoanhSo.xaml;ChiTietBaoCaoCongNo.xaml;ChiTietBaoCaoDoanhSo.xaml;LapBaoCaoThang.xaml;LapPhieuThuTienForm.xaml;LapPhieuXuatHangForm.xaml;MainWindow.xaml;NoThangTruocForm.xaml;PhieuXuatHang.xaml;QuanLyDaiLy.xaml;QuanLyDaiLyForm.xaml;QuanLyDaiLyVaDonVi.xaml;QuanLyMatHang.xaml;SuaDaiLyForm.xaml;ThayDoiQuyDinh.xaml;ThayDoiQuyDinhForm.xaml;TiepNhanDaiLyForm.xaml;
 
 False
