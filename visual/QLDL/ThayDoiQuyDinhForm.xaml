@@ -10,7 +10,7 @@
              Width="930" Height="470" Loaded="UserControl_Loaded" >
     <Grid Background="WhiteSmoke">
         <Separator Margin="0,0,0,469"></Separator>
-        <TextBlock Foreground="Black" FontSize="30" VerticalAlignment="Top" TextAlignment="Center" HorizontalAlignment="Center" Height="49" Margin="244,1,244,0" Width="442">Quản lý các loại đại lý và đơn vị</TextBlock>
+        <TextBlock Foreground="Black" FontSize="30" VerticalAlignment="Top" TextAlignment="Center" HorizontalAlignment="Center" Height="49" Margin="244,1,244,0" Width="442">Quản lý các quy định</TextBlock>
         <Separator Margin="0,0,0,375"></Separator>
         <Grid Margin="0,50,0,0">
             <TextBlock FontSize="20" Foreground="Black" Margin="105,101,-105,-101">Số lượng loại đại lý tối đa</TextBlock>

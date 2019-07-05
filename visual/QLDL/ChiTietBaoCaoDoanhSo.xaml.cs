@@ -101,12 +101,13 @@ namespace QLDL
         }
         private void capnhattien()
         {
-            tongtien = 0;
+            tongtien = 0;         
             foreach (ChitietphieubcdtDTO row in dsDL.ItemsSource)
             {
-                tongtien += row.tongdt;
+                tongtien += row.tongdt;                
             }
             tongtientxt.Text = tongtien.ToString();
+            
         }
         private void ExitButton_Click(object sender, RoutedEventArgs e)
         {
