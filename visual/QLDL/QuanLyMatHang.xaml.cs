@@ -95,7 +95,7 @@ namespace QLDL
             //2. Kiểm tra data hợp lệ or not
             QuiDinhDTO qd = qdBUS.Laydulieu();
             int somh = mhbus.Laysomathang();
-            if (somh >= qd.soluongDVT)
+            if (somh > qd.soluongMH)
             {
                 System.Windows.MessageBox.Show("Thêm mặt hàng thất bại. Số mặt hàng đã đạt tối đa theo qui định");
                 return;

@@ -26,6 +26,7 @@ namespace QLDL
         private CHoSoDaiLyBUS hsBUS;
         private CHoSoDaiLyDTO dlDTO = null;
         private CLoaiDaiLyBUS ldlBUS;
+        private CQuyDinhBUS qdBUS;
         public SuaDaiLyForm()
         {
             InitializeComponent();
@@ -33,6 +34,7 @@ namespace QLDL
 
         private void CapNhatSuaDaiLy_Load(object sender, RoutedEventArgs e)
         {
+            qdBUS = new CQuyDinhBUS(); 
             ldlBUS = new CLoaiDaiLyBUS();
             if (this.dlDTO != null)
             {
@@ -166,12 +168,11 @@ namespace QLDL
             //2. Kiểm tra data hợp lệ or not
             int nomax = ldlBUS.Laysotiennomax(hsBUS.Layloaidl(hs.madl));
             //kiểm tra no vuot tối đa chưa
-
             if (hs.nohientai > nomax)
             {
                 System.Windows.MessageBox.Show("Đại lý đã vượt quá số tiền nợ tối đa cho phép, vui lòng thử lại");
                 return;
-            }
+            }            
             //3. Thêm vào DB
             bool kq = hsBUS.Sua(hs);
             if (kq == false)
@@ -180,6 +181,13 @@ namespace QLDL
             {
                 System.Windows.MessageBox.Show("Cập nhật hồ sơ thành công");
                 this.Close();
+                QuiDinhDTO qd = qdBUS.Laydulieu();
+                int sodl = hsBUS.Laysodaily(quantxt.Text);
+                if (sodl >= qd.Maxsodl)
+                {
+                    System.Windows.MessageBox.Show("Số đại lý trong " + quantxt.Text + " đã đạt tối đa theo quy định. Bạn nên sửa đại lý hoặc điều chỉnh qui định trước khi tiếp tục.");
+                    return;
+                }
             }
         }
 
