@@ -183,7 +183,7 @@ namespace QLDL
                 this.Close();
                 QuiDinhDTO qd = qdBUS.Laydulieu();
                 int sodl = hsBUS.Laysodaily(quantxt.Text);
-                if (sodl >= qd.Maxsodl)
+                if (sodl > qd.Maxsodl)
                 {
                     System.Windows.MessageBox.Show("Số đại lý trong " + quantxt.Text + " đã đạt tối đa theo quy định. Bạn nên sửa đại lý hoặc điều chỉnh qui định trước khi tiếp tục.");
                     return;

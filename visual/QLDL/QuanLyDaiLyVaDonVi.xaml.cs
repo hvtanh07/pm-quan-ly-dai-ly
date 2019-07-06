@@ -173,7 +173,7 @@ namespace QLDL
             //2. Kiểm tra data hợp lệ or not
             QuiDinhDTO qd = quidinhBUS.Laydulieu();
             int soldl = ldlbus.Laysoloaidl();
-            if (soldl > qd.Maxloaidl)
+            if (soldl >= qd.Maxloaidl)
             {
                 System.Windows.MessageBox.Show("Thêm loại đại lý thất bại. Số loại đại lý đã đạt tối đa theo qui định");
                 return;
@@ -336,7 +336,7 @@ namespace QLDL
             //2. Kiểm tra data hợp lệ or not
             QuiDinhDTO qd = quidinhBUS.Laydulieu();
             int sodv = dvbus.Laysodonvi();
-            if (sodv > qd.soluongDVT)
+            if (sodv >= qd.soluongDVT)
             {
                 System.Windows.MessageBox.Show("Thêm đơn vị thất bại. Số đơn vị đã đạt tối đa theo qui định");
                 return;
