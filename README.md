@@ -37,7 +37,7 @@ These instructions will get you a copy of the project up and running on your loc
 ## Status quo
 
 ### organizational status
-![alt text](https://github.com/hvtanh07/pm-quan-ly-dai-ly/blob/master/httc.png)
+![alt text](https://github.com/hvtanh07/pm-quan-ly-dai-ly/blob/master/httt.jpg)
 
 ### Business status
 
