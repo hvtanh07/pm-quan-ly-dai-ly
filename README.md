@@ -1,6 +1,6 @@
 # Store branches management software
 
-This software is used to manage multiple store branches in different areas as well as manage yours items and money flow throughout business 
+This software is used to manage multiple store branches in different areas as well as manage yours items and money flow throughout business.
 
 ## Getting Started
 
